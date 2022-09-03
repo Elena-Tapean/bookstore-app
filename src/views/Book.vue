@@ -16,7 +16,7 @@
 <style lang="scss">
 .book-page {
     @media only screen and (min-width: 0) {
-        
+        height: 100%;
     }
 }
 </style>
