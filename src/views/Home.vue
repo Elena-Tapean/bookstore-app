@@ -4,7 +4,7 @@
       <ul>
         <li v-for="item in 6">
           <router-link :to="`/book/${item}`">
-            My Book #{{ item }}
+          My Book #{{ item }}
           </router-link>
         </li>
       </ul>
@@ -21,6 +21,7 @@
   .home-page {
     @media only screen and (min-width: 0) {
       height: 100%;
+
       ul {
         width: 88%;
         max-width: 420px;
