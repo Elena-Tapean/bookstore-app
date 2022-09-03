@@ -26,10 +26,6 @@ import HambMenuIcon from './HambMenuIcon.vue';
                     to: '/'
                 },
                 {
-                    name: 'Bookstore',
-                    to: '/bookstore'
-                },
-                {
                     name: 'About',
                     to: '/about'
                 },
