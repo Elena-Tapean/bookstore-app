@@ -1,16 +1,6 @@
 <template>
     <main class="book-page main-grid">
         <h1>Book #{{ this.$router.currentRoute.params.id }}</h1>
-        <div>
-            <figure>
-                <img src={{ img }} alt="book covers" />
-            </figure>
-            <h5>{{ title }}</h5>
-            <p>{{ description }}</p>
-            <span>{{ price }}</span>
-            <span>{{ quantity }}</span>
-            <button>BUY</button>
-        </div>
     </main>
 </template>
 
@@ -22,7 +12,7 @@
         },
         data () {
             [
-            {
+                {
                     id: '1',
                     img: '../assets/books/kara_and_the_sun.jpg',
                     title: 'Kara and The Sun',
