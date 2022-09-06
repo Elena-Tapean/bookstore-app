@@ -33,6 +33,22 @@ import HambMenuIcon from './HambMenuIcon.vue';
                 {
                     name: 'Contact',
                     to: '/contact'
+                },
+                {
+                    name: 'Create Account',
+                    to: '/account'
+                },
+                {
+                    name: 'Login',
+                    to: '/login'
+                },
+                {
+                    name: 'Profile',
+                    to: '/profile'
+                },
+                {
+                    name: 'Giving',
+                    to: '/giving'
                 }
             ],
             isOpen: false,

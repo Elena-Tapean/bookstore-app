@@ -25,6 +25,31 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/account',
+    name: 'create-account',
+    component: () => import('../views/Account.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: () => import('../views/Profile.vue')
+  },
+  {
+    path: '/giving',
+    name: 'giving',
+    component: () => import('../views/Giving.vue')
+  },
+  {
+    path: '*',
+    name: 'page not found',
+    component: () => import('../views/PageNotFound.vue')
   }
 ]
 

@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name: 'footer',
+        name: 'MainFooter',
         data () {
             return {
                 nav: [
@@ -26,6 +26,22 @@
                 {
                     name: 'Contact',
                     to: '/contact'
+                },
+                {
+                    name: 'Create Account',
+                    to: '/account'
+                },
+                {
+                    name: 'Login',
+                    to: '/login'
+                },
+                {
+                    name: 'Profile',
+                    to: '/profile'
+                },
+                {
+                    name: 'Giving',
+                    to: '/giving'
                 }
             ]
             }

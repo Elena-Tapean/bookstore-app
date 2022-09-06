@@ -8,12 +8,12 @@
 
 <script>
 import NavBar from './components/NavBar.vue';
-import Footer from './components/Footer.vue';
+import MainFooter from './components/MainFooter.vue';
   export default {
     name: 'App',
     components: {
       NavBar,
-      MainFooter: Footer,
+      MainFooter,
     }
   }
 </script>

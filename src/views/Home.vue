@@ -5,6 +5,9 @@
         <li v-for="item in 6">
           <router-link :to="`/book/${item}`">
           My Book #{{ item }}
+
+          <ImageCards />
+          
           </router-link>
         </li>
       </ul>
@@ -12,9 +15,11 @@
   </template>
   
   <script>
+    import ImageCards from '@/components/ImageCards.vue';
     export default {
-      name: "HomeView",
-  }
+    name: "HomeView",
+    components: { ImageCards }
+}
   </script>
   
   <style lang="scss">
@@ -38,6 +43,12 @@
         justify-content: center;
         align-items: center;
       }
+      img {
+            width: 120px;
+            height: 100px;
+            margin: 5px;
+            align-items: center;
+        }
     }
 
     @media only screen and (min-width: 1024px) {
