@@ -11,6 +11,12 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
+    /* 
+    make a network request to server
+    return the books array
+    create a mutation to update the state
+    serve the state data to component
+    */
   },
   modules: {
   }

@@ -2,6 +2,7 @@
     <header class="nav-bar" ref="navBar">
         <div>
             <img src="../assets/books_logo.png" alt="logo" />
+            <span>Es Bookstore</span>
             <HambMenuIcon :isOpen="isOpen" 
                           @action="handleHambIcon" />
         </div>
@@ -74,6 +75,10 @@ import HambMenuIcon from './HambMenuIcon.vue';
         }
         nav {
             margin-top: 120px;
+        }
+        span {
+            font-size: 20px;
+            margin-left: 10px;
         }
         a {
             margin: 24px 0;

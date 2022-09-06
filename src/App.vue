@@ -2,7 +2,7 @@
   <div id="app">
     <NavBar />
     <router-view/>
-    <Footer />
+    <MainFooter />
   </div>
 </template>
 
@@ -12,9 +12,9 @@ import Footer from './components/Footer.vue';
   export default {
     name: 'App',
     components: {
-    NavBar,
-    Footer,
-}
+      NavBar,
+      MainFooter: Footer,
+    }
   }
 </script>
 
