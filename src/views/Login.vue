@@ -1,15 +1,17 @@
 <template>
     <main class="login-page main-grid">
         <h1>Login</h1>
-        <label>Your email:</label>
-        <br/>
-        <input type="email" id="email" placeholder="name@mail.com..." />
-        <br/>
-        <label>Your password:</label>
-        <br/>
-        <input type="password" id="password" placeholder="password..." />
-        <br/>
-        <button @click={handleCreateAccount}>Log In</button>
+        <form>
+            <label>Your email:</label>
+            <br/>
+            <input type="email" id="email" placeholder="name@mail.com..." />
+            <br/>
+            <label>Your password:</label>
+            <br/>
+            <input type="password" id="password" placeholder="password..." />
+            <br/>
+            <button @click={handleCreateAccount}>Log In</button>
+        </form>
     </main>
 </template>
 
@@ -24,6 +26,13 @@
     @media only screen and (min-width: 0) {
         height: 100%;
 
+        form {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        label {
+            font-size: 17px;
+        }
         input {
             margin-bottom: 20px;
             padding: 5px;
@@ -38,6 +47,23 @@
             font-size: 15px;
             border: none;
             border-radius: 5px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        form {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 21px;
+        }
+        input {
+            padding: 10px;
+            font-size: 17px;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
         }
     }
 } 
