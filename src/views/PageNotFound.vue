@@ -18,6 +18,7 @@
 .not-found {
     @media only screen and (min-width: 0) {
         height: 100%;
+        background-color: #C5E0E3;
 
         h1 {
             font-size: 22px;

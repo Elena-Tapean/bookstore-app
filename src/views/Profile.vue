@@ -46,7 +46,7 @@
 .profile-page {
     @media only screen and (min-width: 0) {
         height: 100%;
-        
+ 
         h4, span {
             display: inline;
             margin: 30px;

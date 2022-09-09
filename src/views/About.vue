@@ -66,7 +66,7 @@
 
         .flex-div {
             display: flex;
-            margin-top: 50px;
+            margin-top: 30px;
         
             img {
                 width: 720px;

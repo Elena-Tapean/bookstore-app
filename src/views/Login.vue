@@ -48,6 +48,10 @@
             border: none;
             border-radius: 5px;
         }
+        button:hover {
+            background-color: #6ad299;
+            color: black;
+        }
     }
     @media only screen and (min-width: 1024px) {
         form {
@@ -64,6 +68,11 @@
         button {
             padding: 15px;
             font-size: 18px;
+        }
+        button:hover {
+            background-color: #6ad299;
+            color: black;
+            cursor: pointer;
         }
     }
 } 

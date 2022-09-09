@@ -75,6 +75,10 @@
         border: none;
         border-radius: 5px;
       }
+      button:hover {
+        background-color: #6ad299;
+        color: black;
+      }
     }
     
     .flex-div {
@@ -89,7 +93,7 @@
 
     .flex-div {
       display: flex;
-      margin-top: 50px;
+      margin-top: 30px;
       
       img {
         width: 720px;
@@ -112,6 +116,7 @@
       }
       input {
         padding: 7px;
+        margin-left: 5px;
         width: 250px;
         font-size: 18px;
         border-radius: 5px;
@@ -125,6 +130,11 @@
         font-size: 20px;
         border: none;
         border-radius: 5px;
+      }
+      button:hover {
+        background-color: #6ad299;
+        color: black;
+        cursor: pointer;
       }
     }
   }
