@@ -6,7 +6,7 @@
           <router-link :to="`/book/${item}`">
           My Book #{{ item }}
 
-          <ImageCards />
+          <!--<ImageCards />-->
           
           </router-link>
         </li>
