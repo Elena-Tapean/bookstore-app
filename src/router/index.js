@@ -2,6 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/Home.vue';
 import Book from '../views/Book.vue';
+import Profile from '../views/Profile.vue';
+import Login from '../views/Login.vue';
+import store from '../store';
 
 Vue.use(VueRouter)
 
@@ -33,13 +36,16 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'login',
-    component: () => import('../views/Login.vue')
+    name: 'Login',
+    component: Login
   },
   {
     path: '/profile',
     name: 'profile',
-    component: () => import('../views/Profile.vue')
+    meta: {
+      auth: true
+    },
+    component: Profile
   },
   {
     path: '/giving',
@@ -57,6 +63,14 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta?.auth) {
+    store.state.user?.name ? next() : next('/login')
+  } else {
+    next()
+  }
 })
 
 export default router

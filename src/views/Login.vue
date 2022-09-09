@@ -1,7 +1,7 @@
 <template>
     <main class="login-page main-grid">
         <h1>Login</h1>
-        <form>
+        <form @submit.prevent="handleLogin">
             <label>Your email:</label>
             <br/>
             <input type="email" id="email" placeholder="name@mail.com..." />
@@ -10,14 +10,19 @@
             <br/>
             <input type="password" id="password" placeholder="password..." />
             <br/>
-            <button @click={handleCreateAccount}>Log In</button>
+            <button>Log In</button>
         </form>
     </main>
 </template>
 
 <script>
     export default {
-        name: 'login'
+        name: 'Login',
+        methods: {
+            handleLogin () {
+                
+            }
+        }
     }
 </script>
 
