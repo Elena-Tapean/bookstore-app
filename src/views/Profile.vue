@@ -1,7 +1,7 @@
 <template>
     <main class="profile-page main-grid">
         <h1>Profile</h1>
-        <h3>Welcome back, user!</h3>
+        <h3>Welcome back!</h3>
         <h4>My Books:</h4>
         <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 3.25C1 3.25 2.35 1 5.5 1C8.65 1 10 3.25 10 3.25V19C10 19 8.65 17.875 5.5 17.875C2.35 17.875 1 19 1 19V3.25ZM10 3.25C10 3.25 11.35 1 14.5 1C17.65 1 19 3.25 19 3.25V19C19 19 17.65 17.875 14.5 17.875C11.35 17.875 10 19 10 19V3.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

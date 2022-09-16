@@ -2,29 +2,29 @@
     <main class="login-page main-grid">
         <h1>Login</h1>
         <ValidationObserver v-slot="{invalid}">
-            <form @submit.prevent="handleSubmit">
+            <form @submit.prevent="handleLogin">
                 <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
                     <span>Name:</span>
                     <br/>
-                    <input v-model="name" type="text" />
+                    <input v-model="user.name" type="text" />
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
                 <ValidationProvider name="Email" rules="required" v-slot="{errors}">
                     <span>Email:</span>
                     <br/>
-                    <input v-model="email" type="email" />
+                    <input v-model="user.email" type="email" />
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
                 <ValidationProvider name="Password" rules="required" v-slot="{errors}">
                     <span>Password:</span>
                     <br/>
-                    <input v-model="password" type="password" />
+                    <input v-model="user.password" type="password" />
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
-                <button type="submit" :disabled="invalid">SUBMIT</button>
+                <button type="submit" :disabled="invalid">LOGIN</button>
             </form>
         </ValidationObserver>
     </main>
@@ -35,15 +35,17 @@
         name: 'Login',
         data () {
             return {
-                name: '',
-                email: '',
-                password: '',
-                invalid: true
+                user: {
+                    name: '',
+                    email: '',
+                    password: '',
+                    invalid: true,
+                }
             }
         },
         methods: {
-            handleSubmit () {
-                console.log(`submitted`)
+            handleLogin () {
+                this.$store.dispatch('login', this.user)
             }
         }
     }

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/Home.vue';
-import Book from '../views/Book.vue';
+import Product from '../views/Product.vue';
 import Profile from '../views/Profile.vue';
 import Login from '../views/Login.vue';
 import store from '../store';
@@ -15,13 +15,16 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/book/:id',
-    name: 'Book',
-    component: Book
+    path: '/product/:id',
+    name: 'Product',
+    component: Product,
   },
   {
     path: '/about',
     name: 'About',
+    meta: {
+      auth: true
+    },
     component: () => import('../views/About.vue')
   },
   {
@@ -56,6 +59,15 @@ const routes = [
     path: '*',
     name: 'page not found',
     component: () => import('../views/PageNotFound.vue')
+  },
+  {
+    path: '/cpanel',
+    name: 'Cpanel',
+    meta: {
+      auth: true,
+      role: 'admin'
+    },
+    component: Profile
   }
 ]
 

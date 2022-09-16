@@ -1,5 +1,5 @@
 <template>
-    <main class="book-page main-grid">
+    <main class="product-page main-grid">
         <h1>{{ this.$router.currentRoute.params.id }}</h1>
         <img src="" alt="book cover" />
         <span><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,27 +9,38 @@
 <path d="M10.125 13.8V10.35H13.5V8.05H10.125V4.6H7.875V8.05H4.5V10.35H7.875V13.8H10.125Z" fill="black"/>
 <path d="M18 23V2.3C18 1.03155 16.9909 0 15.75 0H2.25C1.00912 0 0 1.03155 0 2.3V23L9 17.7422L18 23ZM2.25 2.3H15.75V19.0359L9 15.0938L2.25 19.0359V2.3Z" fill="black"/>
 </svg></span>
-        <h3>{{item.title}}</h3>
-        <h4>{{item.author}}</h4>
-        <p>{{item.description}}</p>
-        <p>{{item.price}}</p>
-        <p>{{item.quantity}}</p>
-        <button class="borrow-button" @click={handleClick}>BORROW</button>
-        <button class="buy-button" @click={handleClick}>BUY</button>
+        <h3>{{title}}</h3>
+        <h4>{{author}}</h4>
+        <p>{{description}}</p>
+        <p>{{price}}</p>
+        <p>{{quantity}}</p>
+        <button class="borrow-button" @click={handleBurrow}>BORROW</button>
+        <button class="buy-button" @click={handleBuy}>BUY</button>
     </main>
 </template>
 
 <script>
     export default {
-    name: "Book",
+    name: "Product",
     created() {
         console.log(`go to server and get the book with id ${this.$router.currentRoute.params.id}`);
+    },
+    computed: {
+        
+    },
+    methods: {
+        handleBurrow () {
+
+        },
+        handleBuy () {
+
+        }
     }
 }
 </script>
 
 <style lang="scss">
-.book-page {
+.product-page {
     @media only screen and (min-width: 0) {
         height: 100%;
 

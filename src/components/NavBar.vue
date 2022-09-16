@@ -11,18 +11,30 @@
                     @input="handleSearch"
                     v-model="search"
                     placeholder="search..." />
-                    <ul v-show="search">
-                        <li v-for="product in products" 
+                <ul v-show="search">
+                    <li v-for="product in products" 
                             :key="product?.id">
-                            <router-link :to="`/product/${product?.id}`">{{product.title}}</router-link>
-                        </li>
-                    </ul>
+                        <router-link :to="`/product/${product?.id}`">{{product.title}}</router-link>
+                    </li>
+                </ul>
         </div>
         <nav>
-            <router-link v-for="item in nav" 
+            <div v-for="item in nav" :key="item.name">
+                <router-link v-if="!item.role"
                         :to="item.to">
-            <span @click="handleRouteChange">{{item.name}}</span>
-            </router-link>
+                <span @click="handleRouteChange">{{item.name}}</span>
+                </router-link>
+                <router-link v-if="item.role && (item.role === user.role)" 
+                        :to="item.to">
+                <span @click="handleRouteChange">{{item.name}}</span>
+                </router-link>
+            </div>
+
+            <span>basket: {{ basketTotal }}</span>
+            
+            <button @click="handleLogout">
+                {{ user.name ? 'LOGOUT' : 'LOGIN' }}
+            </button>
         </nav>
     </header>
 </template>
@@ -40,8 +52,8 @@ import HambMenuIcon from './HambMenuIcon.vue';
                     to: '/'
                 },
                 {
-                    name: 'Book',
-                    to: '/book/:id'
+                    name: 'Product',
+                    to: '/product/:id'
                 },
                 {
                     name: 'About',
@@ -50,6 +62,11 @@ import HambMenuIcon from './HambMenuIcon.vue';
                 {
                     name: 'Contact',
                     to: '/contact'
+                },
+                {
+                    name: 'Cpanel',
+                    to: '/cpanel',
+                    role: 'admin'
                 }
             ],
             isOpen: false,
@@ -62,6 +79,15 @@ import HambMenuIcon from './HambMenuIcon.vue';
     computed: {
       products () {
         return this.$store.state.products 
+      },
+      user () {
+        return this.$store.state.user
+      },
+      basket () {
+        return this.$store.state.basket
+      },
+      basketTotal () {
+        return this.basket.reduce((acc, curr) => acc + curr.count, 0)
       }
     },
     methods: {
@@ -73,8 +99,11 @@ import HambMenuIcon from './HambMenuIcon.vue';
             this.isOpen = false
             this.$refs.navBar.style.height = `${this.barHeight}px`
         },
-        handleSearch() {
-        this.$store.commit('SEARCH_PRODUCTS', this.search)
+        handleSearch () {
+            this.$store.commit('SEARCH_PRODUCTS', this.search)
+        },
+        handleLogout () {
+            this.$store.dispatch('logout')
         }
     }
 }
@@ -111,6 +140,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
         }
         nav {
             margin-top: 120px;
+            display: flex; 
         }
         span {
             font-size: 20px;

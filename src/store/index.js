@@ -1,3 +1,4 @@
+import router from '@/router'
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -5,12 +6,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: {
-      name: 'Elena',
-      role: 'member'
-    },
     products: [],
-    productsCopy: []
+    productsCopy: [],
+    user: {},
+    basket: []
   },
   getters: {
   },
@@ -21,6 +20,28 @@ export default new Vuex.Store({
     },
     SEARCH_PRODUCTS (state, searchString) {
       state.products = state.productsCopy.filter(obj => obj.title.toLowerCase().includes(searchString.toLowerCase()))
+    },
+    SET_USER (state, user) {
+      state.user = user;
+    },
+    INCREMENT_PRODUCT_COUNT (state, {id}) {
+      const index = state.products.findIndex(product => product.id === id)
+      const count = state.products[index].count 
+      ? state.products[index].count += 1
+      : 1
+      const productUpdated = {...state.products[index], count}
+      Vue.set(state.products, index, productUpdated)
+    },
+    DECREMENT_PRODUCT_COUNT (state, {id}) {
+      const index = state.products.findIndex(product => product.id === id)
+      const count = state.products[index].count > 0
+      ? state.products[index].count -= 1
+      : 0
+      const productUpdated = {...state.products[index], count}
+      Vue.set(state.products, index, productUpdated)
+    },
+    ADD_TO_BASKET (state, product) {
+      state.basket.push(product)
     }
   },
   actions: {
@@ -35,7 +56,7 @@ export default new Vuex.Store({
                   title: "Klara and The Sun",
                   description: "A novel by Kazuo Ishiguro. The second transrealist novel that has a nonhuman protagonist.",
                   price: 52,
-                  quantity: 1
+                  quantity: 7
               },
               {
                   id: 2,
@@ -43,7 +64,7 @@ export default new Vuex.Store({
                   title: "Machines Like Me",
                   description: "A novel by Ian McEwan. The first transrealist novel to have a nonhuman protagonist.",
                   price: 55,
-                  quantity: 1
+                  quantity: 5
               },
               {
                   id: 3,
@@ -51,7 +72,7 @@ export default new Vuex.Store({
                   title: "Atlas Obscura",
                   description: "An atlas written by a group of explorers whose mission was to discover and map every unworldly place on Earth",
                   price: 99,
-                  quantity: 1
+                  quantity: 5
               },
               {
                   id: 4,
@@ -59,7 +80,7 @@ export default new Vuex.Store({
                   title: "Tarot Cards",
                   description: "A deck of tarot cards for daily readings. Some say it is the one used in The Quarry game.",
                   price: 68,
-                  quantity: 1
+                  quantity: 10
               },
               {
                   id: 5,
@@ -67,7 +88,7 @@ export default new Vuex.Store({
                   title: "The Yellow Wallpaper",
                   description: "A feministic hauntingly novel written by Charlotte Gilman. One day, the protagonist finds herself locked in her room by her husband. Why? Purely out of medical reasons. Soon, she realizes that she's not alone in the room.",
                   price: 24,
-                  quantity: 1
+                  quantity: 5
               },
               {
                   id: 6,
@@ -75,14 +96,37 @@ export default new Vuex.Store({
                   title: "House of Leaves",
                   description: "A novel \"written\" by Mark Danielweski. The report of an old man found dead in his own aparment, the damnable narration of a tattoo artist who found that report and the story of the house which changes dimensions... from the inside.",
                   price: 89,
-                  quantity: 1
+                  quantity: 2
               }
           ]
           commit('SET_PRODUCTS', data)
         }, 1000)
       } catch (err) {
-
       }
+    },
+    async login ({commit}, user) {
+      try {
+        //cum se face de pe server
+        //const {data} = await axios.post('/api/login', user)
+        //commit('SET_USER', data)
+        //await router.push('/')
+        
+        //aici jos mock
+        setTimeout(() => {
+          commit('SET_USER', {
+            name: 'Elena',
+            role: 'member'
+          })
+          router.push('/')
+        }, 1000)
+      } catch (err) {
+        console.log(err)
+        //daca da eroare datele de pe server scriem pe UI
+        //username incorrect
+      }
+    },
+    async logout ({commit}) {
+      commit('SET_USER', {})
     }
     /* 
     make a network request to server

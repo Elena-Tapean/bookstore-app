@@ -8,11 +8,23 @@
       <br/>
       <br/>
       <ul>
-        <li v-for="item in products" 
-            :key="item.id">
-          <router-link :to="`/book/${item}`">
-            {{ item.title }}
+        <li v-for="product in products" 
+            :key="product.id">
+          <router-link :to="`/product/${product}`">
+            {{ product.title }}
           </router-link>
+          <br/>
+          <div>
+            <span @click="decrement(product.id)">-</span>
+            <span>{{ product.count || 0 }}</span>
+            <button :disabled="product.quantity && product.quantity <= product.count" 
+                    @click="increment(product.id)">+</button>
+            <span v-if="product.quantity && product.quantity <= product.count">Max stock reached</span>
+          </div>
+          <button :disabled="!product.count || product.count === 0" 
+                  @click="addToBasket(product)">
+          Add to Basket
+          </button>
         </li>
       </ul>
     </main>
@@ -24,6 +36,7 @@
     data () {
       return {
         search: '',
+        count: 1
       }
     },
     computed: {
@@ -34,6 +47,15 @@
     methods: {
       handleSearch() {
         this.$store.commit('SEARCH_PRODUCTS', this.search)
+      },
+      increment (id) {
+        this.$store.commit('INCREMENT_PRODUCT_COUNT', {id})
+      },
+      decrement (id) {
+        this.$store.commit('DECREMENT_PRODUCT_COUNT', {id})
+      },
+      addToBasket (product) {
+        this.$store.commit('ADD_TO_BASKET', product)
       }
     }
 }
@@ -60,15 +82,19 @@
         border: 1px solid cadetblue;
         background-color: lightblue;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
       img {
-            width: 120px;
-            height: 100px;
-            margin: 5px;
-            align-items: center;
-        }
+          width: 120px;
+          height: 100px;
+          margin: 5px;
+          align-items: center;
+      }
+      button:disabled {
+        opacity: 0.5;
+      }
     }
 
     @media only screen and (min-width: 1024px) {
