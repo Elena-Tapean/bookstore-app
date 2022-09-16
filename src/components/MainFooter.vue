@@ -40,8 +40,8 @@
                     to: '/profile'
                 },
                 {
-                    name: 'Giving',
-                    to: '/giving'
+                    name: 'Give',
+                    to: '/give'
                 }
             ]
             }

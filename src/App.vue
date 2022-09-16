@@ -14,6 +14,9 @@ import MainFooter from './components/MainFooter.vue';
     components: {
       NavBar,
       MainFooter,
+    },
+    created () {
+      this.$store.dispatch('get_data')
     }
   }
 </script>

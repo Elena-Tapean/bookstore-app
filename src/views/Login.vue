@@ -1,26 +1,49 @@
 <template>
     <main class="login-page main-grid">
         <h1>Login</h1>
-        <form @submit.prevent="handleLogin">
-            <label>Your email:</label>
-            <br/>
-            <input type="email" id="email" placeholder="name@mail.com..." />
-            <br/>
-            <label>Your password:</label>
-            <br/>
-            <input type="password" id="password" placeholder="password..." />
-            <br/>
-            <button>Log In</button>
-        </form>
+        <ValidationObserver v-slot="{invalid}">
+            <form @submit.prevent="handleSubmit">
+                <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
+                    <span>Name:</span>
+                    <br/>
+                    <input v-model="name" type="text" />
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
+                <br/>
+                <ValidationProvider name="Email" rules="required" v-slot="{errors}">
+                    <span>Email:</span>
+                    <br/>
+                    <input v-model="email" type="email" />
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
+                <br/>
+                <ValidationProvider name="Password" rules="required" v-slot="{errors}">
+                    <span>Password:</span>
+                    <br/>
+                    <input v-model="password" type="password" />
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
+                <br/>
+                <button type="submit" :disabled="invalid">SUBMIT</button>
+            </form>
+        </ValidationObserver>
     </main>
 </template>
 
 <script>
     export default {
         name: 'Login',
+        data () {
+            return {
+                name: '',
+                email: '',
+                password: '',
+                invalid: true
+            }
+        },
         methods: {
-            handleLogin () {
-                
+            handleSubmit () {
+                console.log(`submitted`)
             }
         }
     }
@@ -45,17 +68,13 @@
             border: 1px solid grey;
         }
         button {
-            padding: 10px;
+            padding: 5px;
             margin-bottom: 30px;
             background-color: #3CB371;
             color: white;
             font-size: 15px;
             border: none;
             border-radius: 5px;
-        }
-        button:hover {
-            background-color: #6ad299;
-            color: black;
         }
     }
     @media only screen and (min-width: 1024px) {
@@ -71,13 +90,8 @@
             font-size: 17px;
         }
         button {
-            padding: 15px;
+            padding: 10px;
             font-size: 18px;
-        }
-        button:hover {
-            background-color: #6ad299;
-            color: black;
-            cursor: pointer;
         }
     }
 } 

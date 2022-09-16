@@ -1,5 +1,5 @@
 <template>
-    <main class="giving-book main-grid">
+    <main class="give-book main-grid">
         <h1>Give Book</h1>
         <form>
             <fieldset>
@@ -50,7 +50,7 @@
 
 <script>
     export default {
-        name: 'giving'
+        name: 'Give'
     }
     function handleGiveBook (ev) {
         ev.preventDefault
@@ -58,10 +58,9 @@
 </script>
 
 <style lang="scss">
-.giving-book {
+.give-book {
     @media only screen and (min-width: 0) {
         height: 100%;
-        background-color: #C5E0E3;
 
         form {
             margin-top: 10px;

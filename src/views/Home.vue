@@ -1,32 +1,52 @@
 <template>
     <main class="home-page main-grid">
       <h1>Home Page</h1>
+      <input type="text" 
+            @input="handleSearch"
+            v-model="search"
+            placeholder="search product..." />
+      <br/>
+      <br/>
       <ul>
-        <li v-for="item in 6">
+        <li v-for="item in products" 
+            :key="item.id">
           <router-link :to="`/book/${item}`">
-          My Book #{{ item }}
-
-          <!--<ImageCards />-->
-          
+            {{ item.title }}
           </router-link>
         </li>
       </ul>
     </main>
-  </template>
+</template>
   
-  <script>
-    import ImageCards from '@/components/ImageCards.vue';
+<script>
     export default {
-    name: "HomeView",
-    components: { ImageCards }
+    name: "Home",
+    data () {
+      return {
+        search: '',
+      }
+    },
+    computed: {
+      products () {
+        return this.$store.state.products 
+      }
+    },
+    methods: {
+      handleSearch() {
+        this.$store.commit('SEARCH_PRODUCTS', this.search)
+      }
+    }
 }
-  </script>
+</script>
   
-  <style lang="scss">
+<style lang="scss">
   .home-page {
     @media only screen and (min-width: 0) {
       height: 100%;
-
+      img {
+        width: 120px;
+        height: 100px;
+      }
       ul {
         width: 88%;
         max-width: 420px;
@@ -63,4 +83,4 @@
       }
     }
   }
-  </style>
+</style>

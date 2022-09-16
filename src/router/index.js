@@ -11,27 +11,27 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
   },
   {
     path: '/book/:id',
-    name: 'book',
+    name: 'Book',
     component: Book
   },
   {
     path: '/about',
-    name: 'about',
+    name: 'About',
     component: () => import('../views/About.vue')
   },
   {
     path: '/contact',
-    name: 'contact',
+    name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
   {
     path: '/account',
-    name: 'create-account',
+    name: 'Create-account',
     component: () => import('../views/Account.vue')
   },
   {
@@ -41,16 +41,16 @@ const routes = [
   },
   {
     path: '/profile',
-    name: 'profile',
+    name: 'Profile',
     meta: {
       auth: true
     },
     component: Profile
   },
   {
-    path: '/giving',
-    name: 'giving',
-    component: () => import('../views/Giving.vue')
+    path: '/give',
+    name: 'Give',
+    component: () => import('../views/Give.vue')
   },
   {
     path: '*',

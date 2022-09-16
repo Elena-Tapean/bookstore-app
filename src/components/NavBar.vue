@@ -6,6 +6,18 @@
             <HambMenuIcon :isOpen="isOpen" 
                           @action="handleHambIcon" />
         </div>
+        <div class="search-box">
+            <input type="text"
+                    @input="handleSearch"
+                    v-model="search"
+                    placeholder="search..." />
+                    <ul v-show="search">
+                        <li v-for="product in products" 
+                            :key="product?.id">
+                            <router-link :to="`/product/${product?.id}`">{{product.title}}</router-link>
+                        </li>
+                    </ul>
+        </div>
         <nav>
             <router-link v-for="item in nav" 
                         :to="item.to">
@@ -21,10 +33,15 @@ import HambMenuIcon from './HambMenuIcon.vue';
     name: "NavBar",
     data () {
         return {
+            search: '',
             nav: [
                 {
                     name: 'Home',
                     to: '/'
+                },
+                {
+                    name: 'Book',
+                    to: '/book/:id'
                 },
                 {
                     name: 'About',
@@ -33,38 +50,32 @@ import HambMenuIcon from './HambMenuIcon.vue';
                 {
                     name: 'Contact',
                     to: '/contact'
-                },
-                {
-                    name: 'Create Account',
-                    to: '/account'
-                },
-                {
-                    name: 'Login',
-                    to: '/login'
-                },
-                {
-                    name: 'Profile',
-                    to: '/profile'
-                },
-                {
-                    name: 'Giving',
-                    to: '/giving'
                 }
             ],
             isOpen: false,
             barHeight: 52
         }
     },
-    components: { HambMenuIcon },
+    components: { 
+        HambMenuIcon 
+    },
+    computed: {
+      products () {
+        return this.$store.state.products 
+      }
+    },
     methods: {
         handleHambIcon () {
             this.isOpen = !this.isOpen
             this.$refs.navBar.style.height = this.isOpen ? '100%' : `${this.barHeight}px`
-    },
+        },
         handleRouteChange () {
             this.isOpen = false
             this.$refs.navBar.style.height = `${this.barHeight}px`
-    }
+        },
+        handleSearch() {
+        this.$store.commit('SEARCH_PRODUCTS', this.search)
+        }
     }
 }
 </script>
@@ -82,6 +93,15 @@ import HambMenuIcon from './HambMenuIcon.vue';
         position: fixed;
         width: 100%;
         background-color: #fff;
+
+        .search-box {
+            position: relative;
+            ul {
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+        }
 
         > div {
             padding: 16px 24px;
@@ -108,7 +128,8 @@ import HambMenuIcon from './HambMenuIcon.vue';
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        overflow: inherit;
+        
         nav {
             margin-top: 0; 
             a {
