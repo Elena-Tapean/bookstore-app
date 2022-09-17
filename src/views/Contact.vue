@@ -8,7 +8,7 @@
           Borrow, read and buy books at the comfort of your home. Once bought, you obtain the full ebook version of the book.
           If you wish to receive updates or news about what we do, please enter your email below:
         </p>
-        <h3>Your email:</h3>
+        <h3>Newsletter</h3>
         <input type="email" id="email" placeholder="name@mail.com" />
         <button @Click={handleSubmit}>Submit</button>
       </div>
@@ -18,7 +18,7 @@
           Borrow, read and buy books at the comfort of your home. Once bought, you obtain the full ebook version of the book.
           If you wish to receive updates or news about what we do, please enter your email below:
         <br/>
-        <label>Your email:</label>
+        <label>Newsletter</label>
         <br/> 
         <input type="email" id="email" placeholder="name@mail.com" />
         <button @Click={handleSubmit}>Submit</button>

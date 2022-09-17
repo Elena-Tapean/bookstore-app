@@ -47,7 +47,7 @@ export default new Vuex.Store({
   actions: {
     async get_data ({commit}) {
       try {
-        /*request catre server*/
+        /*simulare request catre server*/
         setTimeout(() => {
           const data = [
               {
@@ -121,13 +121,13 @@ export default new Vuex.Store({
         }, 1000)
       } catch (err) {
         console.log(err)
-        //daca da eroare datele de pe server scriem pe UI
+        //daca da eroare datele de pe server, scriem pe UI
         //username incorrect
       }
     },
     async logout ({commit}) {
       commit('SET_USER', {})
-    }
+    },
     /* 
     make a network request to server
     return the books array

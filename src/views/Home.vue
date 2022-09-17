@@ -9,13 +9,13 @@
       <br/>
       <ul>
         <li v-for="product in products" 
-            :key="product.id">
-          <router-link :to="`/product/${product}`">
+            :key="product?.id">
+          <router-link :to="`/product/${product?.title}`">
             {{ product.title }}
           </router-link>
           <br/>
           <div>
-            <span @click="decrement(product.id)">-</span>
+            <button @click="decrement(product.id)">-</button>
             <span>{{ product.count || 0 }}</span>
             <button :disabled="product.quantity && product.quantity <= product.count" 
                     @click="increment(product.id)">+</button>
