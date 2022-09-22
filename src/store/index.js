@@ -42,12 +42,29 @@ export default new Vuex.Store({
     },
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
+    },
+    SHOW_PRODUCT (state, {id}) {
+      const index = state.products.findIndex(product => product.id === id)
+      const productDetails = {...state.products[index], img, title, description, price, quantity}
+      Vue.set(state.products, index, productDetails)
+    },
+    BORROW_BOOK (state, product) {
+      
+    },
+    BUY_BOOK (state, product) {
+
     }
   },
   actions: {
     async get_data ({commit}) {
       try {
-        /*simulare request catre server*/
+        //simulare request catre server
+        /* 
+        make a network request to server
+        return the books array
+        create a mutation to update the state
+        serve the state data to component
+        */
         setTimeout(() => {
           const data = [
               {
@@ -128,12 +145,16 @@ export default new Vuex.Store({
     async logout ({commit}) {
       commit('SET_USER', {})
     },
-    /* 
-    make a network request to server
-    return the books array
-    create a mutation to update the state
-    serve the state data to component
-    */
+    async borrow ({commit}) { 
+      setTimeout(() => {
+        commit('BORROW_BOOK', {})
+      })
+    },
+    async buy ({commit}) { 
+      setTimeout(() => {
+        commit('BUY_BOOK', {})
+      })
+    }
   },
   modules: {
   }
