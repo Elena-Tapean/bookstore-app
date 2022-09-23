@@ -8,6 +8,7 @@ import store from '../store';
 import HomeView from '../views/HomeView';
 import CollectionsView from '../views/CollectionsView';
 import ProductView from '../views/ProductView';
+import Basket from '../views/Basket';
 
 Vue.use(VueRouter)
 
@@ -64,6 +65,11 @@ const routes = [
       auth: true
     },
     component: Profile
+  },
+  {
+    path: '/basket',
+    name: 'Basket',
+    component: Basket
   },
   {
     path: '/give',
