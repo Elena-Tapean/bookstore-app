@@ -136,14 +136,14 @@ import HambMenuIcon from './HambMenuIcon.vue';
         .basket-logo {
             display: none;
         }
-        .search-box {
-            position: relative;
-            ul {
-                position: absolute;
-                top: 50px;
-                left: 0;
-            }
-        }
+        //.search-box {
+            //position: relative;
+            //ul {
+                //position: absolute;
+                //top: 50px;
+                //left: 0;
+            //}
+        //}
 
         > div {
             padding: 16px 24px;

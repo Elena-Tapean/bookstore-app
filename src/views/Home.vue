@@ -65,6 +65,7 @@
   .home-page {
     @media only screen and (min-width: 0) {
       height: 100%;
+      
       img {
         width: 120px;
         height: 100px;
@@ -94,6 +95,9 @@
       }
       button:disabled {
         opacity: 0.5;
+      }
+      span, button {
+        margin: 3px; 
       }
     }
 

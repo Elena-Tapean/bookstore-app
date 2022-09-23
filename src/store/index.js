@@ -107,18 +107,14 @@ export default new Vuex.Store({
     },
     BUY_BOOK (state, product) {
 
+    },
+    GO_BACK () {
+      history.back()
     }
   },
   actions: {
     async get_data ({commit}) {
       try {
-        //simulare request catre server
-        /* 
-        make a network request to server
-        return the books array
-        create a mutation to update the state
-        serve the state data to component
-        */
         setTimeout(() => {
           const data = [
               {
@@ -177,12 +173,6 @@ export default new Vuex.Store({
     },
     async login ({commit}, user) {
       try {
-        //cum se face de pe server
-        //const {data} = await axios.post('/api/login', user)
-        //commit('SET_USER', data)
-        //await router.push('/')
-        
-        //aici jos mock
         setTimeout(() => {
           commit('SET_USER', {
             name: 'Elena',
@@ -192,8 +182,6 @@ export default new Vuex.Store({
         }, 1000)
       } catch (err) {
         console.log(err)
-        //daca da eroare datele de pe server, scriem pe UI
-        //username incorrect
       }
     },
     async logout ({commit}) {
@@ -207,6 +195,11 @@ export default new Vuex.Store({
     async buy ({commit}) { 
       setTimeout(() => {
         commit('BUY_BOOK', {})
+      })
+    },
+    async go_back({commit}) {
+      setTimeout(() => {
+        commit('GO_BACK', {})
       })
     }
   },
