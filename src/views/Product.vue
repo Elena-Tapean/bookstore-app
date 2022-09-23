@@ -12,6 +12,7 @@
             <ul>
                 <li v-for="product in products" :key="products?.id">
                     <span>{{ product.img }}</span>
+                    <img :src="require(product.img)" />
                     <h3>{{ product.title }}</h3>
                     <h4>{{ product.author }}</h4>
                     <p>{{ product.description }}</p>

@@ -6,6 +6,60 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    categories: [
+      { 
+        id: 1,
+        title: 'Books',
+        collections: [
+          {
+            id: 1,
+            title: 'First Book Collection',
+            products: [
+              {
+                id: 1,
+                title: 'C1 Book 1'
+              }
+            ]
+          },
+          {
+            id: 2,
+            title: 'Second Book Collection',
+            products: [
+              {
+                id: 1,
+                title: 'C2 Book 1'
+              }
+            ]
+          }
+        ] 
+      },
+      { 
+        id: 2,
+        title: 'Music',
+        collections: [
+          {
+            id: 1,
+            title: 'First Music Collection',
+            products: [
+              {
+                id: 1,
+                title:'C1 CD 1'
+              }
+            ]
+          },
+          {
+            id: 2,
+            title: 'Second Music Collection',
+            products: [
+              {
+                id: 1,
+                title: 'C2 CD 2'
+              }
+            ]
+          }
+        ] 
+      },
+    ],
     products: [],
     productsCopy: [],
     user: {},
