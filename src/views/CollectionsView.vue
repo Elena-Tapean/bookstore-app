@@ -2,7 +2,8 @@
     <div>
         <h1>{{$router.currentRoute.params.name}} Collection {{$router.currentRoute.params.id}}</h1>
         <ul>
-            <li v-for="product in products">
+            <li v-for="product in products" :key="product.id">
+                <router-link :to="`/product/${product.id}`">{{ product.title }}</router-link>
             </li>
         </ul>
     </div>
@@ -17,9 +18,9 @@ export default {
         collectionId () {
             return this.$router.currentRoute.params.id},
         products () {
-            const categories = this.$store.state.categories 
-            const category = categories.filter( (category) => category.id === this.collectionName )
-            console.log(category)
+            const genres = this.$store.state.genres 
+            const genre = genres.filter( (genre) => genre.id === this.collectionName )
+            console.log(genre)
             return []
         }
     }

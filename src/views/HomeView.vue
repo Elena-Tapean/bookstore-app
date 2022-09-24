@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <h1>Here are the collections</h1>
+    <div class="main-grid">
+        <h1>Here are the products divided by genre:</h1>
         <ul>
-            <li v-for="category in categories" :key="category.id" >
-                <h2>{{category.title}}</h2>
+            <li v-for="genre in genres" :key="genre.id" >
+                <h2>{{ genre.title }}</h2>
                 <ul>
-                    <li v-for="collection in category.collections" :key="collection.id">
-                        <router-link :to="`/collection/${category.id}/${collection.id}`">{{collection.title}}</router-link>
+                    <li v-for="collection in genre.collections" :key="collection.id">
+                        <router-link :to="`/collection/${genre.id}/${collection.id}`">{{ collection.title }}</router-link>
                     </li>
                 </ul>
             </li>
@@ -18,8 +18,8 @@
 export default {
     name: 'HomeView',
     computed: {
-        categories () {
-            return this.$store.state.categories
+        genres () {
+            return this.$store.state.genres
         }
     }
 }

@@ -6,59 +6,113 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    categories: [
-      { 
+    genres: [
+      {
         id: 1,
-        title: 'Books',
+        title: 'Crime',
         collections: [
           {
             id: 1,
-            title: 'First Book Collection',
+            title: 'Agatha Christie',
             products: [
               {
                 id: 1,
-                title: 'C1 Book 1'
+                title: '4.50 from Paddington'
+              },
+              {
+                id: 2,
+                title: 'Cards on the Table'
               }
             ]
           },
           {
             id: 2,
-            title: 'Second Book Collection',
+            title: 'Raymond Chandler',
             products: [
               {
                 id: 1,
-                title: 'C2 Book 1'
+                title: 'Farewell, My Lovely'
+              },
+              {
+                id: 2,
+                title: 'The Long Goodbye'
               }
             ]
           }
-        ] 
+        ]
       },
-      { 
+      {
         id: 2,
-        title: 'Music',
+        title: 'Horror',
         collections: [
           {
             id: 1,
-            title: 'First Music Collection',
+            title: 'Stephen King',
             products: [
               {
                 id: 1,
-                title:'C1 CD 1'
+                title: 'Pet Sematary'
+              },
+              {
+                id: 2,
+                title: 'IT'
+              },
+              {
+                id: 3,
+                title: 'Carrey'
               }
             ]
           },
           {
             id: 2,
-            title: 'Second Music Collection',
+            title: 'Charlotte Perkins Gilman',
             products: [
               {
                 id: 1,
-                title: 'C2 CD 2'
+                title: 'The Yellow Wallpaper'
               }
             ]
           }
-        ] 
+        ]
       },
+      {
+        id: 3,
+        title: 'Poetry',
+        collections: [
+          {
+            id: 1,
+            title: 'William Butler Yeats',
+            products: [
+              {
+                id: 1,
+                title: 'Easter Rising 1916'
+              },
+              {
+                id: 2,
+                title: 'The Second Coming' 
+              },
+              {
+                id: 3,
+                title: 'The Winding Stairs'
+              },
+              {
+                id: 4,
+                title: 'A Vision'
+              }
+            ]
+          },
+          {
+            id: 2,
+            title: 'Ezra Pound',
+            products: [
+              {
+                id: 1,
+                title: 'The Cantos'
+              }
+            ]
+          }
+        ]
+      }
     ],
     products: [],
     productsCopy: [],
@@ -117,55 +171,59 @@ export default new Vuex.Store({
       try {
         setTimeout(() => {
           const data = [
-              {
-                  id: 1,
-                  img: "../assets/books/klara_and_the_sun.jpg",
-                  title: "Klara and The Sun",
-                  description: "A novel by Kazuo Ishiguro. The second transrealist novel that has a nonhuman protagonist.",
-                  price: 52,
-                  quantity: 7
-              },
-              {
-                  id: 2,
-                  img: "../assets/books/machines_like_me.jpg",
-                  title: "Machines Like Me",
-                  description: "A novel by Ian McEwan. The first transrealist novel to have a nonhuman protagonist.",
-                  price: 55,
-                  quantity: 5
-              },
-              {
-                  id: 3,
-                  img: "../assets/books/atlas_obscura.jpg",
-                  title: "Atlas Obscura",
-                  description: "An atlas written by a group of explorers whose mission was to discover and map every unworldly place on Earth",
-                  price: 99,
-                  quantity: 5
-              },
-              {
-                  id: 4,
-                  img: "../assets/books/tarot_cards.jpg",
-                  title: "Tarot Cards",
-                  description: "A deck of tarot cards for daily readings. Some say it is the one used in The Quarry game.",
-                  price: 68,
-                  quantity: 10
-              },
-              {
-                  id: 5,
-                  img: "../assets/books/the_yellow_wallpaper",
-                  title: "The Yellow Wallpaper",
-                  description: "A feministic hauntingly novel written by Charlotte Gilman. One day, the protagonist finds herself locked in her room by her husband. Why? Purely out of medical reasons. Soon, she realizes that she's not alone in the room.",
-                  price: 24,
-                  quantity: 5
-              },
-              {
-                  id: 6,
-                  img: "../assets/books/house_of_leaves",
-                  title: "House of Leaves",
-                  description: "A novel \"written\" by Mark Danielweski. The report of an old man found dead in his own aparment, the damnable narration of a tattoo artist who found that report and the story of the house which changes dimensions... from the inside.",
-                  price: 89,
-                  quantity: 2
-              }
-          ]
+                      {
+                        id: 1,
+                        title: '4.50 from Paddington'
+                      },
+                      {
+                        id: 2,
+                        title: 'Cards on the Table'
+                      },
+                      {
+                        id: 1,
+                        title: 'Farewell, My Lovely'
+                      },
+                      {
+                        id: 2,
+                        title: 'The Long Goodbye'
+                      },
+                      {
+                        id: 1,
+                        title: 'Pet Sematary'
+                      },
+                      {
+                        id: 2,
+                        title: 'IT'
+                      },
+                      {
+                        id: 3,
+                        title: 'Carrey'
+                      },
+                      {
+                        id: 1,
+                        title: 'The Yellow Wallpaper'
+                      },
+                      {
+                        id: 1,
+                        title: 'Easter Rising 1916'
+                      },
+                      {
+                        id: 2,
+                        title: 'The Second Coming' 
+                      },
+                      {
+                        id: 3,
+                        title: 'The Winding Stairs'
+                      },
+                      {
+                        id: 4,
+                        title: 'A Vision'
+                      }, 
+                      {
+                        id: 1,
+                        title: 'The Cantos'
+                      }
+                    ]
           commit('SET_PRODUCTS', data)
         }, 1000)
       } catch (err) {
