@@ -56,10 +56,6 @@ export default new Vuex.Store({
               {
                 id: 2,
                 title: 'IT'
-              },
-              {
-                id: 3,
-                title: 'Carrey'
               }
             ]
           },
@@ -186,10 +182,6 @@ export default new Vuex.Store({
                       {
                         id: 2,
                         title: 'IT'
-                      },
-                      {
-                        id: 3,
-                        title: 'Carrey'
                       },
                       {
                         id: 1,
