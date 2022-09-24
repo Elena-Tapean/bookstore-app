@@ -17,7 +17,10 @@ export default new Vuex.Store({
             products: [
               {
                 id: 1,
-                title: '4.50 from Paddington'
+                title: '4.50 from Paddington',
+                description: '',
+                price: 35,
+                quantity: 1
               },
               {
                 id: 2,
