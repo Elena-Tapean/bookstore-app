@@ -28,8 +28,8 @@
             border-bottom: 1px solid black;
             transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
-           &:first-child, &:last-child {
-            animation: close 0.2s normal forwards ease-in-out;
+            &:first-child, &:last-child {
+                animation: close 0.2s normal forwards ease-in-out;
             }
             &:first-child {
                 transform: translateY(-8px);

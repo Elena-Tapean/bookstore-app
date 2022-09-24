@@ -151,19 +151,11 @@ export default new Vuex.Store({
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
     },
-    SHOW_PRODUCT (state, {id}) {
-      const index = state.products.findIndex(product => product.id === id)
-      const productDetails = {...state.products[index], img, title, description, price, quantity}
-      Vue.set(state.products, index, productDetails)
-    },
     BORROW_BOOK (state, product) {
       
     },
     BUY_BOOK (state, product) {
 
-    },
-    GO_BACK () {
-      history.back()
     }
   },
   actions: {
