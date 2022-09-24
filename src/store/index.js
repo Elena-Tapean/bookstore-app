@@ -238,11 +238,6 @@ export default new Vuex.Store({
       setTimeout(() => {
         commit('BUY_BOOK', {})
       })
-    },
-    async go_back({commit}) {
-      setTimeout(() => {
-        commit('GO_BACK', {})
-      })
     }
   },
   modules: {
