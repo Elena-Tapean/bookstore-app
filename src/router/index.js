@@ -19,7 +19,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/collectionsview/:name/:id',
+    path: '/collectionsview/:id/:name',
     name: 'CollectionsView',
     component: CollectionsView
   },
