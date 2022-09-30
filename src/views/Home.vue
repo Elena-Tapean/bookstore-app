@@ -1,7 +1,9 @@
 <template>
     <main class="home-page main-grid">
       <h1>Welcome to Es Bookstore</h1>
-      <h3 style="font-style: italic;">Read, experience, inspire.</h3>
+      <q style="font-style: italic;">Read, experience, inspire.</q>
+      <br/>
+      <br/>
       <ul>
         <li v-for="(collection, index) in collections" :key="index">
           <select @change="handleCollection">

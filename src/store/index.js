@@ -268,11 +268,6 @@ export default new Vuex.Store({
           price: 80,
           quantity: 5
       }
-    ],
-    collections: {
-      crime: ['C1', 'C2'],
-      horror: ['H1', 'H2'],
-      poetry: ['P1', 'P2']
-    }
+    ]
   }
 })
