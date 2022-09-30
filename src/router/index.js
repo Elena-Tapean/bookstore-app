@@ -6,29 +6,14 @@ import Product from '../views/Product.vue';
 import Profile from '../views/Profile.vue';
 import Login from '../views/Login.vue';
 import store from '../store';
-import HomeView from '../views/HomeView';
-import CollectionsView from '../views/CollectionsView';
-import ProductView from '../views/ProductView';
 import Basket from '../views/Basket';
+//import HomeView from '../views/HomeView';
+//import CollectionsView from '../views/CollectionsView';
+//import ProductView from '../views/ProductView';
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/homeview',
-    name: 'HomeView',
-    component: HomeView
-  },
-  {
-    path: '/collectionsview/:id',
-    name: 'CollectionsView',
-    component: CollectionsView
-  },
-  {
-    path: '/productview/:id',
-    name: 'ProductView',
-    component: ProductView
-  },
   {
     path: '/',
     name: 'Home',

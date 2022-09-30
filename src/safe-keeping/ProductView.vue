@@ -1,4 +1,4 @@
-<template>
+<!--<template>
     <section class="product-view main-grid">
         <h1>{{ product.name }}</h1>
         <h3>Collection:</h3>
@@ -40,4 +40,4 @@ export default {
     .product-view {
         margin-bottom: 10px;
 }
-</style>
+</style>-->

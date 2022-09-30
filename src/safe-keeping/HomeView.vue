@@ -1,4 +1,4 @@
-<template>
+<!--<template>
     <div class="home-view main-grid">
         <h1>These are the book collections:</h1>
         <ul>
@@ -41,4 +41,4 @@ export default {
             margin-bottom: 24px;
         }
     }
-</style>
+</style>-->

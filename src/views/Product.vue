@@ -5,7 +5,7 @@
         <p>{{ product.collectionId }}</p>
         <h3>Description:</h3>
         <p>{{ product.description }}</p>
-        <h3>Price:</h3> 
+        <h3>Price: (Ron)</h3> 
         <span>{{ product.price }}</span>
         <br/>
         <h3>Quantity:</h3>

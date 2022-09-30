@@ -1,4 +1,4 @@
-<template>
+<!--<template>
     <section class="collections-view main-grid">
         <h1>Select product from collection</h1>
         <ul>
@@ -31,4 +31,4 @@ export default {
             margin-bottom: 24px;
         }
     }
-</style>
+</style>-->
