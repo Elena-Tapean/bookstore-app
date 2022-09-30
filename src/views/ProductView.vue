@@ -18,7 +18,7 @@
         </select>
         <br/>
         <br/>
-        <button @click="handleBasket">Add to basket</button>
+        <button @click="addToBasket(product)">Add to basket</button>
     </section>
 </template>
 

@@ -1,17 +1,26 @@
 <template>
     <main class="home-page main-grid">
-      <h1>Home Page</h1>
-      <input type="text" 
+      <h1>Es Bookstore</h1>
+      <h3 style="font-style: italic;">Read, experience, inspire.</h3>
+
+      <!--<input type="text" 
             @input="handleSearch"
             v-model="search"
-            placeholder="search product..." />
+            placeholder="search product..." />-->
       <br/>
       <br/>
+
       <ul>
-        <li v-for="product in products" :key="product?.id">
-          <router-link :to="`/product/${product?.name}`">{{ product.name }}</router-link>
+        <li v-for="(collection, index) in collections" :key="index">
+          <select @change="handleCollection">
+            <option value="" selected disabled>Select collection</option>
+            <option v-for="item in collection" :key="item">{{ item }}</option>
+          </select>
+        </li>
+      </ul>
+
           <br/>
-          <div>
+          <!--<div>
             <button @click="decrement(product.id)">-</button>
             <span>{{ product.count || 0 }}</span>
             <button :disabled="product.quantity && product.quantity <= product.count" 
@@ -21,40 +30,39 @@
           <button :disabled="!product.count || product.count === 0" 
                   @click="addToBasket(product)">
           Add to Basket
-          </button>
-        </li>
-      </ul>
+          </button>-->
     </main>
 </template>
   
 <script>
-    export default {
-    name: "Home",
+export default {
+  name: "Home",
     data () {
       return {
-        search: '',
-        count: 1
       }
     },
-    computed: {
-      products () {
-        return this.$store.state.products 
-      }
-    },
-    methods: {
-      handleSearch() {
-        this.$store.commit('SEARCH_PRODUCTS', this.search)
-      },
-      increment (id) {
-        this.$store.commit('INCREMENT_PRODUCT_COUNT', {id})
-      },
-      decrement (id) {
-        this.$store.commit('DECREMENT_PRODUCT_COUNT', {id})
-      },
-      addToBasket (product) {
-        this.$store.commit('ADD_TO_BASKET', product)
-      }
+  computed: {
+    collections () {
+      return this.$store.getters.collections
     }
+  },
+  methods: {
+    handleCollection (ev) {
+      this.$router.push(`/collection/${ev.target.value}`)
+    }
+   // handleSearch() {
+     //   this.$store.commit('SEARCH_PRODUCTS', this.search)
+    //},
+    //increment (id) {
+        //this.$store.commit('INCREMENT_PRODUCT_COUNT', {id})
+   // },
+   // decrement (id) {
+     //   this.$store.commit('DECREMENT_PRODUCT_COUNT', {id})
+    //},
+    //addToBasket (product) {
+        //this.$store.commit('ADD_TO_BASKET', product)
+    //}
+  }
 }
 </script>
   
@@ -66,6 +74,15 @@
       img {
         width: 120px;
         height: 100px;
+      }
+      select {
+        border: none;
+        border-radius: 5px;
+        background-color: lightblue;
+        font-size: 18px;
+      }
+        ul, li {
+        list-style-type: none;
       }
       ul {
         width: 88%;
