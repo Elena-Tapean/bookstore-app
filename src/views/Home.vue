@@ -9,7 +9,7 @@
       <br/>
       <ul>
         <li v-for="product in products" :key="product?.id">
-          <router-link :to="`/product/${product?.title}`">{{ product.title }}</router-link>
+          <router-link :to="`/product/${product?.name}`">{{ product.name }}</router-link>
           <br/>
           <div>
             <button @click="decrement(product.id)">-</button>

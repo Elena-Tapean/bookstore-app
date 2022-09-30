@@ -6,152 +6,25 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    genres: [
-      {
-        id: 1,
-        title: 'Crime',
-        collections: [
-          {
-            id: 'Agatha Christie',
-            title: 'Agatha Christie',
-            products: [
-              {
-                id: 1,
-                title: '4.50 from Paddington',
-                description: 'Two trains running parralel. In one, a murder takes place. In the second, a witness sees it all, but no one believes her. The eyewitness turns to Miss Marple to solve the case.',
-                price: 35,
-                quantity: 5
-              },
-              {
-                id: 1,
-                title: 'Cards on the Table',
-                description: 'Invited to a party, every guest stays in room playing bridge. The host is in the living room all alone. No one sees anything, nobody hears anything, yet the host is dead. How did it happen?',
-                price: 35,
-                quantity: 5
-              }
-            ]
-          },
-          {
-            id: 'Raymond Chandler',
-            title: 'Raymond Chandler',
-            products: [
-              {
-                id: 3,
-                title: 'Farewell, My Lovely',
-                description: 'Detective Marlow is on the case again. This time the gangsters have a traitor whom they try desperately to find. A seductive lady appears out of nowhere. Neither Marlowe, nor anybody else can understand what her real motif is.',
-                price: 38,
-                quantity: 5
-              },
-              {
-                id: 4,
-                title: 'The Long Goodbye',
-                description: 'One of Raymond Chandler\'s famous novels. A wealthy man seeks Detective Marlowe to find out what has happened to his wife. Later on, as the investigation goes, the man commit suicide and the secrets are no longer secrets.',
-                price: 30,
-                quantity: 5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 2,
-        title: 'Horror',
-        collections: [
-          {
-            id: 'Stephen King',
-            title: 'Stephen King',
-            products: [
-              {
-                id: 5,
-                title: 'Pet Sematary',
-                description: 'There\'s an old cemetery in the ancient Native grounds. It is said it has supernatural powers to bring back the dead. But is it worth it? Is the soul of my beloved still inside their own body? Or an entity barely waiting to get possession over it? A family-friendly Until Dawn. Read with the lights off.',
-                price: 55,
-                quantity: 5
-              },
-              {
-                id: 6,
-                title: 'IT',
-                description: 'One of Stephen King\'s famous novels. IT has terrified more children than any book in the history of mankind. Safe for Anthony Hopkin\'s Hannibal Lector.',
-                price: 58,
-                quantity: 5
-              }
-            ]
-          },
-          {
-            id: 'Charlotte Perkins Gilman',
-            title: 'Charlotte Perkins Gilman',
-            products: [
-              {
-                id: 7,
-                title: 'The Yellow Wallpaper',
-                description: 'A Victorian feminist novel about a wealthy man and his wife. Because of some peculiar medical advice, the man seals his wife in her room. Soon after, she realizes that she\'s not alone in the room.',
-                price: 28,
-                quantity: 5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 3,
-        title: 'Poetry',
-        collections: [
-          {
-            id: 'William Butler Yeats',
-            title: 'William Butler Yeats',
-            products: [
-              {
-                id: 8,
-                title: 'Easter Rising 1916',
-                description: 'Easter of 1916 was not a time for celebration. The Irish wished for freedom, yet on such a hopeful day they were slain by the British.',
-                price: 25,
-                quantity: 5
-              },
-              {
-                id: 9,
-                title: 'The Second Coming',
-                description: 'The poem famous for its visionary outlook on the modern world and the coming of the Antichrist.',
-                price: 29,
-                quantity: 5
-              },
-              {
-                id: 10,
-                title: 'The Winding Stairs',
-                description: 'An early example of W.B. Yeats\'s late-Romantic poetry with inspiration taken from one of the poet\'s most belove locations, Thoor Ballylee.',
-                price: 18,
-                quantity: 5
-              },
-              {
-                id: 11,
-                title: 'A Vision',
-                description: 'Written in 1925, the book contains famous poems alongside astrological charts with the poet\'s authentic illustrations. Now readers can calculate and craft their own chart and see in what Destiny were they born into.',
-                price: 55,
-                quantity: 5
-              }
-            ]
-          },
-          {
-            id: 'Ezra Pound',
-            title: 'Ezra Pound',
-            products: [
-              {
-                id: 12,
-                title: 'The Cantos',
-                description: 'A life-long composition, the Father of English Modernism expresses everything and nothing at the same time. A complete work with adnotations from his biographers, this book can help students and professors alike in their literary pursuit.',
-                price: 55,
-                quantity: 5
-              }
-            ]
-          }
-        ]
-      }
-    ],
+    isModal: false,
     products: [],
     productsCopy: [],
     user: {},
     basket: []
   },
   getters: {
+    collections: state => {
+      const data = state.products.reduce((acc, product) => {
+        if (!acc[product.collectionId]) {
+          acc[product.collectionId] = []
+        }
+        if (!acc[product.collectionId].includes(product.collectionName)) {
+          acc[product.collectionId].push(product.collectionName)
+        }
+        return acc
+      }, {})
+      return data
+    }
   },
   mutations: {
     SET_PRODUCTS (state, data) {
@@ -183,106 +56,107 @@ export default new Vuex.Store({
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
     },
-    BORROW_BOOK (state, product) {
-      
-    },
-    BUY_BOOK (state, product) {
-
-    }
   },
   actions: {
     async get_data ({commit}) {
       try {
         setTimeout(() => {
           const data = [
-                      {
-                        id: 1.1,
-                        title: '4.50 from Paddington',
-                        description: 'Two trains running parralel. In one, a murder takes place. In the second, a witness sees it all, but no one believes her. The eyewitness turns to Miss Marple to solve the case.',
-                        price: 35,
-                        quantity: 5
-                      },
-                      {
-                        id: 1.2,
-                        title: 'Cards on the Table',
-                        description: 'Invited to a party, every guest stays in room playing bridge. The host is in the living room all alone. No one sees anything, nobody hears anything, yet the host is dead. How did it happen?',
-                        price: 35,
-                        quantity: 5
-                      },
-                      {
-                        id: 1.3,
-                        title: 'Farewell, My Lovely',
-                        description: 'Detective Marlow is on the case again. This time the gangsters have a traitor whom they try desperately to find. A seductive lady appears out of nowhere. Neither Marlowe, nor anybody else can understand what her real motif is.',
-                        price: 38,
-                        quantity: 5
-                      },
-                      {
-                        id: 1.4,
-                        title: 'The Long Goodbye',
-                        description: 'One of Raymond Chandler\'s famous novels. A wealthy man seeks Detective Marlowe to find out what has happened to his wife. Later on, as the investigation goes, the man commit suicide and the secrets are no longer secrets.',
-                        price: 30,
-                        quantity: 5
-                      },
-                      {
-                        id: 2.1,
-                        title: 'Pet Sematary',
-                        description: 'There\'s an old cemetery in the ancient Native grounds. It is said it has supernatural powers to bring back the dead. But is it worth it? Is the soul of my beloved still inside their own body? Or an entity barely waiting to get possession over it? A family-friendly Until Dawn. Read with the lights off.',
-                        price: 55,
-                        quantity: 5
-                      },
-                      {
-                        id: 2.2,
-                        title: 'IT',
-                        description: 'One of Stephen King\'s famous novels. IT has terrified more children than any book in the history of mankind. Safe for Anthony Hopkin\'s Hannibal Lector.',
-                        price: 58,
-                        quantity: 5
-                      },
-                      {
-                        id: 2.3,
-                        title: 'The Yellow Wallpaper',
-                        description: 'A Victorian feminist novel about a wealthy man and his wife. Because of some peculiar medical advice, the man seals his wife in her room. Soon after, she realizes that she\'s not alone in the room.',
-                        price: 28,
-                        quantity: 5
-                      },
-                      {
-                        id: 3.1,
-                        title: 'Easter Rising 1916',
-                        description: 'Easter of 1916 was not a time for celebration. The Irish wished for freedom, yet on such a hopeful day they were slain by the British.',
-                        price: 25,
-                        quantity: 5
-                      },
-                      {
-                        id: 3.2,
-                        title: 'The Second Coming',
-                        description: 'The poem famous for its visionary outlook on the modern world and the coming of the Antichrist.',
-                        price: 29,
-                        quantity: 5 
-                      },
-                      {
-                        id: 3.3,
-                        title: 'The Winding Stairs',
-                        description: 'An early example of W.B. Yeats\'s late-Romantic poetry with inspiration taken from one of the poet\'s most belove locations, Thoor Ballylee.',
-                        price: 18,
-                        quantity: 5
-                      },
-                      {
-                        id: 3.4,
-                        title: 'A Vision',
-                        description: 'Written in 1925, the book contains famous poems alongside astrological charts with the poet\'s authentic illustrations. Now readers can calculate and craft their own chart and see in what Destiny were they born into.',
-                        price: 55,
-                        quantity: 5
-                      }, 
-                      {
-                        id: 3.5,
-                        title: 'The Cantos',
-                        description: 'A life-long composition, the Father of English Modernism expresses everything and nothing at the same time. A complete work with adnotations from his biographers, this book can help students and professors alike in their literary pursuit.',
-                        price: 55,
-                        quantity: 5
-                      }
-                    ]
+            {
+              id: 1,
+              name: '4.50 from Paddington',
+              collectionId: 'Crime',
+              collectionName: 'C1',
+              description: 'Two trains running parallel. A crime is committed in the first. In the second a witness saw the killer, but no one believes her. It\'s time for Miss Marple.',
+              price: 35,
+              quantity: 5
+          },
+          {
+              id: 2,
+              name: 'Cards on the Table',
+              collectionId: 'Crime',
+              collectionName: 'C1',
+              description: 'Every guest plays bridge in separate rooms while the host relaxes in the living room. How was it possible for the host to be murdered when every guest had their eyes focused on the game?',
+              price: 35,
+              quantity: 5
+          },
+          {
+              id: 3,
+              name: 'Farewell, My Lovely',
+              collectionId: 'Crime',
+              collectionName: 'C2',
+              description: 'What seems as a usual case of gangsters and crime turns out to be more of a twist. Detective Marlowe is forced to strike a deal with the toughest of the gangsters to solve the case and find his molly.',
+              price: 30,
+              quantity: 5
+          },
+          {
+              id: 4,
+              name: 'The Long Goodbye',
+              collectionId: 'Crime',
+              collectionName: 'C2',
+              description: 'A wealthy man is desperate to find his missing wife. Detective Marlowe takes up the case. During his investigation, the man commits suicide and Marlowe is left with secrets never heard of before.',
+              price: 28,
+              quantity: 5
+          },
+          {
+              id: 5,
+              name: 'Pet Sematary',
+              collectionId: 'Horror',
+              collectionName: 'H1',
+              description: 'A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. When the family\'s baby boy dies, the father is left to choose: to accept death as a natural way of life or bring the beloved child back in his life?',
+              price: 55,
+              quantity: 5
+          },
+          {
+              id: 6,
+              name: 'IT',
+              collectionId: 'Horror',
+              collectionName: 'H1',
+              description: 'No one would think that a clown might inspire fear and horror. But here it is. IT, the famous book by Stephen King, is now re-published with illustrations coming from creative artists that have read the book and felt inspired. Read, look and feel fear.',
+              price: 60,
+              quantity: 5
+          },
+          {
+              id: 7,
+              name: 'The Yellow Wallpaper',
+              collectionId: 'Horror',
+              collectionName: 'H2',
+              description: 'A Victorian husband heeds the advice of the doctor and isolates his wife in her bedroom. The woman feministically contemplates on how quickly men think of their women as being hysterical when they are but a bit ill. Soon enough she finds out that she\'s not the only one in her room.',
+              price: 18,
+              quantity: 3
+          },
+          {
+              id: 8,
+              name: 'The Second Coming',
+              collectionId: 'Poetry',
+              collectionName: 'P1',
+              description: 'A visionary poem about the coming of the Antichrist and the destruction of the Modern world through the reverse of order. Students and professors alike may find the volume at hand a primary source for their thesis papers.',
+              price: 50,
+              quantity: 5
+          },
+          {
+              id: 9,
+              name: 'A Vision',
+              collectionId: 'Poetry',
+              collectionName: 'P1',
+              description: 'A magical volume comprised of some of Yeats\' greatest later poems and his illustrative philosophy of the 28 personalities based on the phases of the moon.',
+              price: 80,
+              quantity: 5
+          },
+          {
+              id: 10,
+              name: 'The Cantos',
+              collectionId: 'Poetry',
+              collectionName: 'P2',
+              description: 'A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.',
+              price: 80,
+              quantity: 5
+          }
+        ]
           commit('SET_PRODUCTS', data)
         }, 1000)
       } catch (err) {
+        console.log(err)
       }
     },
     async login ({commit}, user) {
@@ -301,17 +175,104 @@ export default new Vuex.Store({
     async logout ({commit}) {
       commit('SET_USER', {})
     },
-    async borrow ({commit}) { 
-      setTimeout(() => {
-        commit('BORROW_BOOK', {})
-      })
-    },
-    async buy ({commit}) { 
-      setTimeout(() => {
-        commit('BUY_BOOK', {})
-      })
-    }
   },
   modules: {
+    products: [
+      {
+          id: 1,
+          name: '4.50 from Paddington',
+          collectionId: 'Crime',
+          collectionName: 'C1',
+          description: 'Two trains running parallel. A crime is committed in the first. In the second a witness saw the killer, but no one believes her. It\'s time for Miss Marple.',
+          price: 35,
+          quantity: 5
+      },
+      {
+          id: 2,
+          name: 'Cards on the Table',
+          collectionId: 'Crime',
+          collectionName: 'C1',
+          description: 'Every guest plays bridge in separate rooms while the host relaxes in the living room. How was it possible for the host to be murdered when every guest had their eyes focused on the game?',
+          price: 35,
+          quantity: 5
+      },
+      {
+          id: 3,
+          name: 'Farewell, My Lovely',
+          collectionId: 'Crime',
+          collectionName: 'C2',
+          description: 'What seems as a usual case of gangsters and crime turns out to be more of a twist. Detective Marlowe is forced to strike a deal with the toughest of the gangsters to solve the case and find his molly.',
+          price: 30,
+          quantity: 5
+      },
+      {
+          id: 4,
+          name: 'The Long Goodbye',
+          collectionId: 'Crime',
+          collectionName: 'C2',
+          description: 'A wealthy man is desperate to find his missing wife. Detective Marlowe takes up the case. During his investigation, the man commits suicide and Marlowe is left with secrets never heard of before.',
+          price: 28,
+          quantity: 5
+      },
+      {
+          id: 5,
+          name: 'Pet Sematary',
+          collectionId: 'Horror',
+          collectionName: 'H1',
+          description: 'A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. When the family\'s baby boy dies, the father is left to choose: to accept death as a natural way of life or bring the beloved child back in his life?',
+          price: 55,
+          quantity: 5
+      },
+      {
+          id: 6,
+          name: 'IT',
+          collectionId: 'Horror',
+          collectionName: 'H1',
+          description: 'No one would think that a clown might inspire fear and horror. But here it is. IT, the famous book by Stephen King, is now re-published with illustrations coming from creative artists that have read the book and felt inspired. Read, look and feel fear.',
+          price: 60,
+          quantity: 5
+      },
+      {
+          id: 7,
+          name: 'The Yellow Wallpaper',
+          collectionId: 'Horror',
+          collectionName: 'H2',
+          description: 'A Victorian husband heeds the advice of the doctor and isolates his wife in her bedroom. The woman feministically contemplates on how quickly men think of their women as being hysterical when they are but a bit ill. Soon enough she finds out that she\'s not the only one in her room.',
+          price: 18,
+          quantity: 3
+      },
+      {
+          id: 8,
+          name: 'The Second Coming',
+          collectionId: 'Poetry',
+          collectionName: 'P1',
+          description: 'A visionary poem about the coming of the Antichrist and the destruction of the Modern world through the reverse of order. Students and professors alike may find the volume at hand a primary source for their thesis papers.',
+          price: 50,
+          quantity: 5
+      },
+      {
+          id: 9,
+          name: 'A Vision',
+          collectionId: 'Poetry',
+          collectionName: 'P1',
+          description: 'A magical volume comprised of some of Yeats\' greatest later poems and his illustrative philosophy of the 28 personalities based on the phases of the moon.',
+          price: 80,
+          quantity: 5
+      },
+      {
+          id: 10,
+          name: 'The Cantos',
+          collectionId: 'Poetry',
+          collectionName: 'P2',
+          description: 'A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.',
+          price: 80,
+          quantity: 5
+      }
+    ],
+    collections: {
+      crime: ['C1', 'C2'],
+      horror: ['H1', 'H2'],
+      poetry: ['P1', 'P2']
+    }
   }
 })

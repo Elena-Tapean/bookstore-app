@@ -1,26 +1,44 @@
 <template>
-    <div class="main-grid">
-        <h1>Here are the products divided in genres:</h1>
-    <ul>
-        <li v-for="genre in genres" :key="genre.id" >
-            <h2>{{genre.title}}</h2>
-            <ul>
-                <li v-for="collection in genre.collections" :key="collection.id">
-                    <router-link :to="`/collectionsview/${collection.id}/${genre.id}`">{{collection.title}}</router-link>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    </div>
+    <div class="home-view main-grid">
+        <h1>These are the book collections:</h1>
+        <ul>
+            <li v-for="(collection, index) in collections" :key="index">
+                <select @change="handleCollection">
+                    <option value="" selected disabled>Select collection</option>
+                    <option v-for="item in collection" :key="item">{{ item }}</option>
+                </select>
+            </li>
+        </ul>
+    </div>  
 </template>
 
 <script>
 export default {
-    name: 'Home',
+    name: 'HomeView',
+    data () {
+        return {
+        }
+    },
     computed: {
-        genres () {
-            return this.$store.state.genres
+        collections () {
+            return this.$store.getters.collections
+        }
+    },
+    methods: {
+        handleCollection (ev) {
+            this.$router.push(`/collectionsview/${ev.target.value}`)
         }
     }
 }
 </script>
+
+<style lang="scss">
+    .home-view {
+        ul, li {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 24px;
+        }
+    }
+</style>

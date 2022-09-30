@@ -1,35 +1,34 @@
 <template>
-    <div class="main-grid">
-        <h1>{{$router.currentRoute.params.id}} Collection {{$router.currentRoute.params.name}}</h1>
+    <section class="collections-view main-grid">
+        <h1>Select product from collection</h1>
         <ul>
-            <li v-for="product in products" :key="product.id">
+            <li v-for="product in products">
+                <router-link :to="`/productview/${product.id}`">{{ product.name }}</router-link>
             </li>
         </ul>
-    </div>
+    </section>
 </template>
 
 <script>
 export default {
-    name: 'Collections',
+    name: 'CollectionsView',
     computed: {
-        collectionName () {
-            return this.$router.currentRoute.params.name
-        },
-        collectionId () {
-            return this.$router.currentRoute.params.id
-        },
         products () {
-            const genres = this.$store.state.genres 
-            const genre = genres.filter( (genre) =>  genre.id === this.collectionName )
-            console.log(genre)
-            return [
-                {
-                    //here I have to filter products
-                    //thinking to try the filter() method with product[index]
-                    //console.log code to HTML
-                }
-            ]
+            const collectionName = this.$router.currentRoute.params.id
+            const products = this.$store.state.products
+            return products.filter(obj => obj.collectionName === collectionName)
         }
     }
 }
 </script>
+
+<style lang="scss">
+    .collections-view {
+        ul, li {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 24px;
+        }
+    }
+</style>
