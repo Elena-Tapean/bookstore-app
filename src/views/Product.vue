@@ -1,6 +1,7 @@
 <template>
     <main class="product-page main-grid">
         <h1>{{ product.name }}</h1>
+        <img :src= alt="book cover" />
         <h3>Collection:</h3>
         <p>{{ product.collectionId }}</p>
         <h3>Description:</h3>
@@ -23,10 +24,9 @@
 </template>
 
 <script>
-
 export default {
     name: 'Product',
-    data() {
+    data () {
         return {
         }
     },

@@ -6,7 +6,9 @@ import Product from '../views/Product.vue';
 import Profile from '../views/Profile.vue';
 import Login from '../views/Login.vue';
 import store from '../store';
-import Basket from '../views/Basket';
+import Basket from '../views/Basket.vue';
+import Genre from '../views/Genre.vue';
+import Authors from '../views/Authors.vue'
 //import HomeView from '../views/HomeView';
 //import CollectionsView from '../views/CollectionsView';
 //import ProductView from '../views/ProductView';
@@ -28,6 +30,16 @@ const routes = [
     path: '/product/:id',
     name: 'Product',
     component: Product,
+  },
+  {
+    path: '/genre/:id',
+    name: 'Genre',
+    component: Genre
+  },
+  {
+    path: '/authors/:id',
+    name: 'Authors',
+    component: Authors
   },
   {
     path: '/about',
