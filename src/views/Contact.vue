@@ -30,11 +30,16 @@
 
 <script>
   export default {
-      name: 'Contact'
-  }
-
-  function handleSubmit (ev) {
-    ev.preventDefault
+      name: 'Contact',
+      data () {
+        return {
+        }
+      },
+      methods: {
+        handleSubmit (ev) {
+          ev.preventDefault
+        }
+      }
   }
 </script>
 
