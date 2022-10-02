@@ -1,6 +1,6 @@
 <template>
     <main class="collection-page main-grid">
-        <h1>Select the product from collection</h1>
+        <h1>Select the products from collection</h1>
         <ul>
             <li v-for="product in products">
                 <router-link :to="`/product/${product.id}`">{{ product.name }}</router-link>
@@ -27,6 +27,14 @@ export default {
         @media only screen and (min-width: 0) {
             height: 100%;
             
+            h1 {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+            a {
+                font-size: 20px;
+                font-style: italic;
+            }
             ul, li {
                 list-style-type: none;
             }
@@ -35,8 +43,10 @@ export default {
             }
         }
 
-    @media only screen and (min-width: 1024px) {
-        
-    }
+        @media only screen and (min-width: 1024px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
 }
 </style>
