@@ -106,12 +106,23 @@ export default new Vuex.Store({
           description: 'A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.',
           price: 80,
           quantity: 5
+      },
+      {
+        id: 11,
+        name: 'Van Richten\'s Guide to Vampires',
+        img: require('../assets/books/vampires.jpg'),
+        collectionId: 'Young Adult',
+        collectionName: 'YA1',
+        description: 'A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.',
+        price: 55,
+        quantity: 5
       }
     ],
     collections: {
       crime: ['C1', 'C2'],
       horror: ['H1', 'H2'],
-      poetry: ['P1', 'P2']
+      poetry: ['P1', 'P2'],
+      young: ['YA1']
     },
     genres: [
       {
@@ -382,6 +393,15 @@ export default new Vuex.Store({
               description: 'A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.',
               price: 80,
               quantity: 5
+          },
+          {
+            id: 11,
+            name: 'Van Richten\'s Guide to Vampires',
+            collectionId: 'Young Adult',
+            collectionName: 'YA1',
+            description: 'A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.',
+            price: 55,
+            quantity: 5
           }
         ]
           commit('SET_PRODUCTS', data)
