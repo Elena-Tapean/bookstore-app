@@ -15,6 +15,7 @@ export default {
     name: 'Genre',
     data () {
         return {
+        //dangerouslySetInnerHTML
         }
     },
     computed: {
@@ -41,31 +42,43 @@ export default {
                 height: 220px;
                 border-radius: 5px;
             }
-            select {
-                border: none;
-                border-radius: 5px;
-                background-color: lightblue;
+            h2 {
+                font-size: 21px;
+                font-style: normal;
+            }
+            h3 {
                 font-size: 18px;
+                font-style: normal;
             }
-            ul, li {
-                list-style-type: none;
+            p {
+                margin: 0 30px;
+                font-size: 16px;
+                text-align: justify;
+                text-indent: 30px;
+                line-height: 2;
             }
-            ul {
-                width: 40%;
-                max-width: 220px;
-                margin: 0 auto;
-            }
-            li {
+        }
+
+        @media only screen and (min-width: 1024px) {
+            img {
+                width: 120px;
                 height: 100px;
-                margin-bottom: 24px;
-                border-radius: 4px;
-                font-size: 20px;
-                border: 1px solid cadetblue;
-                background-color: lightblue;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                margin: 5px;
+            }
+            h2 {
+                font-size: 24px;
+                font-style: normal;
+            }
+            h3 {
+                font-size: 21px;
+                font-style: normal;
+            }
+            p {
+                margin: 0 50px;
+                font-size: 19px;
+                text-align: justify;
+                text-indent: 30px;
+                line-height: 2;
             }
         }
 }

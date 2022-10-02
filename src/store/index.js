@@ -190,27 +190,51 @@ export default new Vuex.Store({
     authors: [
       {
         id: 'Agatha Christie',
-        name: 'Agatha Christie'
+        name: 'Agatha Christie',
+        birthday: '15 September 1890',
+        nation: 'English',
+        bio: 'Dame Agatha Mary Clarissa Christie, Lady Mallowan, was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple. A writer during the \"Golden Age of Detective Fiction\", Christie has been called the \"Queen of Crime\". <br/> She also wrote six novels under the pseudonym Mary Westmacott. In 1971, she was made a Dame (DBE) by Queen Elizabeth II for her contributions to literature. Guinness World Records lists Christie as the best-selling fiction writer of all time, her novels having sold more than two billion copies.',
+        quote: 'Never tell all you know - not even to the person you know best.'
       },
       {
         id: 'Raymond Chandler',
-        name: 'Raymond Chandler'
+        name: 'Raymond Chandler',
+        birthday: '23 July 1888',
+        nation: 'American-British',
+        bio: 'Raymond Thornton Chandler was an American-British novelist and screenwriter. In 1932, at the age of forty-four, Chandler became a detective fiction writer after losing his job as an oil company executive during the Great Depression. <br/> Chandler had an immense stylistic influence on American popular literature. He is a founder of the hard-boiled school of detective fiction, along with Dashiell Hammett, James M. Cain and other Black Mask writers. The protagonist of his novels, Philip Marlowe, like Hammett\'s Sam Spade, is considered by some to be synonymous with \"private detective\". ',
+        quote: 'There is no trap so deadly as the trap you set for yourself.'
       },
       {
         id: 'Stephen King',
-        name: 'Stephen King'
+        name: 'Stephen King',
+        birthday: '21 September 1947',
+        nation: 'American',
+        bio: 'Stephen Edwin King is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels. <br/> Described as the \"King of Horror\" (a play on his surname and a reference to his high standing in pop culture) his books have sold more than 350 million copies, and many have been adapted into films, television series, miniseries, and comic books.',
+        quote: 'You can, you should and, if you\'re brave enough to start, you will.'
       },
       {
         id: 'Chalotte Perkins Gilman',
-        name: 'Charlotte Perkins Gilman'
+        name: 'Charlotte Perkins Gilman',
+        birthday: '3 July 1860',
+        nation: 'American',
+        bio: 'Charlotte Perkins Gilman was an American humanist, novelist, writer, lecturer, advocate for social reform, and eugenicist. <br/> She was a utopian feminist and served as a role model for future generations of feminists because of her unorthodox concepts and lifestyle. She has been inducted into the National Women\'s Hall of Fame. Her best remembered work today is her semi-autobiographical short story \"The Yellow Wallpaper\", which she wrote after a severe bout of postpartum psychosis.',
+        quote: 'Eternity is not something that begins after you\'re dead. It is going on all the time. We are in it now.'
       },
       {
         id: 'William Butler Yeats',
-        name: 'William Butler Yeats'
+        name: 'William Butler Yeats',
+        birthday: '13 June 1865',
+        nation: 'Irish',
+        bio: 'William Butler Yeats was an Irish poet, dramatist, writer and one of the foremost figures of 20th-century literature. He was a driving force behind the Irish Literary Revival and became a pillar of the Irish literary establishment who helped to found the Abbey Theatre. In his later years he served two terms as a Senator of the Irish Free State. <br/> A Protestant of Anglo-Irish descent, Yeats was born in Sandymount and was educated in Dublin and London and spent childhood holidays in County Sligo. He studied poetry from an early age, when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, lasting roughly from his student days at the Metropolitan School of Art in Dublin until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display debts to Edmund Spenser, Percy Bysshe Shelley and the poets of the Pre-Raphaelite Brotherhood. <br/> From 1900 his poetry grew more physical, realistic and politicised. He moved away from the transcendental beliefs of his youth, though he remained preoccupied with some elements including cyclical theories of life. He had become the chief playwright for the Irish Literary Theatre in 1897, and early on promoted younger poets such as Ezra Pound. <br/> Yeats was awarded the Nobel Prize in Literature in 1923.',
+        quote: 'There are no strangers here; only friends you haven\'t yet met.'
       },
       {
         id: 'Ezra Pound',
-        name: 'Ezra Pound'
+        name: 'Ezra Pound',
+        birthday: '30 October 1885',
+        nation: 'American',
+        bio: 'Ezra Weston Loomis Pound was an expatriate American poet and critic, a major figure in the early modernist poetry movement. Pound\'s contribution to poetry began in the early 20th century with his role in developing Imagism, a movement stressing precision and economy of language. <br/> Working in London as foreign editor of several American literary magazines, he helped discover and shape the work of contemporaries such as T. S. Eliot, Ernest Hemingway, and James Joyce. He was responsible for the 1914 serialization of Joyce\'s A Portrait of the Artist as a Young Man, the 1915 publication of Eliot\'s \"The Love Song of J. Alfred Prufrock\", and the serialization from 1918 of Joyce\'s Ulysses. <br/> Hemingway wrote in 1932 that, for poets born in the late 19th or early 20th century, not to be influenced by Pound would be \"like passing through a great blizzard and not feeling its cold.\"',
+        quote: 'This is no book. Whoever touches this touches a person.'
       }
     ],
     isModal: false,
