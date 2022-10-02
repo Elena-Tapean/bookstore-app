@@ -2,7 +2,7 @@
     <main class="about-page main-grid">
     <h1>About</h1>
     <div class="min-zero">
-        <img src="../assets/about.jpg" alt="bookstore about page" />
+        <img src="../assets/home.jpg" alt="about page" />
         <h3>Welcome to Es Bookstore!</h3>
         <p>
             Say, have you ever read a book in a library and fell in love with it? So much that you wanted to keep it? Here, at Es Bookstore you can keep your borrowed books by paying its price. Regulars get discounts.
@@ -18,7 +18,7 @@
             </p>
         </div>
         <div>
-            <img src="../assets/about.jpg" alt="bookstore about page" />
+            <img src="../assets/home.jpg" alt="bookstore about page" />
         </div>
     </div>
     </main>
@@ -73,7 +73,7 @@
             margin-top: 30px;
         
             img {
-                width: 720px;
+                width: 620px;
                 height: 500px;
             }
             h3 {

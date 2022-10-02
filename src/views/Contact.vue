@@ -2,7 +2,7 @@
     <main class="contact-info main-grid">
       <h1>Contact</h1>
       <div class="min-zero">
-        <img src="../assets/contact.jpg" alt="bookstore contact page" />
+        <img src="../assets/home.jpg" alt="bookstore contact page" />
         <p>
           We have a solely online presence. 
           Borrow, read and buy books at the comfort of your home. Once bought, you obtain the full ebook version of the book.
@@ -23,7 +23,7 @@
         <input type="email" id="email" placeholder="name@mail.com" />
         <button @Click={handleSubmit}>Submit</button>
         </p>
-        <img src="../assets/contact.jpg" alt="bookstore contact page" />
+        <img src="../assets/home.jpg" alt="bookstore contact page" />
       </div>
     </main>
 </template>
@@ -101,7 +101,7 @@
       margin-top: 30px;
       
       img {
-        width: 720px;
+        width: 620px;
         height: 500px;
       }
       h3 {

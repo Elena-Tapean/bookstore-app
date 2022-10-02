@@ -276,6 +276,7 @@ export default {
           }
           a:hover {
             text-decoration: underline;
+            color: red;
           }
         }
       }
