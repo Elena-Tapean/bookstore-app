@@ -116,13 +116,66 @@ export default new Vuex.Store({
         description: 'A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.',
         price: 55,
         quantity: 5
+      },
+      {
+        id: 12,
+        name: 'Atlas Obscura',
+        img: require('../assets/books/atlas_obscura.jpg'),
+        collectionId: 'Travel',
+        collectionName: 'TRA1',
+        description: 'A travelogue to exotic and mysterious places around the world. A group of young people embark on a journey to discover, catalogue and admire the awe-inspiring places of our world.',
+        price: 100,
+        quantity: 5
+      },
+      {
+        id: 13,
+        name: 'Tarot Cards',
+        img: require('../assets/books/tarot_cards.jpg'),
+        collectionId: 'General Fiction',
+        collectionName: 'GF1',
+        description: 'Due to the release of The Quarry, a complex decision-making horror game, the tarot cards are once more the center of interest in what seems to be the endless quest to understanding destiny.',
+        price: 80,
+        quantity: 5
+      },
+      {
+        id: 14,
+        name: 'Klara and the Sun',
+        img: require('../assets/books/klara_and_the_sun.jpg'),
+        collectionId: 'Literary Fiction',
+        collectionName: 'LF1',
+        description: 'In the near future, robots would take the role of mannechins. They will be put on shop displays to delight passerbys. On a particular sunny day, Klara (one of the robots) awakes and contemplates the view before her. The Sun is her best friend for it is the celestial star that gives her power to move, to feel, to interact.',
+        price: 54,
+        quantity: 5
+      },
+      {
+        id: 15,
+        name: 'Machines Like Me',
+        img: require('../assets/books/machines_like_me.jpg'),
+        collectionId: 'Literary Fiction',
+        collectionName: 'LF2',
+        description: 'The first trans-realist novel of the post-postmodern world, the novel centers around the idea that robots would be the next human beings.',
+        price: 54,
+        quantity: 5
+      },
+      {
+        id: 16,
+        name: 'House of Leaves',
+        img: require('../assets/books/house_of_leaves.jpg'),
+        collectionId: 'Horror',
+        collectionName: 'H3',
+        description: 'A complex book about a tattoo artist obsessed with the death of his neighbour, a mysterious report that no one seems to know, a photographer exploring a rural house, a family that lives in that house, the so-called truth that the tattoo artist figures out while reading that report, the last days of the photographer inside that house and how the house seems to get bigger from the inside than the outside. This book explores the possibility that reality is not what it seems and that space is just another unknown concept as much as time. The book is crazier than James Joyce\'s Ulysses, but it is appreciated among the gamers that know about The Backrooms.',
+        price: 80,
+        quantity: 2
       }
     ],
     collections: {
       crime: ['C1', 'C2'],
-      horror: ['H1', 'H2'],
+      horror: ['H1', 'H2', 'H3'],
       poetry: ['P1', 'P2'],
-      young: ['YA1']
+      young: ['YA1'],
+      travel: ['TRA1'],
+      general: ['GF1'],
+      literary: ['LF1', 'LF2'],
     },
     genres: [
       {
@@ -200,8 +253,36 @@ export default new Vuex.Store({
     ],
     authors: [
       {
+        id: 'Kazuo Ishiguro',
+        name: 'Kazuo Ishiguro',
+        img: require('../assets/authors/ishiguro.jpg'),
+        birthday: '8 November 1954',
+        nation: 'English',
+        bio: 'Kazuo Ishiguro (Sir) is an English novelist, screenwriter, musician, and short-story writer. Ishiguro was born in Nagasaki, Japan, and moved to Britain in 1960 with his parents when he was five. <br/> He is one of the most critically-acclaimed and praised contemporary fiction authors writing in English, being awarded the 2017 Nobel Prize in Literature. In its 2017 citation, the Swedish Academy described Ishiguro as a writer "who, in novels of great emotional force, has uncovered the abyss beneath our illusory sense of connection with the world".',
+        quote: 'There was another life that I might have had, but I am having this one.'
+      },
+      {
+        id: 'Ian McEwan',
+        name: 'Ian McEwan',
+        img: require('../assets/authors/mcewan.jpg'),
+        birthday: '21 June 1948',
+        nation: 'English',
+        bio: 'Ian McEwan is an English novelist and screenwriter. In 2008, The Times featured him on its list of "The 50 greatest British writers since 1945" and The Daily Telegraph ranked him number 19 in its list of the "100 most powerful people in British culture". <br/> McEwan began his career writing sparse, Gothic short stories. His first two novels, The Cement Garden (1978) and The Comfort of Strangers (1981), earned him the nickname \"Ian Macabre\". His next novel, Atonement, garnered acclaim and was adapted into an Oscar-winning film featuring Keira Knightley and James McAvoy.',
+        quote: 'Imagining what it is like to be someone other than yourself is at the core of our humanity. It is the essence of compassion and it is the beginning of morality.'
+      },
+      {
+        id: 'Mark Z. Danielweski',
+        name: 'Mark Z. Danielweski',
+        img: require('../assets/authors/danielweski.jpg'),
+        birthday: '5 March 1966',
+        nation: 'American',
+        bio: 'Mark Z. Danielweski is an American fiction author. He is most widely known for his debut novel House of Leaves (2000), which won the New York Public Library\'s Young Lions Fiction Award. Danielewski began work on a proposed 27-volume series, The Familiar, although he completed only 5 volumes before halting the project in 2017. <br/> Danielewski\'s work is characterized by an intricate, multi-layered typographical variation, or page layout, which he refers to as \"signiconic\". Sometimes known as visual writing,  the typographical variation corresponds directly, at any given narratological point in time, to the physical space of the events in the fictional world as well as the physical space of the page and the reader. Early on, critics characterized his writing as being ergodic literature, and Danielewski has described his style as: <br/> \"Signiconic = sign + icon. Rather than engage those textual faculties of the mind remediating the pictorial or those visual faculties remediating language, the signiconic simultaneously engages both in order to lessen the significance of both and therefore achieve a third perception no longer dependent on sign and image for remediating a world in which the mind plays no part.\"',
+        quote: 'I still get nightmares. In fact, I get them so often I should be used to them by now. I\'m not. No one ever really gets used to nightmares.'
+      },
+      {
         id: 'Agatha Christie',
         name: 'Agatha Christie',
+        img: require('../assets/authors/agatha.jpg'),
         birthday: '15 September 1890',
         nation: 'English',
         bio: 'Dame Agatha Mary Clarissa Christie, Lady Mallowan, was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple. A writer during the \"Golden Age of Detective Fiction\", Christie has been called the \"Queen of Crime\". <br/> She also wrote six novels under the pseudonym Mary Westmacott. In 1971, she was made a Dame (DBE) by Queen Elizabeth II for her contributions to literature. Guinness World Records lists Christie as the best-selling fiction writer of all time, her novels having sold more than two billion copies.',
@@ -210,6 +291,7 @@ export default new Vuex.Store({
       {
         id: 'Raymond Chandler',
         name: 'Raymond Chandler',
+        img: require('../assets/authors/chandler.jpg'),
         birthday: '23 July 1888',
         nation: 'American-British',
         bio: 'Raymond Thornton Chandler was an American-British novelist and screenwriter. In 1932, at the age of forty-four, Chandler became a detective fiction writer after losing his job as an oil company executive during the Great Depression. <br/> Chandler had an immense stylistic influence on American popular literature. He is a founder of the hard-boiled school of detective fiction, along with Dashiell Hammett, James M. Cain and other Black Mask writers. The protagonist of his novels, Philip Marlowe, like Hammett\'s Sam Spade, is considered by some to be synonymous with \"private detective\". ',
@@ -218,6 +300,7 @@ export default new Vuex.Store({
       {
         id: 'Stephen King',
         name: 'Stephen King',
+        img: require('../assets/authors/king.jpg'),
         birthday: '21 September 1947',
         nation: 'American',
         bio: 'Stephen Edwin King is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels. <br/> Described as the \"King of Horror\" (a play on his surname and a reference to his high standing in pop culture) his books have sold more than 350 million copies, and many have been adapted into films, television series, miniseries, and comic books.',
@@ -226,6 +309,7 @@ export default new Vuex.Store({
       {
         id: 'Chalotte Perkins Gilman',
         name: 'Charlotte Perkins Gilman',
+        img: require('../assets/authors/gilman.jpg'),
         birthday: '3 July 1860',
         nation: 'American',
         bio: 'Charlotte Perkins Gilman was an American humanist, novelist, writer, lecturer, advocate for social reform, and eugenicist. <br/> She was a utopian feminist and served as a role model for future generations of feminists because of her unorthodox concepts and lifestyle. She has been inducted into the National Women\'s Hall of Fame. Her best remembered work today is her semi-autobiographical short story \"The Yellow Wallpaper\", which she wrote after a severe bout of postpartum psychosis.',
@@ -234,6 +318,7 @@ export default new Vuex.Store({
       {
         id: 'William Butler Yeats',
         name: 'William Butler Yeats',
+        authors: require('../assets/authors/yeats.jpg'),
         birthday: '13 June 1865',
         nation: 'Irish',
         bio: 'William Butler Yeats was an Irish poet, dramatist, writer and one of the foremost figures of 20th-century literature. He was a driving force behind the Irish Literary Revival and became a pillar of the Irish literary establishment who helped to found the Abbey Theatre. In his later years he served two terms as a Senator of the Irish Free State. <br/> A Protestant of Anglo-Irish descent, Yeats was born in Sandymount and was educated in Dublin and London and spent childhood holidays in County Sligo. He studied poetry from an early age, when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, lasting roughly from his student days at the Metropolitan School of Art in Dublin until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display debts to Edmund Spenser, Percy Bysshe Shelley and the poets of the Pre-Raphaelite Brotherhood. <br/> From 1900 his poetry grew more physical, realistic and politicised. He moved away from the transcendental beliefs of his youth, though he remained preoccupied with some elements including cyclical theories of life. He had become the chief playwright for the Irish Literary Theatre in 1897, and early on promoted younger poets such as Ezra Pound. <br/> Yeats was awarded the Nobel Prize in Literature in 1923.',
@@ -242,6 +327,7 @@ export default new Vuex.Store({
       {
         id: 'Ezra Pound',
         name: 'Ezra Pound',
+        img: require('../assets/authors/pound.jpg'),
         birthday: '30 October 1885',
         nation: 'American',
         bio: 'Ezra Weston Loomis Pound was an expatriate American poet and critic, a major figure in the early modernist poetry movement. Pound\'s contribution to poetry began in the early 20th century with his role in developing Imagism, a movement stressing precision and economy of language. <br/> Working in London as foreign editor of several American literary magazines, he helped discover and shape the work of contemporaries such as T. S. Eliot, Ernest Hemingway, and James Joyce. He was responsible for the 1914 serialization of Joyce\'s A Portrait of the Artist as a Young Man, the 1915 publication of Eliot\'s \"The Love Song of J. Alfred Prufrock\", and the serialization from 1918 of Joyce\'s Ulysses. <br/> Hemingway wrote in 1932 that, for poets born in the late 19th or early 20th century, not to be influenced by Pound would be \"like passing through a great blizzard and not feeling its cold.\"',
@@ -307,6 +393,7 @@ export default new Vuex.Store({
             {
               id: 1,
               name: '4.50 from Paddington',
+              img: require('../assets/books/paddington-train.jpg'),
               collectionId: 'Crime',
               collectionName: 'C1',
               description: 'Two trains running parallel. A crime is committed in the first. In the second a witness saw the killer, but no one believes her. It\'s time for Miss Marple.',
@@ -316,6 +403,7 @@ export default new Vuex.Store({
           {
               id: 2,
               name: 'Cards on the Table',
+              img: require('../assets/books/cards-table.jpg'),
               collectionId: 'Crime',
               collectionName: 'C1',
               description: 'Every guest plays bridge in separate rooms while the host relaxes in the living room. How was it possible for the host to be murdered when every guest had their eyes focused on the game?',
@@ -325,6 +413,7 @@ export default new Vuex.Store({
           {
               id: 3,
               name: 'Farewell, My Lovely',
+              img: require('../assets/books/farewell.jpg'),
               collectionId: 'Crime',
               collectionName: 'C2',
               description: 'What seems as a usual case of gangsters and crime turns out to be more of a twist. Detective Marlowe is forced to strike a deal with the toughest of the gangsters to solve the case and find his molly.',
@@ -334,6 +423,7 @@ export default new Vuex.Store({
           {
               id: 4,
               name: 'The Long Goodbye',
+              img: require('../assets/books/goodbye.jpg'),
               collectionId: 'Crime',
               collectionName: 'C2',
               description: 'A wealthy man is desperate to find his missing wife. Detective Marlowe takes up the case. During his investigation, the man commits suicide and Marlowe is left with secrets never heard of before.',
@@ -343,6 +433,7 @@ export default new Vuex.Store({
           {
               id: 5,
               name: 'Pet Sematary',
+              img: require('../assets/books/pet-sematary.jpg'),
               collectionId: 'Horror',
               collectionName: 'H1',
               description: 'A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. When the family\'s baby boy dies, the father is left to choose: to accept death as a natural way of life or bring the beloved child back in his life?',
@@ -352,6 +443,7 @@ export default new Vuex.Store({
           {
               id: 6,
               name: 'IT',
+              img: require('../assets/books/it.jpg'),
               collectionId: 'Horror',
               collectionName: 'H1',
               description: 'No one would think that a clown might inspire fear and horror. But here it is. IT, the famous book by Stephen King, is now re-published with illustrations coming from creative artists that have read the book and felt inspired. Read, look and feel fear.',
@@ -361,6 +453,7 @@ export default new Vuex.Store({
           {
               id: 7,
               name: 'The Yellow Wallpaper',
+              img: require('../assets/books/wallpaper.jpg'),
               collectionId: 'Horror',
               collectionName: 'H2',
               description: 'A Victorian husband heeds the advice of the doctor and isolates his wife in her bedroom. The woman feministically contemplates on how quickly men think of their women as being hysterical when they are but a bit ill. Soon enough she finds out that she\'s not the only one in her room.',
@@ -370,6 +463,7 @@ export default new Vuex.Store({
           {
               id: 8,
               name: 'The Second Coming',
+              img: require('../assets/books/second-coming.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P1',
               description: 'A visionary poem about the coming of the Antichrist and the destruction of the Modern world through the reverse of order. Students and professors alike may find the volume at hand a primary source for their thesis papers.',
@@ -379,6 +473,7 @@ export default new Vuex.Store({
           {
               id: 9,
               name: 'A Vision',
+              img: require('../assets/books/vision.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P1',
               description: 'A magical volume comprised of some of Yeats\' greatest later poems and his illustrative philosophy of the 28 personalities based on the phases of the moon.',
@@ -388,6 +483,7 @@ export default new Vuex.Store({
           {
               id: 10,
               name: 'The Cantos',
+              img: require('../assets/books/cantos.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P2',
               description: 'A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.',
@@ -397,11 +493,62 @@ export default new Vuex.Store({
           {
             id: 11,
             name: 'Van Richten\'s Guide to Vampires',
+            img: require('../assets/books/vampires.jpg'),
             collectionId: 'Young Adult',
             collectionName: 'YA1',
             description: 'A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.',
             price: 55,
             quantity: 5
+          },
+          {
+            id: 12,
+            name: 'Atlas Obscura',
+            img: require('../assets/books/atlas_obscura.jpg'),
+            collectionId: 'Travel',
+            collectionName: 'TRA1',
+            description: 'A travelogue to exotic and mysterious places around the world. A group of young people embark on a journey to discover, catalogue and admire the awe-inspiring places of our world.',
+            price: 100,
+            quantity: 5
+          },
+          {
+            id: 13,
+            name: 'Tarot Cards',
+            img: require('../assets/books/tarot_cards.jpg'),
+            collectionId: 'General Fiction',
+            collectionName: 'GF1',
+            description: 'Due to the release of The Quarry, a complex decision-making horror game, the tarot cards are once more the center of interest in what seems to be the endless quest to understanding destiny.',
+            price: 80,
+            quantity: 5
+          },
+          {
+            id: 14,
+            name: 'Klara and the Sun',
+            img: require('../assets/books/klara_and_the_sun.jpg'),
+            collectionId: 'Literary Fiction',
+            collectionName: 'LF1',
+            description: 'In the near future, robots would take the role of mannechins. They will be put on shop displays to delight passerbys. On a particular sunny day, Klara (one of the robots) awakes and contemplates the view before her. The Sun is her best friend for it is the celestial star that gives her power to move, to feel, to interact.',
+            price: 54,
+            quantity: 5
+          },
+          {
+            id: 15,
+            name: 'Machines Like Me',
+            img: require('../assets/books/machines_like_me.jpg'),
+            collectionId: 'Literary Fiction',
+            collectionName: 'LF2',
+            description: 'The first trans-realist novel of the post-postmodern world, the novel centers around the idea that robots would be the next human beings.',
+            price: 54,
+            quantity: 5
+          },
+          {
+            id: 16,
+            name: 'House of Leaves',
+            img: require('../assets/books/house_of_leaves.jpg'),
+            collectionId: 'Horror',
+            collectionName: 'H3',
+            description: 'A complex book about a tattoo artist obsessed with the death of his neighbour, a mysterious report that no one seems to know, a photographer exploring a rural house, a family that lives in that house, the so-called truth that the tattoo artist figures out while reading that report, the last days of the photographer inside that house and how the house seems to get bigger from the inside than the outside. This book explores the possibility that reality is not what it seems and that space is just another unknown concept as much as time. The book is crazier than James Joyce\'s Ulysses, but it is appreciated among the gamers that know about The Backrooms.',
+            price: 74,
+            quantity: 2
           }
         ]
           commit('SET_PRODUCTS', data)
