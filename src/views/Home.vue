@@ -209,7 +209,8 @@ export default {
         display: flex;
 
         img {
-          margin: 8px;
+          margin-top: 15px;
+          margin-right: 38px;
           width: 680px;
           height: 540px;
           border-radius: 5px;
