@@ -1,6 +1,6 @@
 <template>
     <main class="basket-page main-grid">
-        <h1>My Basket:</h1>
+        <h1>My Shopping Basket</h1>
         <ul>
             <li v-for="product in products" :key="product.id">
                 <router-link to="/basket">{{ product.title }}</router-link>

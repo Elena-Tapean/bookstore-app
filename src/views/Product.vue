@@ -18,9 +18,6 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br/>
-        <br/>
-        <button @click="addToBasket(product)">Add to basket</button>
     </main>
 </template>
 

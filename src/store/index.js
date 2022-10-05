@@ -335,7 +335,6 @@ export default new Vuex.Store({
       }
     ],
     isModal: false,
-    products: [],
     productsCopy: [],
     user: {},
     basket: []

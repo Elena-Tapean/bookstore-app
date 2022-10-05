@@ -52,11 +52,6 @@ const routes = [
     component: () => import('../views/Contact.vue')
   },
   {
-    path: '/account',
-    name: 'Create-account',
-    component: () => import('../views/Account.vue')
-  },
-  {
     path: '/login',
     name: 'Login',
     component: Login
@@ -73,11 +68,6 @@ const routes = [
     path: '/basket',
     name: 'Basket',
     component: Basket
-  },
-  {
-    path: '/give',
-    name: 'Give',
-    component: () => import('../views/Give.vue')
   },
   {
     path: '*',
