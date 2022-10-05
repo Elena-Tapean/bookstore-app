@@ -1,7 +1,7 @@
 <template>
     <main class="authors-page main-grid">
         <h2>{{ author.name }}</h2>
-        <img src="" alt="author photo" />
+        <img class="author-img" :src="author.img" alt="author photo" />
         <h3>Birthday:</h3>
         <span>{{ author.birthday }}</span>
         <h3>Nationality:</h3>
@@ -9,7 +9,7 @@
         <h3>Quote:</h3>
         <q>{{ author.quote }}</q>
         <h3>Biography:</h3>
-        <p>{{ author.bio }}</p>
+        <p v-html="author.bio" />
     </main>
 </template>
 
@@ -38,11 +38,12 @@ export default {
     .authors-page {
         @media only screen and (min-width: 0) {
             height: 100%;
+            margin-bottom: 24px;
             
-            img {
-                width: 120px;
-                height: 100px;
-                margin: 5px;
+            .author-img {
+                width: 230px;
+                height: 300px;
+                margin: 0 auto;
             }
             h2 {
                 font-size: 21px;
@@ -52,13 +53,6 @@ export default {
                 font-size: 18px;
                 font-style: normal;
             }
-            p {
-                margin: 0 20px;
-                font-size: 16px;
-                text-align: justify;
-                text-indent: 30px;
-                line-height: 2;
-            }
             span {
                 margin: 0 auto;
                 margin-bottom: 18px;
@@ -66,15 +60,17 @@ export default {
                 justify-content: center;
             }
             q {
+                margin: 0 auto;
                 font-size: 17px;
                 font-style: italic;
+                quotes: none;
             }
         }
 
         @media only screen and (min-width: 1024px) {
-            img {
-                width: 120px;
-                height: 100px;
+            .author-img {
+                width: 320px;
+                height: 400px;
                 margin: 5px;
             }
             h2 {
@@ -85,13 +81,6 @@ export default {
                 font-size: 21px;
                 font-style: normal;
             }
-            p {
-                margin: 0 20px;
-                font-size: 18px;
-                text-align: justify;
-                text-indent: 30px;
-                line-height: 2;
-            }
             span {
                 margin: 0 auto;
                 margin-bottom: 24px;
@@ -99,8 +88,10 @@ export default {
                 justify-content: center;
             }
             q {
+                margin: 0 auto;
                 font-size: 18px;
                 font-style: italic;
+                quotes: none;
             }
         }
 }
