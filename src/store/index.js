@@ -383,6 +383,20 @@ export default new Vuex.Store({
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
     },
+    UPDATE_BUY_QUANTITY (state, {id, direction}) {
+      const index = state.products.findIndex(obj => obj.id === id)
+      const product = state.products[index]
+      if (!product.buy_quantity) {
+        product.buy_quantity = 0
+      }
+      if (direction === 'up') {
+        product.buy_quantity += 1
+      } else {
+        product.buy_quantity -= 1
+      }
+      Vue.set(state.products, index, product)
+      console.log(product)
+    }
   },
   actions: {
     async get_data ({commit}) {

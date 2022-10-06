@@ -78,7 +78,8 @@ import HambMenuIcon from './HambMenuIcon.vue';
         return this.$store.state.basket
       },
       basketTotal () {
-        return this.basket.reduce((acc, curr) => acc + curr.count, 0)
+        // return this.basket.length
+         return this.basket.reduce((acc, curr) => acc + curr.buy_quantity, 0)
       }
     },
     methods: {
