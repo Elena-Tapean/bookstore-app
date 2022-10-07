@@ -338,7 +338,6 @@ export default new Vuex.Store({
     productsCopy: [],
     user: {},
     basket: [],
-    inBasket: []
   },
   getters: {
     collections: state => {

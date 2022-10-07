@@ -46,10 +46,7 @@ export default {
     },
   computed: {
     products () {
-      return this.$store.getters.products
-    },
-    inBasket () {
-      return this.$store.getters.inBasket
+      return this.$store.state.products
     }
   },
   methods: {
