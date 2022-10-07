@@ -79,7 +79,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
       },
       basketTotal () {
         // return this.basket.length
-         return this.basket.reduce((acc, curr) => acc + curr.buy_quantity, 0)
+         return this.basket.reduce((acc, curr) => acc + curr.count, 0)
       }
     },
     methods: {
@@ -90,9 +90,6 @@ import HambMenuIcon from './HambMenuIcon.vue';
         handleRouteChange () {
             this.isOpen = false
             this.$refs.navBar.style.height = `${this.barHeight}px`
-        },
-        handleSearch () {
-            this.$store.commit('SEARCH_PRODUCTS', this.search)
         },
         handleLogout () {
             this.$store.dispatch('logout')

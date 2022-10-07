@@ -4,25 +4,28 @@
       <q style="font-style: italic; quotes: none;">Read, experience, inspire.</q>
       <br/>
       <br/>
-      <input type="text" v-model="search" @input="handleSearch" placeholder="search product" />
+      <input type="text" 
+              v-model="search" 
+              @input="handleSearch" 
+              placeholder="search product..." />
       <br/>
       <br/>
       <ul>
         <li v-for="product in products" :key="product.id">
           <router-link :to="`/product/${product.id}`">
             {{ product.name }}
-        </router-link>
-        <div>
-        <button @click="decrement(product.id)">-</button>
-        <span>{{ product.buy_quantity || 0 }}</span>
-        <button :disabled="product.quantity && product.quantity <= product.buy_quantity" 
+          </router-link>
+          <div>
+            <button @click="decrement(product.id)">-</button>
+            <span>{{ product.count || 0 }}</span>
+            <button :disabled="product.quantity && (product.quantity <= product.count)" 
                 @click="increment(product.id)">+</button>
-        <span v-if="product.quantity && (product.quantity <= product.buy_quantity)">Max stock reached</span>
-      </div>
-        <button :disabled="!product.buy_quantity || product.count === 0" 
-                  @click="addToBasket(product)">
-        Add to Basket
-        </button>
+            <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
+          </div>
+          <button :disabled="!product.count || product.count === 0" 
+                @click="addToBasket(product)">
+            Add to Basket
+          </button>
         </li>
       </ul>
       <br/>
@@ -48,13 +51,13 @@ export default {
   },
   methods: {
     handleSearch () {
-      this.$store.commit('SEARCH_PRODUCTS', this.searchString)
+      this.$store.commit('SEARCH_PRODUCTS', this.search)
     },
     increment (id) {
-      this.$store.commit('UPDATE_BUY_QUANTITY', {id, direction: 'up'})
+      this.$store.commit('INCREMENT_PRODUCT_COUNT', {id})
     },
     decrement (id) {
-      this.$store.commit('UPDATE_BUY_QUANTITY', {id, direction: 'down'})
+      this.$store.commit('DECREMENT_PRODUCT_COUNT', {id})
     },
     addToBasket (product) {
       this.$store.commit('ADD_TO_BASKET', product)
@@ -74,9 +77,7 @@ export default {
       ul {
         width: 88%;
         max-width: 420px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        margin: 0 auto;
       }
       li {
         height: 240px;
@@ -87,7 +88,8 @@ export default {
         background-color: lightblue;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -96,20 +98,21 @@ export default {
         list-style-type: none;
       }
       ul {
-        display: flex;
         width: 88%;
-        max-width: 420px;
+        max-width: 800px;
         margin: 0 auto;
       }
       li {
-        height: 100px;
+        height: 240px;
         margin-bottom: 24px;
         border-radius: 4px;
         font-size: 20px;
         border: 1px solid cadetblue;
         background-color: lightblue;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
