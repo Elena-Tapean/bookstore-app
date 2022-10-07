@@ -6,16 +6,14 @@
             <HambMenuIcon :isOpen="isOpen" 
                           @action="handleHambIcon" />
         </div>
-        
         <nav>
             <div v-for="item in nav" :key="item.name">
-                <router-link v-if="!item.role"
-                        :to="item.to">
-                <span @click="handleRouteChange">{{ item.name }}</span>
+                <router-link v-if="!item.role" :to="item.to">
+                    <span @click="handleRouteChange">{{ item.name }}</span>
                 </router-link>
                 <router-link v-if="item.role && (item.role === user.role)" 
                         :to="item.to">
-                <span @click="handleRouteChange">{{ item.name }}</span>
+                    <span @click="handleRouteChange">{{ item.name }}</span>
                 </router-link>
             </div>
 

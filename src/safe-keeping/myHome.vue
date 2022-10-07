@@ -4,63 +4,31 @@
       <q style="font-style: italic;">Read, experience, inspire.</q>
       <br/>
       <br/>
-      <div class="min-zero">
-        <img src="../assets/home.jpg" alt="home logo" />
-        <br/>
-        <h3>A variety of genres for every taste</h3>
-        <ul>
-          <li class="pale-pink" v-for="genre in genres">
-            <router-link :to="`/genre/${genre.id}`">{{ genre.name }}</router-link>
-          </li>
-        </ul>
-      </div>
-      <div class="flex-min">
-        <ul>
-          <h3>A variety of genres for every taste</h3>
-          <li class="pale-pink" v-for="genre in genres">
-            <router-link :to="`/genre/${genre.id}`">{{ genre.name }}</router-link>
-          </li>
-        </ul>
-        <img src="../assets/home.jpg" alt="home logo" />
-      </div>
+      <img src="../assets/home.jpg" alt="home logo" />
       <br/>
-      <div class="second-zero">
-        <h3>Collections on display</h3>
-        <ul>
-          <li class="cadet-blue" v-for="(collection, index) in collections" :key="index">
-            <select @change="handleCollection">
-              <option value="" selected disabled>Select collection</option>
-              <option v-for="item in collection" :key="item">{{ item }}</option>
-            </select>
-          </li>
-        </ul>
-        <br/>
-        <h3>Authors on display</h3>
-        <ul>
-          <li class="author" v-for="author in authors">
-            <router-link :to="`/authors/${author.id}`">{{ author.name }}</router-link>
-          </li>
-        </ul>
-      </div>
-      <div class="second-flex">
-        <ul>
-          <h3>Collections on display</h3>
-          <li class="cadet-blue" v-for="(collection, index) in collections" :key="index">
-            <select @change="handleCollection">
-              <option value="" selected disabled>Select collection</option>
-              <option v-for="item in collection" :key="item">{{ item }}</option>
-            </select>
-          </li>
-        </ul>
-        <br/>
-        <ul>
-          <h3>Authors on display</h3>
-          <li class="author" v-for="author in authors">
-            <router-link :to="`/authors/${author.id}`">{{ author.name }}</router-link>
-          </li>
-        </ul>
-      </div>
+      <h3>A variety of genres for every taste</h3>
+      <ul>
+        <li class="pale-pink" v-for="genre in genres">
+          <router-link :to="`/genre/${genre.id}`">{{ genre.name }}</router-link>
+        </li>
+      </ul>
       <br/>
+      <h3>Collections on display</h3>
+      <ul>
+        <li class="cadet-blue" v-for="(collection, index) in collections" :key="index">
+          <select @change="handleCollection">
+            <option value="" selected disabled>Select collection</option>
+            <option v-for="item in collection" :key="item">{{ item }}</option>
+          </select>
+        </li>
+      </ul>
+      <br/>
+      <h3>Authors on display</h3>
+      <ul>
+        <li class="author" v-for="author in authors">
+          <router-link :to="`/authors/${author.id}`">{{ author.name }}</router-link>
+        </li>
+      </ul>
       <br/>
     </main>
 </template>
@@ -112,37 +80,30 @@ export default {
         width: 50%;
         margin: 0 auto;
       }
-      .min-zero {
-        img {
-          margin: 8px;
-          width: 450px;
-          height: 420px;
-          border-radius: 5px;
+      img {
+        margin: 8px;
+        width: 450px;
+        height: 420px;
+        border-radius: 5px;
+      }
+      li.pale-pink {
+        height: 40px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-size: 18px;
+        border: 1px solid rgb(148, 19, 62);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: rgb(231, 64, 119);
         }
-        li.pale-pink {
-          height: 40px;
-          margin-bottom: 10px;
-          border-radius: 4px;
-          font-size: 18px;
-          border: 1px solid rgb(148, 19, 62);
-          background-color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          a {
-            text-decoration: none;
-            color: rgb(231, 64, 119);
-          }
-          a:hover {
-            text-decoration: underline;
-          }
+        a:hover {
+          text-decoration: underline;
         }
       }
-      .flex-min {
-        display: none;
-      }
-
-      .second-zero {
         select {
           border: none;
           border-radius: 5px;
@@ -183,9 +144,6 @@ export default {
           }
         }
       }
-      .second-flex {
-        display: none;
-      }
     }
 
     @media only screen and (min-width: 1024px) {
@@ -202,12 +160,6 @@ export default {
         width: 20%;
         margin: 0 auto;
       }
-      .min-zero {
-        display: none;
-      }
-      .flex-min {
-        display: flex;
-
         img {
           margin-top: 15px;
           margin-right: 38px;
@@ -232,14 +184,6 @@ export default {
           a:hover {
             text-decoration: underline;
           }
-        }
-      }
-      .second-zero {
-        display: none;
-      }
-      .second-flex {
-        display: flex;
-
         select {
           border: none;
           border-radius: 5px;
@@ -280,7 +224,6 @@ export default {
             color: red;
           }
         }
-      }
     }
   }
 </style>

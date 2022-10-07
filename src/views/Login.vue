@@ -1,6 +1,7 @@
 <template>
     <main class="login-page main-grid">
         <h1>Login</h1>
+        <p>To enter the bookstore, you need to present us your name, email and password.</p>
         <ValidationObserver v-slot="{invalid}">
             <form @submit.prevent="handleLogin">
                 <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
