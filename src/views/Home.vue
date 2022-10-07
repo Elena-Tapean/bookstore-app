@@ -46,7 +46,10 @@ export default {
     },
   computed: {
     products () {
-      return this.$store.state.products
+      return this.$store.getters.products
+    },
+    inBasket () {
+      return this.$store.getters.inBasket
     }
   },
   methods: {
@@ -99,7 +102,7 @@ export default {
       }
       ul {
         width: 88%;
-        max-width: 800px;
+        max-width: 400px;
         margin: 0 auto;
       }
       li {
