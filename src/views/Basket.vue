@@ -3,7 +3,10 @@
         <h1>My Shopping Basket</h1>
         <ul>
             <li v-for="product in basket" :key="product.id">
-                <router-link :to="`/product/${product.id}`">{{ product.name }}</router-link>
+                <router-link :to="`/product/${product.id}`">
+                    {{ product.name }}
+                </router-link>
+                
             </li>
         </ul>
     </main>
@@ -20,6 +23,13 @@
 <script>
 export default {
     name: 'Basket',
+    data () {
+        return {
+        }
+    },
+    created () {
+      this.$store.dispatch('get_data')
+    },
     computed: {
         basket () {
             return this.$store.state.basket
@@ -27,6 +37,9 @@ export default {
         products () {
             return this.$store.state.products
         }
+    },
+    methods: {
+        
     }
 }
 </script>
