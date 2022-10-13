@@ -10,14 +10,6 @@
         <p v-html="product.description" />
         <h3>Price: (Ron)</h3> 
         <span>{{ product.price }}</span>
-        <h3>Quantity:</h3>
-        <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
     </main>
 </template>
 
@@ -60,24 +52,6 @@ export default {
             height: 350px;
             margin: 5px;
         }
-        select {
-            border: 1px solid grey;
-            border-radius: 5px;
-            background-color: white;
-            font-size: 16px;
-            option {
-                background-color: white;
-            }
-        }
-        button {
-            margin: 10px 30px;
-            padding: 5px;
-            border-radius: 5px;
-            background-color: #3CB371;
-            color: white;
-            border: none;
-            font-size: 17px;
-        }
     }
 
     @media only screen and (min-width: 1024px) {
@@ -96,24 +70,6 @@ export default {
             height: 450px;
             margin: 5px;
             align-items: left;
-        }
-        select {
-            border: 1px solid grey;
-            border-radius: 5px;
-            background-color: white;
-            font-size: 18px;
-            option {
-                background-color: white;
-            }
-        }
-        button {
-            margin: 10px 30px;
-            padding: 5px;
-            border-radius: 5px;
-            background-color: #3CB371;
-            color: white;
-            border: none;
-            font-size: 18px;
         }
     }
 }

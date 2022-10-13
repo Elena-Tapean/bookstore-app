@@ -109,7 +109,7 @@ export default new Vuex.Store({
     },
     {
       id: 11,
-      name: 'Van Richten\'s Guide to Vampires',
+      name: 'Guide to Vampires',
       img: require('../assets/books/vampires.jpg'),
       collectionId: 'Young Adult',
       collectionName: 'YA1',
@@ -129,16 +129,6 @@ export default new Vuex.Store({
     },
     {
       id: 13,
-      name: 'Tarot Cards',
-      img: require('../assets/books/tarot_cards.jpg'),
-      collectionId: 'General Fiction',
-      collectionName: 'GF1',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Due to the release of The Quarry, a complex decision-making horror game, the tarot cards are once more the center of interest in what seems to be the endless quest to understanding destiny.</p>',
-      price: 80,
-      quantity: 5
-    },
-    {
-      id: 14,
       name: 'Klara and the Sun',
       img: require('../assets/books/klara_and_the_sun.jpg'),
       collectionId: 'Literary Fiction',
@@ -148,17 +138,7 @@ export default new Vuex.Store({
       quantity: 5
     },
     {
-      id: 15,
-      name: 'Machines Like Me',
-      img: require('../assets/books/machines_like_me.jpg'),
-      collectionId: 'Literary Fiction',
-      collectionName: 'LF2',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> The first trans-realist novel of the post-postmodern world, the novel centers around the idea that robots would be the next human beings.</p>',
-      price: 54,
-      quantity: 5
-    },
-    {
-      id: 16,
+      id: 14,
       name: 'House of Leaves',
       img: require('../assets/books/house_of_leaves.jpg'),
       collectionId: 'Horror',
@@ -174,8 +154,7 @@ export default new Vuex.Store({
       poetry: ['P1', 'P2'],
       young: ['YA1'],
       travel: ['TRA1'],
-      general: ['GF1'],
-      literary: ['LF1', 'LF2'],
+      literary: ['LF1'],
     },
     genres: [
       {
@@ -260,15 +239,6 @@ export default new Vuex.Store({
         nation: 'English',
         quote: 'There was another life that I might have had, but I am having this one.',
         bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Kazuo Ishiguro (Sir) is an English novelist, screenwriter, musician, and short-story writer. Ishiguro was born in Nagasaki, Japan, and moved to Britain in 1960 with his parents when he was five. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> He is one of the most critically-acclaimed and praised contemporary fiction authors writing in English, being awarded the 2017 Nobel Prize in Literature. In its 2017 citation, the Swedish Academy described Ishiguro as a writer "who, in novels of great emotional force, has uncovered the abyss beneath our illusory sense of connection with the world".</p>',
-      },
-      {
-        id: 'Ian McEwan',
-        name: 'Ian McEwan',
-        img: require('../assets/authors/mcewan.jpg'),
-        birthday: '21 June 1948',
-        nation: 'English',
-        quote: 'Imagining what it is like to be someone other than yourself is at the core of our humanity. It is the essence of compassion and it is the beginning of morality.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Ian McEwan is an English novelist and screenwriter. In 2008, The Times featured him on its list of \"The 50 greatest British writers since 1945\" and The Daily Telegraph ranked him number 19 in its list of the \"100 most powerful people in British culture\". <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> McEwan began his career writing sparse, Gothic short stories. His first two novels, The Cement Garden (1978) and The Comfort of Strangers (1981), earned him the nickname \"Ian Macabre\". His next novel, Atonement, garnered acclaim and was adapted into an Oscar-winning film featuring Keira Knightley and James McAvoy.</p>',
       },
       {
         id: 'Mark Z. Danielweski',
@@ -383,6 +353,9 @@ export default new Vuex.Store({
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
     },
+    BUYING_PRODUCT (state, product) {
+      state.basket.add(product)
+    }
     //UPDATE_BUY_QUANTITY (state, {id, direction}) {
     //  const index = state.products.findIndex(obj => obj.id === id)
     //  const product = state.products[index]
@@ -505,7 +478,7 @@ export default new Vuex.Store({
           },
           {
             id: 11,
-            name: 'Van Richten\'s Guide to Vampires',
+            name: 'Guide to Vampires',
             img: require('../assets/books/vampires.jpg'),
             collectionId: 'Young Adult',
             collectionName: 'YA1',
@@ -525,16 +498,6 @@ export default new Vuex.Store({
           },
           {
             id: 13,
-            name: 'Tarot Cards',
-            img: require('../assets/books/tarot_cards.jpg'),
-            collectionId: 'General Fiction',
-            collectionName: 'GF1',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Due to the release of The Quarry, a complex decision-making horror game, the tarot cards are once more the center of interest in what seems to be the endless quest to understanding destiny.</p>',
-            price: 80,
-            quantity: 5
-          },
-          {
-            id: 14,
             name: 'Klara and the Sun',
             img: require('../assets/books/klara_and_the_sun.jpg'),
             collectionId: 'Literary Fiction',
@@ -544,17 +507,7 @@ export default new Vuex.Store({
             quantity: 5
           },
           {
-            id: 15,
-            name: 'Machines Like Me',
-            img: require('../assets/books/machines_like_me.jpg'),
-            collectionId: 'Literary Fiction',
-            collectionName: 'LF2',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> The first trans-realist novel of the post-postmodern world, the novel centers around the idea that robots would be the next human beings.</p>',
-            price: 54,
-            quantity: 5
-          },
-          {
-            id: 16,
+            id: 14,
             name: 'House of Leaves',
             img: require('../assets/books/house_of_leaves.jpg'),
             collectionId: 'Horror',

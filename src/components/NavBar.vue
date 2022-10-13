@@ -111,7 +111,8 @@ import HambMenuIcon from './HambMenuIcon.vue';
         background-color: #fff;
 
         .basket-logo {
-            display: none;
+            display: flex;
+            justify-content: center;
         }
         > div {
             padding: 16px 24px;
