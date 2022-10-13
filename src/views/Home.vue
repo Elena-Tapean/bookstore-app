@@ -34,9 +34,10 @@
           </li>
         </ul>
         <br/>
-        <h3>Collections on display</h3>
-        <ul class="container-collections">
-          <li class="item-collections" v-for="(collection, index) in collections" :key="index">
+        <div class="flex-div">
+        <ul>
+          <h3>Collections on display</h3>
+          <li class="list-collections" v-for="(collection, index) in collections" :key="index">
             <select @change="handleCollection">
               <option value="" selected disabled>Select collection</option>
               <option v-for="item in collection" :key="item">{{ item }}</option>
@@ -44,12 +45,14 @@
           </li>
         </ul>
         <br/>
-        <h3>Authors on display</h3>
-        <ul class="container-authors">
-          <li class="item-authors" v-for="author in authors">
+        <ul>
+          <h3>Authors on display</h3>
+          <li class="list-authors" v-for="author in authors">
             <router-link :to="`/authors/${author.id}`">{{ author.name }}</router-link>
           </li>
         </ul>
+        <br/>
+        </div>
     </main>
 </template>
   
@@ -177,34 +180,29 @@ export default {
         font-style: normal;
       }
       .container-genres {
-        margin: 5px;
         padding: 5px;
+        margin: 5px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-between; 
       }
       .item-genres {
         margin: 5px;
-        padding: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
         border: 1px solid orange;
         border-radius: 4px;
       }
-      a {
-        text-decoration: none;
-        font-size: 17px;
-        font-style: normal;
-        color: darkblue;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .container-collections {
-        margin: 5px;
+      .flex-div {
+        margin: 30px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: flex-start; 
       }
-      .item-collections {
+      .list-collections {
         margin: 5px 15px 5px 15px;
         padding: 20px;
         border: none;
@@ -224,19 +222,21 @@ export default {
         font-size: 18px;
         font-style: normal;
       }
-      .container-authors {
-        margin-bottom: 24px;
-        padding: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .item-authors {
+      .list-authors {
         margin: 5px;
         padding: 5px;
         border: 1px solid purple;
         border-radius: 4px;
         font-size: 16px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 17px;
+        font-style: normal;
+        color: darkblue;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
     @media only screen and (min-width: 1024px) {
