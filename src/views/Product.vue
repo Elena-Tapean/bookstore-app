@@ -44,6 +44,7 @@ export default {
         span {
             margin: 0 auto;
             margin-bottom: 18px;
+            font-size: 18px;
             display: flex;
             justify-content: center;
         }
@@ -51,6 +52,7 @@ export default {
             width: 230px;
             height: 350px;
             margin: 5px;
+            float: center;
         }
     }
 
@@ -61,15 +63,16 @@ export default {
         }
         span {
             margin: 0 auto;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+            font-size: 18px;
             display: flex;
             justify-content: center;
         }
         .product-img {
             width: 330px;
             height: 450px;
-            margin: 5px;
-            align-items: left;
+            margin: 35px;
+            float: right;
         }
     }
 }

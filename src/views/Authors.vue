@@ -43,7 +43,7 @@ export default {
             .author-img {
                 width: 230px;
                 height: 300px;
-                margin: 0 auto;
+                float: center;
             }
             h2 {
                 font-size: 21px;
@@ -71,7 +71,8 @@ export default {
             .author-img {
                 width: 320px;
                 height: 420px;
-                margin: 5px;
+                margin: 35px;
+                float: right;
             }
             h2 {
                 font-size: 24px;
@@ -84,6 +85,7 @@ export default {
             span {
                 margin: 0 auto;
                 margin-bottom: 24px;
+                font-size: 18px;
                 display: flex;
                 justify-content: center;
             }

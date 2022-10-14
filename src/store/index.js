@@ -422,7 +422,7 @@ export default new Vuex.Store({
               img: require('../assets/books/pet-sematary.jpg'),
               collectionId: 'Horror',
               collectionName: 'H1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> When the family\'s baby boy dies, the father is feels that he needs to make a decision: to accept death as a natural way of life or to bring the beloved child back to his life?</p>',
+              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> When the family\'s baby boy dies, the father is left to choose: to accept death as a natural way of life or to bring the beloved child back in his life?</p>',
               price: 55,
               quantity: 5
           },

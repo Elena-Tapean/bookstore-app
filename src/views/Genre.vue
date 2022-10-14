@@ -35,11 +35,13 @@ export default {
     .genre-page {
         @media only screen and (min-width: 0) {
             height: 100%;
+            margin-bottom: 24px;
 
             .genre-img {
                 width: 380px;
                 height: 450px;
                 border-radius: 5px;
+                float: center;
             }
             h2 {
                 font-size: 21px;
@@ -53,9 +55,10 @@ export default {
 
         @media only screen and (min-width: 1024px) {
             .genre-img {
-                width: 520px;
-                height: 650px;
-                margin: 5px;
+                width: 420px;
+                height: 350px;
+                margin: 35px;
+                float: right;
             }
             h2 {
                 font-size: 24px;
