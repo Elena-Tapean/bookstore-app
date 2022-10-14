@@ -37,8 +37,8 @@ export default {
             height: 100%;
 
             .genre-img {
-                width: 480px;
-                height: 320px;
+                width: 380px;
+                height: 450px;
                 border-radius: 5px;
             }
             h2 {
@@ -53,8 +53,8 @@ export default {
 
         @media only screen and (min-width: 1024px) {
             .genre-img {
-                width: 650px;
-                height: 420px;
+                width: 520px;
+                height: 650px;
                 margin: 5px;
             }
             h2 {

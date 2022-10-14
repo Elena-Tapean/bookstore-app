@@ -70,7 +70,7 @@ export default {
         @media only screen and (min-width: 1024px) {
             .author-img {
                 width: 320px;
-                height: 400px;
+                height: 420px;
                 margin: 5px;
             }
             h2 {

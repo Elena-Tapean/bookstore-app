@@ -109,7 +109,7 @@ export default new Vuex.Store({
     },
     {
       id: 11,
-      name: 'Guide to Vampires',
+      name: 'Van Richten\'s Guide to Vampires',
       img: require('../assets/books/vampires.jpg'),
       collectionId: 'Young Adult',
       collectionName: 'YA1',
@@ -478,7 +478,7 @@ export default new Vuex.Store({
           },
           {
             id: 11,
-            name: 'Guide to Vampires',
+            name: 'Van Richten\'s Guide to Vampires',
             img: require('../assets/books/vampires.jpg'),
             collectionId: 'Young Adult',
             collectionName: 'YA1',

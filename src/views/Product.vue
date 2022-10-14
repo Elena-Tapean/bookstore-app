@@ -8,8 +8,8 @@
         <span>{{ product.collectionId }}</span>
         <h3>Description:</h3>
         <p v-html="product.description" />
-        <h3>Price: (Ron)</h3> 
-        <span>{{ product.price }}</span>
+        <h3>Price:</h3> 
+        <span>{{ product.price }} Ron</span>
     </main>
 </template>
 
@@ -48,7 +48,7 @@ export default {
             justify-content: center;
         }
         .product-img {
-            width: 320px;
+            width: 230px;
             height: 350px;
             margin: 5px;
         }
@@ -66,7 +66,7 @@ export default {
             justify-content: center;
         }
         .product-img {
-            width: 420px;
+            width: 330px;
             height: 450px;
             margin: 5px;
             align-items: left;
