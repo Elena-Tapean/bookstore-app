@@ -38,13 +38,13 @@ export default {
         margin-bottom: 24px;
 
         h3 {
-            font-size: 18px;
+            font-size: 17px;
             font-style: italic;
         }
         span {
             margin: 0 auto;
             margin-bottom: 18px;
-            font-size: 18px;
+            font-size: 16px;
             display: flex;
             justify-content: center;
         }
@@ -58,15 +58,17 @@ export default {
 
     @media only screen and (min-width: 1024px) {
         h3 {
-            font-size: 20px;
+            font-size: 18px;
             font-style: italic;
+            font-family: Verdana, Tahoma, sans-serif;
         }
         span {
             margin: 0 auto;
             margin-bottom: 20px;
-            font-size: 18px;
+            font-size: 17px;
             display: flex;
             justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .product-img {
             width: 330px;

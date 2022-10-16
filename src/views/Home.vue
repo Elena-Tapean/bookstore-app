@@ -124,7 +124,7 @@ export default {
         font-family: Verdana, Tahoma, sans-serif;
       }
       q {
-        font-size: 21px;
+        font-size: 18px;
         font-style: italic;
         text-align: center;
         quotes: none;
@@ -283,7 +283,7 @@ export default {
         font-family: Verdana, Tahoma, sans-serif;
       }
       q {
-        font-size: 23px;
+        font-size: 21px;
         font-style: italic;
         text-align: center;
         quotes: none;
@@ -305,15 +305,15 @@ export default {
         justify-content: space-between;   
       }
       .item-products {
-        margin: 15px 25px;
+        margin: 15px 35px;
         padding: 10px 20px 10px 20px;
         border: 1px solid rgb(4, 222, 222);
         border-radius: 5px;
         background-color: lightcyan;
       }
       .product-img {
-        width: 200px;
-        height: 300px;
+        width: 180px;
+        height: 220px;
         margin-bottom: 10px;
         border-radius: 5px;
       }

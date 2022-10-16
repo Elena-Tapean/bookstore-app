@@ -13,7 +13,7 @@ export default new Vuex.Store({
         img: require('../assets/books/paddington-train.jpg'),
         collectionId: 'Crime',
         collectionName: 'C1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Two trains running parallel. A crime is committed in the first. In the second a witness saw it all, but no one believes her. It\'s time for Miss Marple to solve the case.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Elspeth McGillicuddy is not given to hallucinations. Until she witnesses a murder at Paddington Station. But did she? No victim, no suspect, no other witnesses. In fact no one believes it really happened at all. Except her friend Miss Jane Marple, and she\'s returning to the scene of the crime to discover just exactly what Mrs. McGillicuddy saw.</p>',
         price: 35,
         quantity: 5
     },
@@ -23,7 +23,7 @@ export default new Vuex.Store({
         img: require('../assets/books/cards-table.jpg'),
         collectionId: 'Crime',
         collectionName: 'C1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Every guest plays bridge in separate rooms while the host relaxes in the living room. How was it possible for the host to be murdered when every guest had their eyes focused on the game?</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
         price: 35,
         quantity: 5
     },
@@ -33,7 +33,7 @@ export default new Vuex.Store({
         img: require('../assets/books/farewell.jpg'),
         collectionId: 'Crime',
         collectionName: 'C2',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> What seems as a usual case of gangsters and crime turns out to be more of a twist. Detective Marlowe is forced to strike a deal with the toughest of the gangsters to solve the case and find his missing molly.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Marlowe\'s about to give up on a completely routine case when he finds himself in the wrong place at the right time to get caught up in a murder that leads to a ring of jewel thieves, another murder, a fortune-teller, a couple more murders, and more corruption than your average graveyard.</p>',
         price: 30,
         quantity: 5
     },
@@ -43,7 +43,7 @@ export default new Vuex.Store({
         img: require('../assets/books/goodbye.jpg'),
         collectionId: 'Crime',
         collectionName: 'C2',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A wealthy man is desperate to find his missing wife. Detective Marlowe takes up the case. During his investigation, the man commits suicide and Marlowe is left with secrets never heard of before.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Down-and-out drunk Terry Lennox has a problem: his millionaire wife is dead and he needs to get out of LA fast. So he turns to the only friend he can trust: private investigator Philip Marlowe. Marlowe is willing to help a man down on his luck, but later Lennox commits suicide in Mexico and things start to turn nasty. Marlowe is drawn into a sordid crowd of adulterers and alcoholics in LA\'s Idle Valley, where the rich are suffering one big suntanned hangover. Marlowe is sure Lennox didn\'t kill his wife, but how many stiffs will turn up before he gets to the truth?</p>',
         price: 28,
         quantity: 5
     },
@@ -53,7 +53,7 @@ export default new Vuex.Store({
         img: require('../assets/books/pet-sematary.jpg'),
         collectionId: 'Horror',
         collectionName: 'H1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> When the family\'s baby boy dies, the father is feels that he needs to make a decision: to accept death as a natural way of life or to bring the beloved child back to his life?</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son - and now an idyllic home. As a family, they\'ve got it all...right down to the friendly car. But the nearby woods hide a blood-chilling truth - more terrifying than death itself - and hideously more powerful. The Creeds are going to learn that sometimes dead is better.</p>',
         price: 55,
         quantity: 5
     },
@@ -63,7 +63,7 @@ export default new Vuex.Store({
         img: require('../assets/books/it.jpg'),
         collectionId: 'Horror',
         collectionName: 'H1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> No one would think that a clown might inspire fear and horror. But here it is. IT, the famous book by Stephen King, is now re-published with illustrations coming from creative artists that have read the book and felt inspired. Read, look and feel fear. </p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Welcome to Derry, Maine... It\'s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real... They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.</p>',
         price: 60,
         quantity: 5
     },
@@ -73,7 +73,7 @@ export default new Vuex.Store({
         img: require('../assets/books/wallpaper.jpg'),
         collectionId: 'Horror',
         collectionName: 'H2',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A Victorian husband heeds the advice of the doctor and isolates his wife in her bedroom. The woman feministically contemplates on how quickly men think of their women as being hysterical when they are but a bit ill. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Soon enough she finds out that she\'s not alone in her room.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A woman and her husband rent a summer house, but what should be a restful getaway turns into a suffocating psychological battle. This chilling account of postpartum depression and a husband\'s controlling behavior in the guise of treatment will leave you breathless.</p>',
         price: 18,
         quantity: 3
     },
@@ -83,7 +83,7 @@ export default new Vuex.Store({
         img: require('../assets/books/second-coming.jpg'),
         collectionId: 'Poetry',
         collectionName: 'P1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A visionary poem about the coming of the Antichrist and the destruction of the Modern world through the reverse of order. Students and professors alike may find the volume at hand a primary source for their thesis papers.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A collection of 15 of Yeats\' most famous poems, including \"The Second Coming\" and \"Easter, 1916\". \"The Second Coming\" is viewed as a prophetic poem that envisions the close of the Christian epoch and the violent birth of a new age. The poem\'s title makes reference to the Biblical reappearance of Christ, prophesied in Matthew 24 and the Revelations of St. John, which according to Christianity, will accompany the Apocalypse and divine Last Judgment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other symbols in the poem are drawn from mythology, the occult, and Yeats\' view of history as defined in his cryptic prose volume A Vision. The principal figure of the work is a sphinx-like creature with a lion\'s body and man\'s head, a \"rough beast\" awakened in the desert that makes its way to Christ\'s birthplace, Bethlehem. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other poems in this collect include \'Easter, 1916\', which chronicles Yeats\' complicated feelings on the execution of Irish patriots of the Easter Rebellion in Dublin.</p>',
         price: 50,
         quantity: 5
     },
@@ -93,7 +93,7 @@ export default new Vuex.Store({
         img: require('../assets/books/vision.jpg'),
         collectionId: 'Poetry',
         collectionName: 'P1',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A magical volume comprised of some of Yeats\' greatest later poems and his illustrative philosophy of the 28 personalities based on the phases of the moon.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
         price: 80,
         quantity: 5
     },
@@ -103,7 +103,7 @@ export default new Vuex.Store({
         img: require('../assets/books/cantos.jpg'),
         collectionId: 'Poetry',
         collectionName: 'P2',
-        description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.</p>',
+        description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Cantos by Ezra Pound is a long, incomplete poem in 116 sections, each of which is a canto. Most of it was written between 1915 and 1962, although much of the early work was abandoned and the early cantos, as finally published, date from 1922 onwards. It is a book-length work, widely considered to be an intense and challenging read. The Cantos is generally considered one of the most significant works of modernist poetry in the 20th century. As in Pound\'s prose writing, the themes of economics, governance and culture are integral to the work\'s content. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The most striking feature of the text, to a casual browser, is the inclusion of Chinese characters as well as quotations in European languages other than English. A close reader will normally require a scholarly commentary to help understand the text. The range of allusion to historical events is broad, and abrupt changes occur with little transition.</p>',
         price: 80,
         quantity: 5
     },
@@ -113,7 +113,7 @@ export default new Vuex.Store({
       img: require('../assets/books/vampires.jpg'),
       collectionId: 'Young Adult',
       collectionName: 'YA1',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.</p>',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Within these pages, Dr. Rudolph Van Richten shares his vast background as one of Ravenloft\'s most formidable lore masters and vampire hunters. Decades of research and experience have been compiled into discussions which define the very nature of those \"kings of the undead\", and help put them at a disadvantage to mortals, whom they consider to be \"mere cattle\". <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dr. Van Richten has detailed vampiric powers, weaknesses, feeding and sleeping habits, even their varied relationships with others of their own kind. Old myths are dispelled, new facts are uncovered, and the experiences of both vampires and those who hunt them are recorded for your safety and enlightenment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Quickly! Soon the sun sets and the dead will rise! The vampires of Ravenloft know no mercy, and you must be prepared before the darkness engulfs you.</p>',
       price: 55,
       quantity: 5
     },
@@ -123,7 +123,7 @@ export default new Vuex.Store({
       img: require('../assets/books/atlas_obscura.jpg'),
       collectionId: 'Travel',
       collectionName: 'TRA1',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A travelogue to exotic and mysterious places around the world. A group of young people embark on a journey to discover, catalogue and admire the awe-inspiring places of our planet.</p>',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif;; text-align: justify; text-indent: 30px; line-height: 2;"> Inspiring equal parts wonder and wanderlust, Atlas Obscura celebrates over 600 of the strangest and most curious places in the world. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Here are natural wonders—the dazzling glowworm caves in New Zealand, or a baobob tree in South Africa that\'s so large it has a pub inside where 15 people can drink comfortably. Architectural marvels, including the M.C. Escher-like stepwells in India. Mind-boggling events, like the Baby Jumping Festival in Spain, where men dressed as devils literally vault over rows of squirming infants. Not to mention the Great Stalacpipe Organ in Virginia, Turkmenistan\'s 45-year hole of fire called the Door of Hell, coffins hanging off a side of a cliff in the Philippines, eccentric bone museums in Italy, or a weather-forecasting invention that was powered by leeches, still on display in Devon, England. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Atlas Obscura revels in the weird, the unexpected, the overlooked, the hidden, and the mysterious. Every page expands our sense of how strange and marvelous the world really is. And with its compelling descriptions, hundreds of photographs, surprising charts, maps for every region of the world, it is a book you can open anywhere.</p>',
       price: 100,
       quantity: 5
     },
@@ -133,7 +133,7 @@ export default new Vuex.Store({
       img: require('../assets/books/klara_and_the_sun.jpg'),
       collectionId: 'Literary Fiction',
       collectionName: 'LF1',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> In the near future, robots would take the role of mannechins. They will be put on shop displays to delight passerbys. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> On a particular sunny day, Klara (one of the robots) awakes and contemplates the view before her. The Sun is her best friend for it is the celestial star that gives her power to move, to feel, to interact.</p>',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> From her place in the store, Klara, an Artificial Friend with outstanding observational qualities, watches carefully the behavior of those who come in to browse, and of those who pass on the street outside. She remains hopeful that a customer will soon choose her, but when the possibility emerges that her circumstances may change forever, Klara is warned not to invest too much in the promises of humans. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> In Klara and the Sun, Kazuo Ishiguro looks at our rapidly changing modern world through the eyes of an unforgettable narrator to explore a fundamental question: what does it mean to love?</p>',
       price: 54,
       quantity: 5
     },
@@ -143,7 +143,7 @@ export default new Vuex.Store({
       img: require('../assets/books/house_of_leaves.jpg'),
       collectionId: 'Horror',
       collectionName: 'H3',
-      description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A complex book about a tattoo artist obsessed with the death of his neighbour, a mysterious report that no one seems to know, a photographer exploring a rural house, a family that lives in that house, the so-called truth that the tattoo artist figures out while reading that report, the last days of the photographer inside that house and how the house seems to get bigger from the inside than the outside. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> This book explores the possibility that reality is not what it seems and that space is just another unknown concept as much as time. The book is crazier than James Joyce\'s Ulysses, but it is appreciated among the gamers that know about The Backrooms. </p>',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
       price: 74,
       quantity: 2
     }
@@ -382,7 +382,7 @@ export default new Vuex.Store({
               img: require('../assets/books/paddington-train.jpg'),
               collectionId: 'Crime',
               collectionName: 'C1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Two trains running parallel. A crime is committed in the first. In the second a witness saw it all, but no one believes her. It\'s time for Miss Marple to solve the case.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Elspeth McGillicuddy is not given to hallucinations. Until she witnesses a murder at Paddington Station. But did she? No victim, no suspect, no other witnesses. In fact no one believes it really happened at all. Except her friend Miss Jane Marple, and she\'s returning to the scene of the crime to discover just exactly what Mrs. McGillicuddy saw.</p>',
               price: 35,
               quantity: 5
           },
@@ -392,7 +392,7 @@ export default new Vuex.Store({
               img: require('../assets/books/cards-table.jpg'),
               collectionId: 'Crime',
               collectionName: 'C1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Every guest plays bridge in separate rooms while the host relaxes in the living room. How was it possible for the host to be murdered when every guest had their eyes focused on the game?</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
               price: 35,
               quantity: 5
           },
@@ -402,7 +402,7 @@ export default new Vuex.Store({
               img: require('../assets/books/farewell.jpg'),
               collectionId: 'Crime',
               collectionName: 'C2',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> What seems as a usual case of gangsters and crime turns out to be more of a twist. Detective Marlowe is forced to strike a deal with the toughest of the gangsters to solve the case and find his missing molly.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Marlowe\'s about to give up on a completely routine case when he finds himself in the wrong place at the right time to get caught up in a murder that leads to a ring of jewel thieves, another murder, a fortune-teller, a couple more murders, and more corruption than your average graveyard.</p>',
               price: 30,
               quantity: 5
           },
@@ -412,7 +412,7 @@ export default new Vuex.Store({
               img: require('../assets/books/goodbye.jpg'),
               collectionId: 'Crime',
               collectionName: 'C2',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A wealthy man is desperate to find his missing wife. Detective Marlowe takes up the case. During his investigation, the man commits suicide and Marlowe is left with secrets never heard of before.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Down-and-out drunk Terry Lennox has a problem: his millionaire wife is dead and he needs to get out of LA fast. So he turns to the only friend he can trust: private investigator Philip Marlowe. Marlowe is willing to help a man down on his luck, but later Lennox commits suicide in Mexico and things start to turn nasty. Marlowe is drawn into a sordid crowd of adulterers and alcoholics in LA\'s Idle Valley, where the rich are suffering one big suntanned hangover. Marlowe is sure Lennox didn\'t kill his wife, but how many stiffs will turn up before he gets to the truth?</p>',
               price: 28,
               quantity: 5
           },
@@ -422,7 +422,7 @@ export default new Vuex.Store({
               img: require('../assets/books/pet-sematary.jpg'),
               collectionId: 'Horror',
               collectionName: 'H1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A family moves to rural Maine for a quiet life away from the city. After a while the Creeds hear of strange stories of animals and people brought back to life with the aid of an ancient cemetery in the Native lands. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> When the family\'s baby boy dies, the father is left to choose: to accept death as a natural way of life or to bring the beloved child back in his life?</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son - and now an idyllic home. As a family, they\'ve got it all...right down to the friendly car. But the nearby woods hide a blood-chilling truth - more terrifying than death itself - and hideously more powerful. The Creeds are going to learn that sometimes dead is better.</p>',
               price: 55,
               quantity: 5
           },
@@ -432,7 +432,7 @@ export default new Vuex.Store({
               img: require('../assets/books/it.jpg'),
               collectionId: 'Horror',
               collectionName: 'H1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> No one would think that a clown might inspire fear and horror. But here it is. IT, the famous book by Stephen King, is now re-published with illustrations coming from creative artists that have read the book and felt inspired. Read, look and feel fear. </p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Welcome to Derry, Maine... It\'s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real... They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.</p>',
               price: 60,
               quantity: 5
           },
@@ -442,7 +442,7 @@ export default new Vuex.Store({
               img: require('../assets/books/wallpaper.jpg'),
               collectionId: 'Horror',
               collectionName: 'H2',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A Victorian husband heeds the advice of the doctor and isolates his wife in her bedroom. The woman feministically contemplates on how quickly men think of their women as being hysterical when they are but a bit ill. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Soon enough she finds out that she\'s not alone in her room.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A woman and her husband rent a summer house, but what should be a restful getaway turns into a suffocating psychological battle. This chilling account of postpartum depression and a husband\'s controlling behavior in the guise of treatment will leave you breathless.</p>',
               price: 18,
               quantity: 3
           },
@@ -452,7 +452,7 @@ export default new Vuex.Store({
               img: require('../assets/books/second-coming.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A visionary poem about the coming of the Antichrist and the destruction of the Modern world through the reverse of order. Students and professors alike may find the volume at hand a primary source for their thesis papers.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A collection of 15 of Yeats\' most famous poems, including \"The Second Coming\" and \"Easter, 1916\". \"The Second Coming\" is viewed as a prophetic poem that envisions the close of the Christian epoch and the violent birth of a new age. The poem\'s title makes reference to the Biblical reappearance of Christ, prophesied in Matthew 24 and the Revelations of St. John, which according to Christianity, will accompany the Apocalypse and divine Last Judgment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other symbols in the poem are drawn from mythology, the occult, and Yeats\' view of history as defined in his cryptic prose volume A Vision. The principal figure of the work is a sphinx-like creature with a lion\'s body and man\'s head, a \"rough beast\" awakened in the desert that makes its way to Christ\'s birthplace, Bethlehem. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other poems in this collect include \'Easter, 1916\', which chronicles Yeats\' complicated feelings on the execution of Irish patriots of the Easter Rebellion in Dublin.</p>',
               price: 50,
               quantity: 5
           },
@@ -462,7 +462,7 @@ export default new Vuex.Store({
               img: require('../assets/books/vision.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P1',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A magical volume comprised of some of Yeats\' greatest later poems and his illustrative philosophy of the 28 personalities based on the phases of the moon.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
               price: 80,
               quantity: 5
           },
@@ -472,7 +472,7 @@ export default new Vuex.Store({
               img: require('../assets/books/cantos.jpg'),
               collectionId: 'Poetry',
               collectionName: 'P2',
-              description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A life-long poem written between 1915 and 1962. It contains collections of memories, episodes of life and fragments of thought illustrated in a Imagist, Vorticist and Modern manner. Students that study Ezra Pound\'s work can find the book at hand useful for their thesis papers.</p>',
+              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Cantos by Ezra Pound is a long, incomplete poem in 116 sections, each of which is a canto. Most of it was written between 1915 and 1962, although much of the early work was abandoned and the early cantos, as finally published, date from 1922 onwards. It is a book-length work, widely considered to be an intense and challenging read. The Cantos is generally considered one of the most significant works of modernist poetry in the 20th century. As in Pound\'s prose writing, the themes of economics, governance and culture are integral to the work\'s content. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The most striking feature of the text, to a casual browser, is the inclusion of Chinese characters as well as quotations in European languages other than English. A close reader will normally require a scholarly commentary to help understand the text. The range of allusion to historical events is broad, and abrupt changes occur with little transition.</p>',
               price: 80,
               quantity: 5
           },
@@ -482,7 +482,7 @@ export default new Vuex.Store({
             img: require('../assets/books/vampires.jpg'),
             collectionId: 'Young Adult',
             collectionName: 'YA1',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A guide to vampires written by the illustruous vampire hunter Rudolph Van Richten of the Dungeons and Dragons\'s franchise.</p>',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Within these pages, Dr. Rudolph Van Richten shares his vast background as one of Ravenloft\'s most formidable lore masters and vampire hunters. Decades of research and experience have been compiled into discussions which define the very nature of those \"kings of the undead\", and help put them at a disadvantage to mortals, whom they consider to be \"mere cattle\". <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dr. Van Richten has detailed vampiric powers, weaknesses, feeding and sleeping habits, even their varied relationships with others of their own kind. Old myths are dispelled, new facts are uncovered, and the experiences of both vampires and those who hunt them are recorded for your safety and enlightenment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Quickly! Soon the sun sets and the dead will rise! The vampires of Ravenloft know no mercy, and you must be prepared before the darkness engulfs you.</p>',
             price: 55,
             quantity: 5
           },
@@ -492,7 +492,7 @@ export default new Vuex.Store({
             img: require('../assets/books/atlas_obscura.jpg'),
             collectionId: 'Travel',
             collectionName: 'TRA1',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A travelogue to exotic and mysterious places around the world. A group of young people embark on a journey to discover, catalogue and admire the awe-inspiring places of our planet.</p>',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Inspiring equal parts wonder and wanderlust, Atlas Obscura celebrates over 600 of the strangest and most curious places in the world. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Here are natural wonders—the dazzling glowworm caves in New Zealand, or a baobob tree in South Africa that\'s so large it has a pub inside where 15 people can drink comfortably. Architectural marvels, including the M.C. Escher-like stepwells in India. Mind-boggling events, like the Baby Jumping Festival in Spain, where men dressed as devils literally vault over rows of squirming infants. Not to mention the Great Stalacpipe Organ in Virginia, Turkmenistan\'s 45-year hole of fire called the Door of Hell, coffins hanging off a side of a cliff in the Philippines, eccentric bone museums in Italy, or a weather-forecasting invention that was powered by leeches, still on display in Devon, England. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Atlas Obscura revels in the weird, the unexpected, the overlooked, the hidden, and the mysterious. Every page expands our sense of how strange and marvelous the world really is. And with its compelling descriptions, hundreds of photographs, surprising charts, maps for every region of the world, it is a book you can open anywhere.</p>',
             price: 100,
             quantity: 5
           },
@@ -502,7 +502,7 @@ export default new Vuex.Store({
             img: require('../assets/books/klara_and_the_sun.jpg'),
             collectionId: 'Literary Fiction',
             collectionName: 'LF1',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> In the near future, robots would take the role of mannechins. They will be put on shop displays to delight passerbys. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> On a particular sunny day, Klara (one of the robots) awakes and contemplates the view before her. The Sun is her best friend for it is the celestial star that gives her power to move, to feel, to interact.</p>',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> From her place in the store, Klara, an Artificial Friend with outstanding observational qualities, watches carefully the behavior of those who come in to browse, and of those who pass on the street outside. She remains hopeful that a customer will soon choose her, but when the possibility emerges that her circumstances may change forever, Klara is warned not to invest too much in the promises of humans. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> In Klara and the Sun, Kazuo Ishiguro looks at our rapidly changing modern world through the eyes of an unforgettable narrator to explore a fundamental question: what does it mean to love?</p>',
             price: 54,
             quantity: 5
           },
@@ -512,7 +512,7 @@ export default new Vuex.Store({
             img: require('../assets/books/house_of_leaves.jpg'),
             collectionId: 'Horror',
             collectionName: 'H3',
-            description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A complex book about a tattoo artist obsessed with the death of his neighbour, a mysterious report that no one seems to know, a photographer exploring a rural house, a family that lives in that house, the so-called truth that the tattoo artist figures out while reading that report, the last days of the photographer inside that house and how the house seems to get bigger from the inside than the outside. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> This book explores the possibility that reality is not what it seems and that space is just another unknown concept as much as time. The book is crazier than James Joyce\'s Ulysses, but it is appreciated among the gamers that know about The Backrooms. </p>',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
             price: 74,
             quantity: 2
           }
