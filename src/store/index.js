@@ -146,16 +146,48 @@ export default new Vuex.Store({
       description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
       price: 74,
       quantity: 2
+    },
+    {
+      id: 15,
+      name: 'Midnight Sun',
+      img: require('../assets/books/midnight_sun.jpg'),
+      collectionId: 'General Fiction',
+      collectionName: 'YA2',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;">Midnight Sun is a 2020 companion novel to the 2005 book Twilight by author Stephenie Meyer. The work retells the events of Twilight from the perspective of Edward Cullen instead of that of the series\' usual narrating character Bella Swan. Meyer stated that Twilight was to be the only book from the series that she planned to rewrite from Edward\'s perspective.</p>',
+      price: 35,
+      quantity: 2
+    },
+    {
+      id: 16,
+      name: 'The Hidden Goddess',
+      img: require('../assets/books/the_hidden_goddess.jpg'),
+      collectionId: 'Spiritual',
+      collectionName: 'S1',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Hidden Goddess delves into the Bible to uncover the goddesses that have been buried within it. As well as discussing familiar figures such as Eve and Mary, the book also features Asherah, Sophia, Lilith, and others, exploring their histories, their roles in early Judaic Christian belief and their subsequent suppression. A readable and accessible antidote to the stereotype that the divine feminine is absent in the biblical traditions. A great resource for women and men seeking the Goddess in unlikely places.</p>',
+      price: 55,
+      quantity: 2
+    },
+    {
+      id: 17,
+      name: 'The Remains of the Day',
+      img: require('../assets/books/remains_of_the_day.jpg'),
+      collectionId: 'Literary Fiction',
+      collectionName: 'LF2',
+      description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Remains of the Day is a 1989 novel by the Nobel Prize-winning British author Kazuo Ishiguro. The protagonist, Stevens, is a butler with a long record of service at Darlington Hall, a stately home near Oxford, England. In 1956, he takes a road trip to visit a former colleague, and reminisces about events at Darlington Hall in the 1920s and 1930s. The work received the Booker Prize for Fiction in 1989. A film adaptation of the novel, made in 1993 and starring Anthony Hopkins and Emma Thompson, was nominated for eight Academy Awards. In 2022, it was included on the "Big Jubilee Read" list of 70 books by Commonwealth authors, selected to celebrate the Platinum Jubilee of Elizabeth II.</p>',
+      price: 35,
+      quantity: 5
+    },
+    {
+      id: 18,
+      name: 'Dracula',
+      img: require('../assets/books/dracula.jpg'),
+      collectionId: 'Literary Fiction',
+      collectionName: 'LF3',
+      description: '<p style="margin: 0 30pxl font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
+      price: 55,
+      quantity: 5
     }
     ],
-    collections: {
-      crime: ['C1', 'C2'],
-      horror: ['H1', 'H2', 'H3'],
-      poetry: ['P1', 'P2'],
-      young: ['YA1'],
-      travel: ['TRA1'],
-      literary: ['LF1'],
-    },
     genres: [
       {
         id: 1,
@@ -230,6 +262,15 @@ export default new Vuex.Store({
         description: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> This genre is applied to titles that explore the different aspects of nature and the environment. Subjects include natural environments (rainforest, desert, mountains, etc.), animals, environmental science (pollution, recycling, conservation, etc.), and weather. This genre is used when an overview or general look at a particular aspect of nature is presented. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> More detailed scientific explanations of similiar subjects would generally use the science genre.</p>'
       }
     ],
+    collections: {
+      crime: ['C1', 'C2'],
+      horror: ['H1', 'H2', 'H3'],
+      poetry: ['P1', 'P2'],
+      young: ['YA1', 'YA2'],
+      travel: ['TRA1'],
+      literary: ['LF1', 'LF2', 'LF3'],
+      spiritual: ['S1'],
+    },
     authors: [
       {
         id: 'Kazuo Ishiguro',
@@ -302,6 +343,33 @@ export default new Vuex.Store({
         nation: 'American',
         quote: 'This is no book. Whoever touches this touches a person.',
         bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Ezra Weston Loomis Pound was an expatriate American poet and critic, a major figure in the early modernist poetry movement. Pound\'s contribution to poetry began in the early 20th century with his role in developing Imagism, a movement stressing precision and economy of language. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Working in London as foreign editor of several American literary magazines, he helped discover and shape the work of contemporaries such as T. S. Eliot, Ernest Hemingway, and James Joyce. He was responsible for the 1914 serialization of Joyce\'s A Portrait of the Artist as a Young Man, the 1915 publication of Eliot\'s \"The Love Song of J. Alfred Prufrock\", and the serialization from 1918 of Joyce\'s Ulysses. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Hemingway wrote in 1932 that, for poets born in the late 19th or early 20th century, not to be influenced by Pound would be \"like passing through a great blizzard and not feeling its cold.\"</p>',
+      },
+      {
+        id: 'Stephenie Meyer',
+        name: 'Stephenie Meyer',
+        img: require('../assets/authors/meyer.jpg'),
+        birthday: '24 December 1973',
+        nation: 'American',
+        quote: 'After all, what was more important, in the end, than love?',
+        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Stephenie Meyer is an American novelist and film producer. She is best known for writing the vampire romance series Twilight, which has sold over 100 million copies, with translations into 37 different languages. An avid young reader, she attended Brigham Young University, marrying at the age of twenty-one before graduating with a degree in English in 1997. Having no prior experience as an author, she conceived the idea for the Twilight series in a dream. Influenced by the work of Jane Austen and William Shakespeare, she wrote Twilight soon thereafter. After many rejections, Little, Brown and Company offered her a $750,000 three-book deal which led to a four-book series, several spin-off novels and novellas, and a series of commercially successful film adaptations. Aside from young adult novels, Meyer has ventured into adult novels with The Host (2008) and The Chemist (2016). Meyer has worked in film production and cofounded production company Fickle Fish Films. Meyer produced both parts of Breaking Dawn and two other novel adaptations.</p>'
+      },
+      {
+        id: 'Laurie Martin-Gardner',
+        name: 'Laurie Martin-Gardner',
+        img: require('../assets/authors/martin.jpg'),
+        birthday: '(unknown)',
+        nation: 'American',
+        quote: '(unknown)',
+        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A lifelong student of history, mythology, and religion, Laurie Martin-Gardner draws inspiration from both the natural and spiritual worlds around her. Since childhood, she has spent her days immersed in the written word and published her first poem at the tender age of 12. Her first standalone non-fiction book, The Hidden Goddess, hit bookstores on February 1, 2020. Tracing the Divine Feminine from Asherah to Mary Magdalene, The Hidden Goddess is a look into the goddess traditions that influenced and permeated the foundations of the Judeo-Christian faith.</p>'
+      },
+      {
+        id: 'Bram Stocker',
+        name: 'Bram Stocker',
+        img: require('../assets/authors/bram_stocker.jpg'),
+        birthday: '8 November 1847',
+        nation: 'Irish',
+        quote: 'We learn of great things by little experiences.',
+        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Abraham Stocker was an Irish author who is celebrated for his 1897 Gothic horror novel Dracula. During his lifetime, he was better known as the personal assistant of actor Sir Henry Irving and business manager of the Lyceum Theatre, which Irving owned. In his early years, Stoker worked as a theatre critic for an Irish newspaper, and wrote stories as well as commentaries. He also enjoyed travelling, particularly to Cruden Bay where he set two of his novels. During another visit to the English coastal town of Whitby, Stoker drew inspiration for writing Dracula. He died on 20 April 1912 due to locomotor ataxia and was cremated in north London. Since his death, his magnum opus Dracula has become one of the most well-known works in English literature, and the novel has been adapted for numerous films, short stories, and plays.</p>'
       }
     ],
     isModal: false,
@@ -515,6 +583,46 @@ export default new Vuex.Store({
             description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
             price: 74,
             quantity: 2
+          },
+          {
+            id: 15,
+            name: 'Midnight Sun',
+            img: require('../assets/books/midnight_sun.jpg'),
+            collectionId: 'General Fiction',
+            collectionName: 'GF1',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;">Midnight Sun is a 2020 companion novel to the 2005 book Twilight by author Stephenie Meyer. The work retells the events of Twilight from the perspective of Edward Cullen instead of that of the series\' usual narrating character Bella Swan. Meyer stated that Twilight was to be the only book from the series that she planned to rewrite from Edward\'s perspective.</p>',
+            price: 35,
+            quantity: 2
+          },
+          {
+            id: 16,
+            name: 'The Hidden Goddess',
+            img: require('../assets/books/the_hidden_goddess.jpg'),
+            collectionId: 'Spiritual',
+            collectionName: 'S1',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Hidden Goddess delves into the Bible to uncover the goddesses that have been buried within it. As well as discussing familiar figures such as Eve and Mary, the book also features Asherah, Sophia, Lilith, and others, exploring their histories, their roles in early Judaic Christian belief and their subsequent suppression. A readable and accessible antidote to the stereotype that the divine feminine is absent in the biblical traditions. A great resource for women and men seeking the Goddess in unlikely places.</p>',
+            price: 55,
+            quantity: 2
+          },
+          {
+            id: 17,
+            name: 'The Remains of the Day',
+            img: require('../assets/books/remains_of_the_day.jpg'),
+            collectionId: 'Literary Fiction',
+            collectionName: 'LF2',
+            description: '<p style="margin: 0 30px; font-size: 17; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Remains of the Day is a 1989 novel by the Nobel Prize-winning British author Kazuo Ishiguro. The protagonist, Stevens, is a butler with a long record of service at Darlington Hall, a stately home near Oxford, England. In 1956, he takes a road trip to visit a former colleague, and reminisces about events at Darlington Hall in the 1920s and 1930s. The work received the Booker Prize for Fiction in 1989. A film adaptation of the novel, made in 1993 and starring Anthony Hopkins and Emma Thompson, was nominated for eight Academy Awards. In 2022, it was included on the "Big Jubilee Read" list of 70 books by Commonwealth authors, selected to celebrate the Platinum Jubilee of Elizabeth II.</p>',
+            price: 35,
+            quantity: 5
+          },
+          {
+            id: 18,
+            name: 'Dracula',
+            img: require('../assets/books/dracula.jpg'),
+            collectionId: 'Literary Fiction',
+            collectionName: 'LF3',
+            description: '<p style="margin: 0 30pxl font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
+            price: 55,
+            quantity: 5
           }
         ]
           commit('SET_PRODUCTS', data)

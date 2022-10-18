@@ -39,6 +39,17 @@
         </li>
       </ul>
       <br/>
+      <h3>A variety of genres for every taste</h3>
+      <ul class="container-genres">    
+        <li class="item-genres" v-for="genre in genres">
+          <router-link :to="`/genre/${genre.id}`">
+            <img class="genre-img" :src="genre.img" alt="book cover" />
+            <br/>
+            {{ genre.name }}
+          </router-link>
+        </li>
+      </ul>
+      <br/>
       <h3>Discover your favorite authors</h3>
       <ul class="container-authors">
         <li class="item-authors" v-for="author in authors">
@@ -49,15 +60,6 @@
           </router-link>
         </li>
       </ul>
-      <br/>
-      <!--<h3>A variety of genres for every taste</h3>
-      <ul class="container-genres">    
-        <li class="item-genres" v-for="genre in genres">
-          <router-link :to="`/genre/${genre.id}`">
-            {{ genre.name }}
-          </router-link>
-        </li>
-      </ul>-->
     </main>
 </template>
   
@@ -101,6 +103,9 @@ export default {
     },
     addToBasket (product) {
       this.$store.commit('ADD_TO_BASKET', product)
+    },
+    readMore () {
+
     }
   }
 }
@@ -221,6 +226,25 @@ export default {
         font-size: 18px;
         font-style: normal;
       }
+      .container-genres {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;   
+      }
+      .item-genres {
+        margin: 15px;
+        padding: 5px 10px 10px 10px;
+        border: 1px solid rgb(4, 222, 222);
+        border-radius: 5px;
+        background-color: lightcyan;
+      }
+      .genre-img {
+        width: 170px;
+        height: 200px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
       .container-authors {
         padding: 5px 20px;
         display: flex;
@@ -250,19 +274,6 @@ export default {
       a:hover {
         text-decoration: underline;
       }
-      //.container-genres {
-      //  padding: 5px;
-      //  display: flex;
-      //  flex-wrap: wrap;
-      //  justify-content: space-evenly;   
-      //}
-      //.item-genres {
-      //  margin: 15px;
-      //  padding: 5px 10px 10px 10px;
-      //  border: 1px solid rgb(4, 222, 222);
-      //  border-radius: 5px;
-      //  background-color: lightcyan;
-      //}
     }
     @media only screen and (min-width: 1024px) {
       h1 {
@@ -374,8 +385,27 @@ export default {
         font-size: 18px;
         font-style: normal;
       }
+      .container-genres {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;   
+      }
+      .item-genres {
+        margin: 10px;
+        padding: 10px 15px 10px 15px;
+        border: 1px solid rgb(4, 222, 222);
+        border-radius: 5px;
+        background-color: lightcyan;
+      }
+      .genre-img {
+        width: 180px;
+        height: 220px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
       .container-authors {
-        padding: 5px 40px;
+        padding: 5px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;   
@@ -403,19 +433,6 @@ export default {
       a:hover {
         text-decoration: underline;
       }
-      //.container-genres {
-      //  padding: 5px;
-      //  display: flex;
-      //  flex-wrap: wrap;
-      //  justify-content: space-evenly;   
-      //}
-      //.item-genres {
-      //  margin: 10px;
-      //  padding: 10px 15px 10px 15px;
-      //  border: 1px solid rgb(4, 222, 222);
-      //  border-radius: 5px;
-      //  background-color: lightcyan;
-      //}
     }
   }
 </style>

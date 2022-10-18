@@ -7,8 +7,8 @@ import Profile from '../views/Profile.vue';
 import Login from '../views/Login.vue';
 import store from '../store';
 import Basket from '../views/Basket.vue';
+import Authors from '../views/Authors.vue';
 import Genre from '../views/Genre.vue';
-import Authors from '../views/Authors.vue'
 //import HomeView from '../views/HomeView';
 //import CollectionsView from '../views/CollectionsView';
 //import ProductView from '../views/ProductView';
@@ -34,7 +34,7 @@ const routes = [
   {
     path: '/genre/:id',
     name: 'Genre',
-    component: Genre
+    component: Genre,
   },
   {
     path: '/authors/:id',
