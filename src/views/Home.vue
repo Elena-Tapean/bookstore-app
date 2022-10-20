@@ -20,6 +20,7 @@
             <span>{{ product.count || 0 }}</span>
             <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
                   @click="increment(product.id)">+</button>
+            <br/>
             <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
           </div>
           <button class="basket-button" :disabled="!product.count || product.count === 0" 
