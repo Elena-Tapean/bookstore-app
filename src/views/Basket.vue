@@ -9,7 +9,7 @@
                     {{ product.name }}
                 </router-link>
                 <br/>
-                <div>
+                <div class="container-div">
                     <button class="quantity-button" @click="decrement(product.id)">-</button>
                     <span>{{ product.count || 0 }}</span>
                     <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
@@ -36,12 +36,12 @@ export default {
       this.$store.dispatch('get_data')
     },
     computed: {
-        basket () {
-            return this.$store.state.basket
-        }, 
         products () {
             return this.$store.state.products
         },
+        basket () {
+            return this.$store.state.basket
+        } 
     },
     methods: {
         increment (id) {
@@ -97,23 +97,42 @@ export default {
             height: 180px;
             border-radius: 5px;
         }
-        .quantity-button {
+        .container-div {
+            padding: 5px;
             margin: 5px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgb(228, 83, 131);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  
+            
+            .quantity-button {
+                margin: 0 15px;
+                padding: 6px 8px;
+                border: none;
+                border-radius: 4px;
+                background-color: rgb(228, 83, 131);
+                color: white;
+                font-size: 16px;
+            }
+            .quantity-button:hover {
+                background-color: rgb(218, 30, 93);
+            }
+            span {
+                margin: 5px;
+                font-size: 17px;
+                font-style: normal;
+            }
+        }
+        .buying-button:disabled {
+            margin: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.8);
+            border-radius: 5px;
+            background-color: rgba(128, 128, 128, 1.0);
+            opacity: 0.4;
             color: white;
             font-size: 14px;
-        }
-        .quantity-button:hover {
-            background-color: rgb(218, 30, 93)
-        }
-        span {
-            margin: 5px;
-            font-size: 16px;
             font-style: normal;
         }
-        .buying-button {
+        .buying-button:enabled {
             margin: 5px;
             border: 1px solid green;
             border-radius: 5px;
@@ -121,9 +140,6 @@ export default {
             color: white;
             font-size: 17px;
             font-style: normal;
-        }
-        .buying-button:hover {
-            background: linear-gradient(green, mediumseagreen);
         }
     }
 
@@ -163,35 +179,28 @@ export default {
             height: 180px;
             border-radius: 5px;
         }
-        .quantity-button {
-            margin: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgb(228, 83, 131);
-            color: white;
+        .container-div {
+            padding: 5px;
+            margin: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  
+            
+            .quantity-button {
+                padding: 3px 8px;
+                font-size: 17px;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+        .buying-button:disabled {
+            margin: 5px;
             font-size: 16px;
         }
-        .quantity-button:hover {
-            background-color: rgb(218, 30, 93)
-        }
-        span {
+        .buying-button:enabled {
             margin: 5px;
-            padding: 5px;
-            font-size: 17px;
-            font-style: normal;
-        }
-        .buying-button {
-            margin: 5px;
-            padding: 3px 15px;
-            border: 1px solid green;
-            border-radius: 5px;
-            background-color: mediumseagreen;
-            color: white;
             font-size: 18px;
-            font-style: normal;
-        }
-        .buying-button:hover {
-            background: linear-gradient(green, mediumseagreen);
         }
     }
 }

@@ -8,7 +8,7 @@
               @input="handleSearch" 
               placeholder="search product..." />
       <ul class="container-products">
-        <li class= "item-products" v-for="product in products" :key="product.id">
+        <li class="item-products" v-for="product in products" :key="product.id">
           <router-link :to="`/product/${product.id}`">
             <img class="product-img" :src="product.img" alt="book cover" />
             <br/>
@@ -267,21 +267,13 @@ export default {
     @media only screen and (min-width: 1024px) {
       h1 {
         font-size: 40px;
-        font-style: normal;
-        text-align: center;
-        font-family: Verdana, Tahoma, sans-serif;
       }
       q {
         font-size: 21px;
-        font-style: italic;
-        text-align: center;
         quotes: none;
-        font-family: Arial, Helvetica, sans-serif;
       }
       input {
         margin: 24px 0 5px 0;
-        border: 1px solid grey;
-        border-radius: 4px;
         font-size: 16px;
       }
       ul, li {
@@ -296,23 +288,15 @@ export default {
       .item-products {
         margin: 15px 35px;
         padding: 10px 20px 10px 20px;
-        border: 1px solid rgb(4, 222, 222);
-        border-radius: 5px;
-        background-color: lightcyan;
       }
       .product-img {
         width: 180px;
         height: 220px;
         margin-bottom: 10px;
-        border-radius: 5px;
       }
       .quantity-button {
         margin: 10px;
         padding: 3px 8px;
-        border: none;
-        border-radius: 4px;
-        background-color: rgb(228, 83, 131);
-        color: white;
         font-size: 17px;
       }
       .quantity-button:hover {
@@ -321,71 +305,37 @@ export default {
       span {
         margin: 5px;
         font-size: 18px;
-        font-style: normal;
       }
       .basket-button:disabled {
         margin: 7px;
-        border: 1px solid rgba(128, 128, 128, 0.8);
-        border-radius: 5px;
-        background-color: rgba(128, 128, 128, 1.0);
-        opacity: 0.4;
-        color: white;
         font-size: 16px;
-        font-style: normal;
       }
       .basket-button:enabled {
         margin: 7px;
-        border: 1px solid green;
-        border-radius: 5px;
-        background-color: mediumseagreen;
-        color: white;
         font-size: 19px;
-        font-style: normal;
       }
       h3 {
         font-size: 27px;
-        font-style: normal;
-        text-align: center;
-        font-family: Verdana, Tahoma, sans-serif;
       }
       .container-collections {
         margin: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;   
       }
       .item-collections {
         margin: 10px;
         padding: 20px;
-        border: 1px solid rgb(4, 222, 222);
-        border-radius: 4px;
-        background-color: lightcyan;
       }
       select {
-        border: none;
-        background-color: lightcyan;
-        color: black;
         font-size: 19px;
-        font-style: normal;
       }
       option {
-        background-color: white;
-        color: rgb(218, 30, 93);
         font-size: 18px;
-        font-style: normal;
       }
       .container-authors {
         padding: 5px 40px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;   
       }
       .item-authors {
         margin: 10px;
         padding: 10px 15px 10px 15px;
-        border: 1px solid rgb(4, 222, 222);
-        border-radius: 5px;
-        background-color: lightcyan;
       }
       .author-img {
         width: 150px;
@@ -394,28 +344,8 @@ export default {
         border-radius: 5px;
       }
       a {
-        text-decoration: none;
         font-size: 18px;
-        font-style: normal;
-        color: darkblue;
-        font-family: Arial, Helvetica, sans-serif;
       }
-      a:hover {
-        text-decoration: underline;
-      }
-      //.container-genres {
-      //  padding: 5px;
-      //  display: flex;
-      //  flex-wrap: wrap;
-      //  justify-content: space-evenly;   
-      //}
-      //.item-genres {
-      //  margin: 10px;
-      //  padding: 10px 15px 10px 15px;
-      //  border: 1px solid rgb(4, 222, 222);
-      //  border-radius: 5px;
-      //  background-color: lightcyan;
-      //}
     }
   }
 </style>
