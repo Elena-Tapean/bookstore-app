@@ -18,23 +18,19 @@
                     <span @click="handleRouteChange">{{ item.name }}</span>
                 </router-link>
             </div>
-            
             <a href="tel: +40723060361">tel: +40 723 060 361</a>
-
             <router-link to="/basket">
                 <span class="basket-logo">
                     basket ({{ basketTotal }})
                 </span>
             </router-link>
-
             <router-link to="/login">
                 <button @click="handleLogout">
                     <svg width="20" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.586 8L4.05 5.464L5.464 4.05L10.414 9L5.464 13.95L4.05 12.536L6.586 10H0V8H6.586ZM8 0H16C17.1 0 18 0.9 18 2V16C18 17.1 17.1 18 16 18H8V16H16V2H8V0Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.586 8L4.05 5.464L5.464 4.05L10.414 9L5.464 13.95L4.05 12.536L6.586 10H0V8H6.586ZM8 0H16C17.1 0 18 0.9 18 2V16C18 17.1 17.1 18 16 18H8V16H16V2H8V0Z" fill="rgb(228, 83, 131)"/>
 </svg> {{ user.name ? 'LOGOUT' : 'LOGIN' }}
                 </button>
             </router-link>
-
         </nav>
     </header>
 </template>
@@ -116,20 +112,16 @@ import HambMenuIcon from './HambMenuIcon.vue';
 <style lang="scss">
 .nav-bar {
     @media only screen and (min-width: 0) {
-        background-image: url('../assets/header.jpg');
-        background-repeat: no-repeat;
+        background: linear-gradient(rgb(228, 83, 131), rgb(218, 30, 93));
         height: 82px;
         top: 0;
         left: 0;
         overflow: hidden;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(218, 30, 93);
         transition: height 0.5s ease-in-out;
         z-index: 99;
         position: fixed;
         width: 100%;
-        background-color: whitesmoke;
-        font-size: 18px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
         .img-logo {
             width: 30px;
@@ -148,7 +140,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
             justify-content: center;
         }
         > div {
-            padding: 16px 24px;
+            padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -157,25 +149,25 @@ import HambMenuIcon from './HambMenuIcon.vue';
             margin-top: 120px;
         }
         span {
-            font-size: 20px;
             margin-left: 10px;
+            font-size: 21px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         a {
             margin: 25px;
             display: block;
             text-decoration: none;
             color: rgba(0, 0, 0, 0.8);
-            font-size: 18px;
+            font-size: 21px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         button {
             margin: 0 auto;
-            padding: 5px 7px;
             border: none;
             border-radius: 5px;
-            background-color: rgb(228, 83, 131);
-            color: white;
-            font-size: 18px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(228, 83, 131);
+            font-size: 21px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
     }
@@ -184,7 +176,6 @@ import HambMenuIcon from './HambMenuIcon.vue';
         justify-content: space-between;
         align-items: center;
         overflow: inherit;
-        font-size: 20px;
         
         .img-logo {
             width: 40px;
@@ -202,19 +193,26 @@ import HambMenuIcon from './HambMenuIcon.vue';
             margin-top: 0;
             display: flex;
         }
-        a {
-            margin: 0 10px;
-            display: inline-block;
-        }
         .basket-logo {
             display: flex;
         }
+        span {
+            margin-left: 5px;
+            font-size: 20px;
+        }
+        a {
+            margin: 0 10px;
+            display: inline-block;
+            font-size: 20px;
+        }
         button {
             margin: 0 20px;
+            font-size: 20px;
         }
     }
     .router-link-exact-active {
-        color: orangered;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
     }
 }
 </style>
