@@ -9,7 +9,7 @@
             {{ product.name }}
           </router-link>
           <br/>
-          <span>{{ product.price }} Lei</span>
+          {{ product.price }} Lei
         </li>
       </ul>
       <br/>
@@ -18,7 +18,7 @@
   
 <script>
 export default {
-  name: "Home",
+  name: "Home", 
     data () {
       return {
         search: '',
@@ -53,13 +53,13 @@ export default {
         list-style-type: none;
       }
       ul {
-        margin: 0 10px;
+        margin: 0 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
       }
       li {
-        margin: 0 10px;
+        margin: 10px;
         border: none;
       }
       .product-img {
@@ -83,18 +83,24 @@ export default {
       h2 {
         font-size: 33px;
       }
-      input {
-        margin: 24px 0 5px 0;
-        font-size: 16px;
+      ul {
+        margin: 0 120px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      li {
+        margin: 0 10px;
+        border: none;
       }
       .product-img {
-        width: 180px;
-        height: 220px;
+        width: 130px;
+        height: 170px;
         margin-bottom: 10px;
       }
       a {
         font-size: 18px;
       }
     }
-  }
+  } 
 </style>

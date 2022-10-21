@@ -12,7 +12,7 @@
         <h3>Description:</h3>
         <p v-html="product.description" />
         <h3>Price:</h3> 
-        <span>{{ product.price }} Ron</span>
+        <span>{{ product.price }} Lei</span>
     </main>
 </template>
 

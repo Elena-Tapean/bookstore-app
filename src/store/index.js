@@ -423,7 +423,7 @@ export default new Vuex.Store({
     },
     BUYING_PRODUCT (state, product) {
       state.basket.add(product)
-    }
+    },
     //UPDATE_BUY_QUANTITY (state, {id, direction}) {
     //  const index = state.products.findIndex(obj => obj.id === id)
     //  const product = state.products[index]
@@ -444,118 +444,8 @@ export default new Vuex.Store({
       try {
         setTimeout(() => {
           const data = [
-            {
-              id: 1,
-              name: '4.50 from Paddington',
-              img: require('../assets/books/paddington-train.jpg'),
-              collectionId: 'Crime',
-              collectionName: 'C1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Elspeth McGillicuddy is not given to hallucinations. Until she witnesses a murder at Paddington Station. But did she? No victim, no suspect, no other witnesses. In fact no one believes it really happened at all. Except her friend Miss Jane Marple, and she\'s returning to the scene of the crime to discover just exactly what Mrs. McGillicuddy saw.</p>',
-              price: 35,
-              quantity: 5
-          },
           {
-              id: 2,
-              name: 'Cards on the Table',
-              img: require('../assets/books/cards-table.jpg'),
-              collectionId: 'Crime',
-              collectionName: 'C1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
-              price: 35,
-              quantity: 5
-          },
-          {
-              id: 3,
-              name: 'Farewell, My Lovely',
-              img: require('../assets/books/farewell.jpg'),
-              collectionId: 'Crime',
-              collectionName: 'C2',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Marlowe\'s about to give up on a completely routine case when he finds himself in the wrong place at the right time to get caught up in a murder that leads to a ring of jewel thieves, another murder, a fortune-teller, a couple more murders, and more corruption than your average graveyard.</p>',
-              price: 30,
-              quantity: 5
-          },
-          {
-              id: 4,
-              name: 'The Long Goodbye',
-              img: require('../assets/books/goodbye.jpg'),
-              collectionId: 'Crime',
-              collectionName: 'C2',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Down-and-out drunk Terry Lennox has a problem: his millionaire wife is dead and he needs to get out of LA fast. So he turns to the only friend he can trust: private investigator Philip Marlowe. Marlowe is willing to help a man down on his luck, but later Lennox commits suicide in Mexico and things start to turn nasty. Marlowe is drawn into a sordid crowd of adulterers and alcoholics in LA\'s Idle Valley, where the rich are suffering one big suntanned hangover. Marlowe is sure Lennox didn\'t kill his wife, but how many stiffs will turn up before he gets to the truth?</p>',
-              price: 28,
-              quantity: 5
-          },
-          {
-              id: 5,
-              name: 'Pet Sematary',
-              img: require('../assets/books/pet-sematary.jpg'),
-              collectionId: 'Horror',
-              collectionName: 'H1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son - and now an idyllic home. As a family, they\'ve got it all...right down to the friendly car. But the nearby woods hide a blood-chilling truth - more terrifying than death itself - and hideously more powerful. The Creeds are going to learn that sometimes dead is better.</p>',
-              price: 55,
-              quantity: 5
-          },
-          {
-              id: 6,
-              name: 'IT',
-              img: require('../assets/books/it.jpg'),
-              collectionId: 'Horror',
-              collectionName: 'H1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Welcome to Derry, Maine... It\'s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real... They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.</p>',
-              price: 60,
-              quantity: 5
-          },
-          {
-              id: 7,
-              name: 'The Yellow Wallpaper',
-              img: require('../assets/books/wallpaper.jpg'),
-              collectionId: 'Horror',
-              collectionName: 'H2',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A woman and her husband rent a summer house, but what should be a restful getaway turns into a suffocating psychological battle. This chilling account of postpartum depression and a husband\'s controlling behavior in the guise of treatment will leave you breathless.</p>',
-              price: 18,
-              quantity: 3
-          },
-          {
-              id: 8,
-              name: 'The Second Coming',
-              img: require('../assets/books/second-coming.jpg'),
-              collectionId: 'Poetry',
-              collectionName: 'P1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A collection of 15 of Yeats\' most famous poems, including \"The Second Coming\" and \"Easter, 1916\". \"The Second Coming\" is viewed as a prophetic poem that envisions the close of the Christian epoch and the violent birth of a new age. The poem\'s title makes reference to the Biblical reappearance of Christ, prophesied in Matthew 24 and the Revelations of St. John, which according to Christianity, will accompany the Apocalypse and divine Last Judgment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other symbols in the poem are drawn from mythology, the occult, and Yeats\' view of history as defined in his cryptic prose volume A Vision. The principal figure of the work is a sphinx-like creature with a lion\'s body and man\'s head, a \"rough beast\" awakened in the desert that makes its way to Christ\'s birthplace, Bethlehem. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Other poems in this collect include \'Easter, 1916\', which chronicles Yeats\' complicated feelings on the execution of Irish patriots of the Easter Rebellion in Dublin.</p>',
-              price: 50,
-              quantity: 5
-          },
-          {
-              id: 9,
-              name: 'A Vision',
-              img: require('../assets/books/vision.jpg'),
-              collectionId: 'Poetry',
-              collectionName: 'P1',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
-              price: 80,
-              quantity: 5
-          },
-          {
-              id: 10,
-              name: 'The Cantos',
-              img: require('../assets/books/cantos.jpg'),
-              collectionId: 'Poetry',
-              collectionName: 'P2',
-              description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Cantos by Ezra Pound is a long, incomplete poem in 116 sections, each of which is a canto. Most of it was written between 1915 and 1962, although much of the early work was abandoned and the early cantos, as finally published, date from 1922 onwards. It is a book-length work, widely considered to be an intense and challenging read. The Cantos is generally considered one of the most significant works of modernist poetry in the 20th century. As in Pound\'s prose writing, the themes of economics, governance and culture are integral to the work\'s content. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The most striking feature of the text, to a casual browser, is the inclusion of Chinese characters as well as quotations in European languages other than English. A close reader will normally require a scholarly commentary to help understand the text. The range of allusion to historical events is broad, and abrupt changes occur with little transition.</p>',
-              price: 80,
-              quantity: 5
-          },
-          {
-            id: 11,
-            name: 'Van Richten\'s Guide to Vampires',
-            img: require('../assets/books/vampires.jpg'),
-            collectionId: 'Young Adult',
-            collectionName: 'YA1',
-            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Within these pages, Dr. Rudolph Van Richten shares his vast background as one of Ravenloft\'s most formidable lore masters and vampire hunters. Decades of research and experience have been compiled into discussions which define the very nature of those \"kings of the undead\", and help put them at a disadvantage to mortals, whom they consider to be \"mere cattle\". <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dr. Van Richten has detailed vampiric powers, weaknesses, feeding and sleeping habits, even their varied relationships with others of their own kind. Old myths are dispelled, new facts are uncovered, and the experiences of both vampires and those who hunt them are recorded for your safety and enlightenment. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Quickly! Soon the sun sets and the dead will rise! The vampires of Ravenloft know no mercy, and you must be prepared before the darkness engulfs you.</p>',
-            price: 55,
-            quantity: 5
-          },
-          {
-            id: 12,
+            id: 1,
             name: 'Atlas Obscura',
             img: require('../assets/books/atlas_obscura.jpg'),
             collectionId: 'Travel',
@@ -565,7 +455,7 @@ export default new Vuex.Store({
             quantity: 5
           },
           {
-            id: 13,
+            id: 2,
             name: 'Klara and the Sun',
             img: require('../assets/books/klara_and_the_sun.jpg'),
             collectionId: 'Literary Fiction',
@@ -575,7 +465,7 @@ export default new Vuex.Store({
             quantity: 5
           },
           {
-            id: 14,
+            id: 3,
             name: 'House of Leaves',
             img: require('../assets/books/house_of_leaves.jpg'),
             collectionId: 'Horror',
@@ -585,17 +475,7 @@ export default new Vuex.Store({
             quantity: 2
           },
           {
-            id: 15,
-            name: 'Midnight Sun',
-            img: require('../assets/books/midnight_sun.jpg'),
-            collectionId: 'General Fiction',
-            collectionName: 'GF1',
-            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;">Midnight Sun is a 2020 companion novel to the 2005 book Twilight by author Stephenie Meyer. The work retells the events of Twilight from the perspective of Edward Cullen instead of that of the series\' usual narrating character Bella Swan. Meyer stated that Twilight was to be the only book from the series that she planned to rewrite from Edward\'s perspective.</p>',
-            price: 35,
-            quantity: 2
-          },
-          {
-            id: 16,
+            id: 4,
             name: 'The Hidden Goddess',
             img: require('../assets/books/the_hidden_goddess.jpg'),
             collectionId: 'Spiritual',
@@ -605,23 +485,23 @@ export default new Vuex.Store({
             quantity: 2
           },
           {
-            id: 17,
-            name: 'The Remains of the Day',
-            img: require('../assets/books/remains_of_the_day.jpg'),
-            collectionId: 'Literary Fiction',
-            collectionName: 'LF2',
-            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Remains of the Day is a 1989 novel by the Nobel Prize-winning British author Kazuo Ishiguro. The protagonist, Stevens, is a butler with a long record of service at Darlington Hall, a stately home near Oxford, England. In 1956, he takes a road trip to visit a former colleague, and reminisces about events at Darlington Hall in the 1920s and 1930s. The work received the Booker Prize for Fiction in 1989. A film adaptation of the novel, made in 1993 and starring Anthony Hopkins and Emma Thompson, was nominated for eight Academy Awards. In 2022, it was included on the "Big Jubilee Read" list of 70 books by Commonwealth authors, selected to celebrate the Platinum Jubilee of Elizabeth II.</p>',
-            price: 35,
+            id: 5,
+            name: 'A Vision',
+            img: require('../assets/books/vision.jpg'),
+            collectionId: 'Poetry',
+            collectionName: 'P1',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
+            price: 80,
             quantity: 5
           },
           {
-            id: 18,
+            id: 6,
             name: 'Dracula',
             img: require('../assets/books/dracula.jpg'),
             collectionId: 'Literary Fiction',
             collectionName: 'LF3',
             description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
-            price: 55,
+            price: 35,
             quantity: 5
           }
         ]
