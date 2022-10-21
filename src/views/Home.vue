@@ -1,12 +1,6 @@
 <template>
     <main class="home-page main-grid">
-      <h1>Welcome to Es Bookstore</h1>
-      <q>Read, experience, inspire.</q>
       <br/>
-      <input type="text" 
-              v-model="search" 
-              @input="handleSearch" 
-              placeholder="search product..." />
       <ul class="container-products">
         <li class="item-products" v-for="product in products" :key="product.id">
           <router-link :to="`/product/${product.id}`">
@@ -30,7 +24,7 @@
         </li>
       </ul>
       <br/>
-      <h3>Collections on display</h3>
+      <!--<h3>Collections on display</h3>
       <ul class="container-collections">
         <li class="item-collections" v-for="(collection, index) in collections" :key="index">
           <select @change="handleCollection">
@@ -51,7 +45,7 @@
         </li>
       </ul>
       <br/>
-      <!--<h3>A variety of genres for every taste</h3>
+      <h3>A variety of genres for every taste</h3>
       <ul class="container-genres">    
         <li class="item-genres" v-for="genre in genres">
           <router-link :to="`/genre/${genre.id}`">
@@ -190,7 +184,17 @@ export default {
         font-size: 17px;
         font-style: normal;
       }
-      h3 {
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        font-style: normal;
+        color: darkblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /*h3 {
         font-size: 23px;
         font-style: normal;
         text-align: center;
@@ -207,7 +211,7 @@ export default {
         padding: 20px;
         border: 1px solid rgb(4, 222, 222);
         border-radius: 4px;
-        background-color: lightcyan;
+       background-color: lightcyan;
       }
       select {
         border: none;
@@ -241,30 +245,21 @@ export default {
         margin-bottom: 10px;
         border-radius: 5px;
       }
-      a {
-        text-decoration: none;
-        font-size: 18px;
-        font-style: normal;
-        color: darkblue;
-        font-family: Arial, Helvetica, sans-serif;
+      .container-genres {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;   
       }
-      a:hover {
-        text-decoration: underline;
-      }
-      //.container-genres {
-      //  padding: 5px;
-      //  display: flex;
-      //  flex-wrap: wrap;
-      //  justify-content: space-evenly;   
-      //}
-      //.item-genres {
-      //  margin: 15px;
-      //  padding: 5px 10px 10px 10px;
-      //  border: 1px solid rgb(4, 222, 222);
-      //  border-radius: 5px;
-      //  background-color: lightcyan;
-      //}
+      .item-genres {
+        margin: 15px;
+        padding: 5px 10px 10px 10px;
+        border: 1px solid rgb(4, 222, 222);
+        border-radius: 5px;
+        background-color: lightcyan;
+      }*/
     }
+
     @media only screen and (min-width: 1024px) {
       h1 {
         font-size: 40px;
@@ -318,7 +313,7 @@ export default {
       h3 {
         font-size: 27px;
       }
-      .container-collections {
+      /*.container-collections {
         margin: 10px;
       }
       .item-collections {
@@ -343,7 +338,7 @@ export default {
         height: 200px;
         margin-bottom: 10px;
         border-radius: 5px;
-      }
+      }*/
       a {
         font-size: 18px;
       }
