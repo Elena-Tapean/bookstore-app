@@ -1,10 +1,9 @@
 <template>
-    <main class="login-page main-grid">
+    <main class="register-page main-grid">
         <div class="shader-bg">
-        <h1>Log In</h1>
-        <br/>
+        <h1>Register</h1>
         <ValidationObserver v-slot="{invalid}">
-            <form @submit.prevent="handleLogin">
+        <form @submit.prevent="handleRegister">
             <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
                 <span>Name:</span>
                 <br/>
@@ -13,6 +12,13 @@
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
+            <ValidationProvider name="Surname" rules="required|alpha" v-slot="{errors}">
+                <span>Surname:</span>
+                <br/>
+                <input v-model="user.surname" type="text" />
+                <br/>
+                <span>{{errors[0]}}</span>
+            </ValidationProvider>
             <br/>
             <ValidationProvider name="Email" rules="required" v-slot="{errors}">
                 <span>Email:</span>
@@ -22,7 +28,6 @@
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
-            <br/>
             <ValidationProvider name="Password" rules="required" v-slot="{errors}">
                 <span>Password:</span>
                 <br/>
@@ -31,8 +36,19 @@
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
-            <br/>
-            <button type="submit" :disabled="invalid">LOG IN</button>
+            <ValidationProvider name="Confirm Password" rules="required" v-slot="{errors}">
+                <span>Confirm Password:</span>
+                <br/>
+                <input v-model="user.confirm" type="password" />
+                <br/>
+                <span>{{errors[0]}}</span>
+            </ValidationProvider>
+                <br/>
+                <input class="checkbox-info" type="checkbox" />
+                <span>I have read and agreed with the Terms and Conditions.</span>
+                <br/>
+                <br/>
+                <button type="submit" :disabled="invalid">REGISTER</button>
             </form>
         </ValidationObserver>
         </div>
@@ -40,38 +56,40 @@
 </template>
 
 <script>
-    export default {
-        name: 'Login',
-        data () {
-            return {
-                user: {
+export default {
+    name: 'Register',
+    data () {
+        return {
+            user: {
                     name: '',
+                    surname: '',
                     email: '',
                     password: '',
+                    confirm: '',
                     invalid: true,
                 }
-            }
-        },
-        methods: {
-            handleLogin () {
-                this.$store.dispatch('login', this.user)
-            }
+        }
+    },
+    methods: {
+        handleRegister () {
+            this.$store.dispatch('register', this.user)
         }
     }
+}
 </script>
 
 <style lang="scss">
-.login-page {
+.register-page {
     @media only screen and (min-width: 0) {
         height: 100%;
-        background-image: url('../assets/login.jpg');
+        background-image: url('../assets/register.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         .shader-bg {
-            margin: 50px 120px;
-            padding: 10px 15px;
+            margin: 20px 100px;
+            padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
         }
         h1 {
@@ -94,6 +112,9 @@
             border-radius: 5px;
             border: 1px solid white;
         }
+        .checkbox-info {
+            width: 10%;
+        }
         button {
             padding: 7px 10px;
             background: linear-gradient(mediumseagreen, green);
@@ -109,8 +130,8 @@
     }
     @media only screen and (min-width: 1024px) {
         .shader-bg {
-            margin: 50px 550px;
-            padding: 10px 15px;
+            margin: 30px 480px;
+            padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
         }
         h1 {
@@ -123,6 +144,9 @@
             margin: 10px;
             padding: 10px;
             width: 200px;
+        }
+        .checkbox-info {
+            width: 5%;
         }
         button {
             font-size: 18px;

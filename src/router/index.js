@@ -5,6 +5,7 @@ import Collection from '../views/Collection.vue';
 import Product from '../views/Product.vue';
 import Profile from '../views/Profile.vue';
 import Login from '../views/Login.vue';
+import Register from '../views/Register.vue';
 import store from '../store';
 import Basket from '../views/Basket.vue';
 import Authors from '../views/Authors.vue';
@@ -55,6 +56,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/profile',

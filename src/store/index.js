@@ -536,6 +536,23 @@ export default new Vuex.Store({
     },
     async logout ({commit}) {
       commit('SET_USER', {})
+    },
+    async register ({commit}, user) {
+      try {
+        setTimeout(() => {
+          commit('SET_USER', {
+            name: 'Elena',
+            surname: 'Tapean',
+            role: 'member'
+          }) 
+          router.push('/profile')
+        }, 1000)
+      } catch (err) {
+        console.log(err)
+      }
+    }, 
+    async leave ({commit}) {
+      commit('SET_USER', {})
     }
   },
   modules: {
