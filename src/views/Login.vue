@@ -1,40 +1,40 @@
 <template>
     <main class="login-page main-grid">
         <div class="shader-bg">
-        <h1>Log In</h1>
-        <br/>
-        <ValidationObserver v-slot="{invalid}">
-            <form @submit.prevent="handleLogin">
-            <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
-                <span>Name:</span>
-                <br/>
-                <input v-model="user.name" type="text" />
-                <br/>
-                <span>{{errors[0]}}</span>
-            </ValidationProvider>
+            <h1>Log In</h1>
             <br/>
-            <br/>
-            <ValidationProvider name="Email" rules="required" v-slot="{errors}">
-                <span>Email:</span>
+            <ValidationObserver v-slot="{invalid}">
+                <form @submit.prevent="handleLogin">
+                <ValidationProvider name="Name" rules="required|alpha" v-slot="{errors}">
+                    <span>Name:</span>
+                    <br/>
+                    <input v-model="user.name" type="text" />
+                    <br/>
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
                 <br/>
-                <input v-model="user.email" type="email" />
                 <br/>
-                <span>{{errors[0]}}</span>
-            </ValidationProvider>
-            <br/>
-            <br/>
-            <ValidationProvider name="Password" rules="required" v-slot="{errors}">
-                <span>Password:</span>
+                <ValidationProvider name="Email" rules="required" v-slot="{errors}">
+                    <span>Email:</span>
+                    <br/>
+                    <input v-model="user.email" type="email" />
+                    <br/>
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
                 <br/>
-                <input v-model="user.password" type="password" />
                 <br/>
-                <span>{{errors[0]}}</span>
-            </ValidationProvider>
-            <br/>
-            <br/>
-            <button type="submit" :disabled="invalid">LOG IN</button>
-            </form>
-        </ValidationObserver>
+                <ValidationProvider name="Password" rules="required" v-slot="{errors}">
+                    <span>Password:</span>
+                    <br/>
+                    <input v-model="user.password" type="password" />
+                    <br/>
+                    <span>{{errors[0]}}</span>
+                </ValidationProvider>
+                <br/>
+                <br/>
+                <button type="submit" :disabled="invalid">LOG IN</button>
+                </form>
+            </ValidationObserver>
         </div>
     </main>
 </template>
