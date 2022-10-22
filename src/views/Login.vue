@@ -64,7 +64,7 @@
 .login-page {
     @media only screen and (min-width: 0) {
         height: 100%;
-        background-image: url('../assets/login.jpg');
+        background-image: url('../assets/home.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -72,7 +72,7 @@
         .shader-bg {
             margin: 50px 120px;
             padding: 10px 15px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
         }
         h1 {
@@ -112,7 +112,7 @@
         .shader-bg {
             margin: 50px 550px;
             padding: 10px 15px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
         }
         h1 {

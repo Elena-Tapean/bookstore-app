@@ -1,8 +1,8 @@
 <template>
     <main class="basket-page main-grid">
-        <h1>My Shopping Basket</h1>
-        <ul class="container-basket">
-            <li class="item-basket" v-for="product in basket" :key="product.id">
+        <h2>My Basket</h2>
+        <ul>
+            <li v-for="product in basket" :key="product.id">
                 <router-link :to="`/product/${product.id}`">
                     <img class="product-img" :src="product.img" alt="book cover" />
                     <br/>
@@ -61,40 +61,24 @@ export default {
 .basket-page {
     @media only screen and (min-width: 0) {
         height: 100%;
+        background-image: url('../assets/home.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
+        h2 {
+            font-size: 24px;
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: normal;
+            text-align: center;
+        }
         ul, li {
             list-style-type: none;
         }
-        .container-basket {
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .item-basket {
-            margin: 15px;
-            padding: 10px 15px 10px 15px;
-            border: 1px solid rgb(4, 222, 222);
-            border-radius: 4px;
-            background-color: lightcyan;
-        }
-        span {
-            margin: 5px;
-            font-size: 16px;
-            font-style: normal;
-        }
-        a {
-            text-decoration: none;
-            font-size: 17px;
-            font-style: normal;
-            color: darkblue;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
         .product-img {
-            width: 140px;
-            height: 180px;
+            width: 120px;
+            height: 150px;
             border-radius: 5px;
         }
         .container-div {
@@ -147,36 +131,9 @@ export default {
         ul, li {
             list-style-type: none;
         }
-        .container-basket {
-            padding: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .item-basket {
-            margin: 15px;
-            padding: 10px 25px 10px 25px;
-            border: 1px solid rgb(4, 222, 222);
-            border-radius: 4px;
-            background-color: lightcyan;
-        }
-        span {
-            margin: 5px;
-            font-size: 17px;
-            font-style: normal;
-        }
-        a {
-            text-decoration: none;
-            font-size: 18px;
-            font-style: normal;
-            color: darkblue;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
         .product-img {
-            width: 140px;
-            height: 180px;
+            width: 130px;
+            height: 170px;
             border-radius: 5px;
         }
         .container-div {

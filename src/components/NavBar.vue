@@ -172,6 +172,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
         }
         button {
             margin: 0 auto;
+            padding: 2px 4px;
             border: none;
             border-radius: 5px;
             background-color: rgb(255, 255, 255);
@@ -207,7 +208,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
         }
         span {
             margin-left: 5px;
-            font-size: 20px;
+            font-size: 19px;
         }
         a {
             margin: 0 10px;
@@ -216,7 +217,7 @@ import HambMenuIcon from './HambMenuIcon.vue';
         }
         button {
             margin: 0 20px;
-            font-size: 20px;
+            font-size: 19px;
         }
     }
     .router-link-exact-active {
