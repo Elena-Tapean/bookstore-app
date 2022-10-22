@@ -2,19 +2,17 @@
     <main class="profile-page main-grid">
         <h2>Welcome, {{ user.name }}!</h2>
         <p>October is a versatile season. Poetry, mysteries, thrillers, crimes, horror, fantasy, romances. It's the right season to put on a warm blanket around your shoulders, have a strong tea nearby or a fancy hot chocolate and a good book to read. Enjoy this year's Halloween!</p>
-        <div class="shader-bg">
-            <ul>
-                <li v-for="product in products" :key="product.id">
-                    <router-link :to="`/product/${product.id}`">
-                        <img class="product-img" :src="product.img" alt="book cover" />
-                        <br/>
-                        {{product.name}}
-                    </router-link>
+        <ul>
+            <li v-for="product in products" :key="product.id">
+                <router-link :to="`/product/${product.id}`">
+                    <img class="product-img" :src="product.img" alt="book cover" />
                     <br/>
-                    <span>{{product.price}} Lei</span>
+                    {{product.name}}
+                </router-link>
+                <br/>
+                <span>{{product.price}} Lei</span>
                 </li>
             </ul>
-        </div>
     </main>
 </template>
 
@@ -65,17 +63,11 @@
             text-align: justify; 
             line-height: 2;
         }
-        .shader-bg {
-            margin: 10px 30px 24px;
-            padding: 5px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 5px;
-        }
         ul, li {
             list-style-type: none;
         }
         ul {
-            margin: 0 15px;
+            margin: 0 30px;
             padding: 0 5px;
             display: flex;
             flex-wrap: wrap;
@@ -91,13 +83,13 @@
             border-radius: 5px;
         }
         span {
-            color: black;
+            color: rgb(134, 4, 47);
         }
         a {
             text-decoration: none;
             font-size: 18px;
             font-style: normal;
-            color: rgb(228, 83, 131);
+            color: black;
             font-family: Arial, Helvetica, sans-serif;
         } 
         a:hover {
@@ -114,13 +106,9 @@
             margin-bottom: 10px;
             font-size: 20px;
         }
-        .shader-bg {
-            margin: 10px 150px 24px;
-            padding: 10px;
-        }
         ul {
-            margin: 0 30px;
-            padding: 0 5px;
+            margin: 0 120px;
+            padding: 0 60px;
         }
         .product-img {
             width: 120px;
@@ -128,13 +116,13 @@
             border-radius: 5px;
         }
         span {
-            color: black;
+            color: rgb(134, 4, 47);
         }
         a {
             text-decoration: none;
             font-size: 18px;
             font-style: normal;
-            color: rgb(228, 83, 131);
+            color: black;
             font-family: Arial, Helvetica, sans-serif;
         } 
     }
