@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     products: [
-      {
+      /*{
         id: 1,
         name: '4.50 from Paddington',
         img: require('../assets/books/paddington-train.jpg'),
@@ -186,7 +186,7 @@ export default new Vuex.Store({
       description: '<p style="margin: 0 30pxl font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
       price: 55,
       quantity: 5
-    }
+    }*/
     ],
     genres: [
       {
@@ -496,6 +496,16 @@ export default new Vuex.Store({
           },
           {
             id: 6,
+            name: 'Cards on the Table',
+            img: require('../assets/books/cards-table.jpg'),
+            collectionId: 'Crime',
+            collectionName: 'C1',
+            description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
+            price: 35,
+            quantity: 5
+        },
+          {
+            id: 7,
             name: 'Dracula',
             img: require('../assets/books/dracula.jpg'),
             collectionId: 'Literary Fiction',

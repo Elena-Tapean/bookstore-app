@@ -18,7 +18,6 @@
                     <span @click="handleRouteChange">{{ item.name }}</span>
                 </router-link>
             </div>
-            <a href="tel: +40723060361">tel: +40 723 060 361</a>
             <router-link to="/basket">
                 <span class="basket-logo">
                     basket ({{ basketTotal }})
