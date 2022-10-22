@@ -1,18 +1,20 @@
 <template>
     <main class="profile-page main-grid">
-        <h1>Profile</h1>
-        <h3>Welcome, reader!</h3>
-        <h2>New titles this month</h2>
+        <h2>Welcome, {{ user.name }}!</h2>
         <p>October is a versatile season. Poetry, mysteries, thrillers, crimes, horror, fantasy, romances. It's the right season to put on a warm blanket around your shoulders, have a strong tea nearby or a fancy hot chocolate and a good book to read. Enjoy this year's Halloween!</p>
-        <br/>
-        <ul>
-            <li v-for="product in products" :key="product.id">
-                <router-link :to="`/product/${product.id}`">
-                    {{ product.name }}
-                </router-link>
-                <span>({{ product.collectionId}})</span>
-            </li>
-        </ul>
+        <div class="shader-bg">
+            <ul>
+                <li v-for="product in products" :key="product.id">
+                    <router-link :to="`/product/${product.id}`">
+                        <img class="product-img" :src="product.img" alt="book cover" />
+                        <br/>
+                        {{product.name}}
+                    </router-link>
+                    <br/>
+                    <span>{{product.price}} Lei</span>
+                </li>
+            </ul>
+        </div>
     </main>
 </template>
 
@@ -27,6 +29,9 @@
             this.$store.dispatch('get_data')
         },
         computed: {
+            user () {
+                return this.$store.state.user
+            },
             products () {
                 return this.$store.state.products
             }
@@ -38,74 +43,100 @@
 .profile-page {
     @media only screen and (min-width: 0) {
         height: 100%;
-        margin-bottom: 24px;
- 
-        h3 {
-            margin: 30px;
-            text-align: center;
-            font-size: 19px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+        background-image: url('../assets/profile.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
         h2 {
-            margin: 10px 50px;
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: left;
+            font-size: 25px;
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: normal;
+            text-align: center;
         }
         p {
             margin: 0 30px;
-            font-size: 17px;
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: black; 
             font-family: Arial, Helvetica, sans-serif;
-            text-align: justify; 
             text-indent: 30px; 
+            text-align: justify; 
             line-height: 2;
+        }
+        .shader-bg {
+            margin: 10px 30px 24px;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
         }
         ul, li {
             list-style-type: none;
         }
+        ul {
+            margin: 0 15px;
+            padding: 0 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         li {
-            margin: 5px 30px;
-            padding: 10px;
-            border: 1px solid lightblue;
-            background-color: lightcyan;
-            border-radius: 4px;
+            margin: 10px;
+            border: none;
+        }
+        .product-img {
+            width: 120px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        span {
+            color: black;
         }
         a {
             text-decoration: none;
-            font-size: 17px;
-            font-style: italic;
-            color: blue;
+            font-size: 18px;
+            font-style: normal;
+            color: rgb(228, 83, 131);
             font-family: Arial, Helvetica, sans-serif;
-        }
+        } 
         a:hover {
             text-decoration: underline;
-        }
-        span {
-            font-size: 15px;
-            font-style: normal;
-            color: grey;
         }
     }
 
     @media only screen and (min-width: 1024px) {
-        h3 {
-            font-size: 21px;
-        }
         h2 {
-            font-size: 21px;
+            font-size: 28px;
         }
         p {
-            font-size: 18px;
+            margin: 0 200px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .shader-bg {
+            margin: 10px 150px 24px;
+            padding: 10px;
         }
         ul {
-            display: block;
-            margin: 0 auto;
-            max-width: 450px;
+            margin: 0 30px;
+            padding: 0 5px;
         }
-        li {
-            margin: 10px 30px;
-            padding: 15px;
+        .product-img {
+            width: 120px;
+            height: 150px;
+            border-radius: 5px;
         }
+        span {
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-style: normal;
+            color: rgb(228, 83, 131);
+            font-family: Arial, Helvetica, sans-serif;
+        } 
     }
 }   
 </style>

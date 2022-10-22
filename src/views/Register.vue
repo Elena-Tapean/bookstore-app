@@ -91,6 +91,7 @@ export default {
             margin: 20px 100px;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
         }
         h1 {
             color: white;
@@ -133,6 +134,7 @@ export default {
             margin: 30px 480px;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
         }
         h1 {
             font-size: 28px;

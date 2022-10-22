@@ -9,10 +9,11 @@
             {{ product.name }}
           </router-link>
           <br/>
-          {{ product.price }} Lei
+          <span>{{ product.price }} Lei</span>
         </li>
       </ul>
-      <h2>Coming next month</h2>
+      <br/>
+      <h3>Coming next month</h3>
       <div class="flex-div">
         <div>
           <h3>Midnight Sun</h3>
@@ -50,10 +51,14 @@ export default {
   .home-page {
     @media only screen and (min-width: 0) {
       height: 100%;
-      margin-bottom: 24px;
+      background-image: url('../assets/home.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
 
       h2 {
         font-size: 24px;
+        color: black;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-style: normal;
         text-align: center;
@@ -77,15 +82,25 @@ export default {
         height: 150px;
         border-radius: 5px;
       }
+      span {
+        color: rgb(134, 4, 47);
+      }
       a {
         text-decoration: none;
         font-size: 18px;
         font-style: normal;
-        color: rgb(218, 30, 93);
+        color: black;
         font-family: Arial, Helvetica, sans-serif;
       }
       a:hover {
         text-decoration: underline;
+      }
+      h3 {
+        color: black;
+        font-size: 24px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: normal;
+        text-align: center;
       }
       .flex-div {
         display: flex;
@@ -101,7 +116,9 @@ export default {
         }
         p {
           margin: 0 30px;
-          font-size: 17px; 
+          margin-bottom: 24px;
+          font-size: 17px;
+          color: black; 
           font-family: Arial, Helvetica, sans-serif; 
           text-align: justify; 
           line-height: 2;
@@ -117,7 +134,7 @@ export default {
 
     @media only screen and (min-width: 1024px) {
       h2 {
-        font-size: 33px;
+        font-size: 30px;
       }
       ul {
         margin: 0 120px;
@@ -140,7 +157,7 @@ export default {
       }
       .flex-div {
         display: flex;
-        margin: 0 350px;
+        margin: 0 450px;
 
         h3 {
           font-size: 24px;

@@ -73,6 +73,7 @@
             margin: 50px 120px;
             padding: 10px 15px;
             background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
         }
         h1 {
             color: white;
@@ -112,6 +113,7 @@
             margin: 50px 550px;
             padding: 10px 15px;
             background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
         }
         h1 {
             font-size: 28px;
