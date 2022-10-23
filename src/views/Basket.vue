@@ -1,27 +1,59 @@
 <template>
     <main class="basket-page main-grid">
+        <router-link class="go-back" to="/"> 
+           Go Back
+        </router-link>
         <h2>My Basket</h2>
-        <ul>
-            <li v-for="product in basket" :key="product.id">
-                <router-link :to="`/product/${product.id}`">
-                    <img class="product-img" :src="product.img" alt="book cover" />
-                    <br/>
-                    {{ product.name }}
-                </router-link>
-                <br/>
-                <div class="container-div">
-                    <button class="quantity-button" @click="decrement(product.id)">-</button>
-                    <span>{{ product.count || 0 }}</span>
-                    <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
-                            @click="increment(product.id)">+</button>
-                    <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
-                </div>
-                <button class="buying-button" :disabled="!product.count || product.count === 0"
-                        @click="buyProduct(product)">
-                    Buy
-                </button>
-            </li>
-        </ul>
+        <div class="min-div">
+            <div class="shader-bg">
+                <ul>
+                    <li v-for="product in basket" :key="product.id">
+                        <router-link :to="`/product/${product.id}`">
+                            <img class="product-img" :src="product.img" alt="book cover" />
+                            <br/>
+                            {{ product.name }}
+                        </router-link>
+                        <br/>
+                        <div>
+                            <button class="quantity-button" @click="decrement(product.id)">-</button>
+                            <span>{{ product.count || 0 }}</span>
+                            <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
+                                   @click="increment(product.id)">+</button>
+                            <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
+                        </div>
+                        <button class="buy-button" :disabled="!product.count || product.count === 0" 
+                                @click.prevent="buyProduct(product)">
+                            BUY
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-div">
+            <div class="shader-bg">
+                <ul>
+                    <li v-for="product in basket" :key="product.id">
+                        <router-link :to="`/product/${product.id}`">
+                            <img class="product-img" :src="product.img" alt="book cover" />
+                            <br/>
+                            {{ product.name }}
+                        </router-link>
+                        <br/>
+                        <div>
+                            <button class="quantity-button" @click="decrement(product.id)">-</button>
+                            <span>{{ product.count || 0 }}</span>
+                            <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
+                                   @click="increment(product.id)">+</button>
+                            <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
+                        </div>
+                        <button class="buy-button" :disabled="!product.count || product.count === 0" 
+                                @click.prevent="buyProduct(product)">
+                            BUY
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
 </template>
 
@@ -50,8 +82,8 @@ export default {
         decrement (id) {
             this.$store.commit('DECREMENT_PRODUCT_COUNT', {id})
         },
-        buyProduct (product) {
-            this.$store.commit('BUYING_PRODUCT', product)
+        buyProduct () {
+            this.$store.dispatch('BUY_PRODUCT', this.user)
         }
     }
 }
@@ -66,6 +98,23 @@ export default {
         background-position: center;
         background-size: cover;
 
+        .flex-div {
+            display: none;
+        }
+        .shader-bg {
+            margin: 0 125px;
+            padding: 3px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+        .go-back {
+            margin: 20px;
+            display: flex;
+            font-size: 18px;
+            font-style: italic;
+            color: rgb(218, 30, 93);
+            text-decoration: none;
+        }
         h2 {
             font-size: 24px;
             color: black;
@@ -73,91 +122,123 @@ export default {
             font-style: normal;
             text-align: center;
         }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-style: normal;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         ul, li {
             list-style-type: none;
+        }
+        ul {
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .product-img {
             width: 120px;
             height: 150px;
             border-radius: 5px;
         }
-        .container-div {
-            padding: 5px;
-            margin: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;  
-            
-            .quantity-button {
-                margin: 0 15px;
-                padding: 6px 8px;
-                border: none;
-                border-radius: 4px;
-                background-color: rgb(228, 83, 131);
-                color: white;
-                font-size: 16px;
-            }
-            .quantity-button:hover {
-                background-color: rgb(218, 30, 93);
-            }
-            span {
-                margin: 5px;
-                font-size: 17px;
-                font-style: normal;
-            }
+        span {
+            margin: 0 5px;
+            font-size: 18px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .buying-button:disabled {
-            margin: 5px;
-            border: 1px solid rgba(128, 128, 128, 0.8);
-            border-radius: 5px;
-            background-color: rgba(128, 128, 128, 1.0);
-            opacity: 0.4;
+        .quantity-button {
+            margin: 0 15px;
+            margin-bottom: 5px;
+            padding: 5px 25px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(228, 83, 131);
             color: white;
-            font-size: 14px;
-            font-style: normal;
+            font-size: 15px;
         }
-        .buying-button:enabled {
+        .quantity-button:hover {
+            background-color: rgb(218, 30, 93);
+        }
+        .buy-button {
             margin: 5px;
-            border: 1px solid green;
+            padding: 7px;
+            border: none;
             border-radius: 5px;
             background-color: mediumseagreen;
             color: white;
-            font-size: 17px;
+            font-size: 18px;
             font-style: normal;
         }
     }
 
     @media only screen and (min-width: 1024px) {
-        ul, li {
-            list-style-type: none;
+        .min-div {
+            display: none;
+        }
+        .flex-div {
+            display: flex;
+        }
+        .shader-bg {
+            margin: 10px 50px;
+            padding: 3px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+        .go-back {
+            margin: 5px;
+            margin-left: 50px;
+            display: flex;
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 27px;
+        }
+        a {
+            font-size: 18px;
+        }
+        ul {
+            margin: 0 30px;
+            padding: 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .product-img {
             width: 130px;
             height: 170px;
-            border-radius: 5px;
         }
-        .container-div {
-            padding: 5px;
-            margin: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;  
-            
-            .quantity-button {
-                padding: 3px 8px;
-                font-size: 17px;
-            }
-            span {
-                font-size: 18px;
-            }
-        }
-        .buying-button:disabled {
-            margin: 5px;
+        .quantity-button {
+            margin: 0 10px;
+            padding: 5px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(228, 83, 131);
+            color: white;
             font-size: 16px;
         }
-        .buying-button:enabled {
-            margin: 5px;
-            font-size: 18px;
+        .quantity-button:hover {
+            background-color: rgb(218, 30, 93);
+        }
+        .buy-button {
+            margin: 0;
+            margin-top: 5px;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            background-color: mediumseagreen;
+            color: white;
+            font-size: 17px;
+            font-style: normal;
         }
     }
 }

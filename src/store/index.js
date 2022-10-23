@@ -421,8 +421,9 @@ export default new Vuex.Store({
     ADD_TO_BASKET (state, product) {
       state.basket.push(product)
     },
-    BUYING_PRODUCT (state, product) {
-      state.basket.add(product)
+    BUY_PRODUCT (state, user, product) {
+      state.user = user;
+      state.basket.buy(product)
     },
     //UPDATE_BUY_QUANTITY (state, {id, direction}) {
     //  const index = state.products.findIndex(obj => obj.id === id)
