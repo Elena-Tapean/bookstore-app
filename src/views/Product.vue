@@ -3,10 +3,10 @@
         <router-link class="go-back" to="/"> 
            Go Back
         </router-link>
-        <div class="min-div">
-            <div class="shader-bg">
-                <h1>{{ product.name }}</h1>
+        <div class="shader-bg">
+            <div class="min-div">
                 <img class="product-img" :src="product.img" alt="book cover" />
+                <h1>{{ product.name }}</h1>
                 <h2>Author:</h2>
                 <span>{{ product.author }}</span>
                 <h2>Genre:</h2>
@@ -29,16 +29,15 @@
                 </button>
             </div>
         </div>
-        <div class="flex-div">
-            <div class="shader-bg">
-                <h1>{{ product.name }}</h1>
-                <h2>Author:</h2>
-                <span>{{ product.author }}</span>
-                <h2>Genre:</h2>
-                <span>{{ product.collectionId }}</span>
-                <h2>Description:</h2>
-                <p v-html="product.description" />
-                <div class="flex-div">
+        <div class="shader2-bg">
+            <div class="flex-div">
+                <img class="product-img" :src="product.img" alt="book cover" />
+                <div class="info-div">
+                    <h1>{{ product.name }}</h1>
+                    <h2>Author:</h2>
+                    <span>{{ product.author }}</span>
+                    <h2>Genre:</h2>
+                    <span>{{ product.collectionId }}</span>
                     <h2>Price:</h2>
                     <span>{{ product.price }} Lei</span>
                     <h2>Quantity:</h2>
@@ -50,13 +49,14 @@
                         <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
                     </div>
                     <button class="basket-button" :disabled="!product.count || product.count === 0" 
-                           @click="addToBasket(product)">
+                            @click="addToBasket(product)">
                         Add to basket
                     </button>
                 </div>
             </div>
-            <div class="shader-bg">
-                <img class="product-img" :src="product.img" alt="book cover" />
+            <div class="flex2-div">
+                <h2>Description:</h2>
+                <p v-html="product.description" />
             </div>
         </div>
     </main>
@@ -112,7 +112,13 @@ export default {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
         }
+        .shader2-bg {
+            display: none;
+        }
         .flex-div {
+            display: none;
+        }
+        .flex2-div {
             display: none;
         }
         h1 {
@@ -132,6 +138,7 @@ export default {
             font-family: Arial, Helvetica, sans-serif;
         }
         .product-img {
+            margin-top: 15px;
             width: 220px;
             height: 300px;
             border-radius: 5px;
@@ -186,15 +193,31 @@ export default {
         .min-div {
             display: none;
         }
+        .shader-bg {
+            display: none;
+        }
+        .info-div {
+            display: inline-block;
+            margin-right: 150px;
+        }
         .flex-div {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
-        .shader-bg {
-            margin: 15px 25px;
-            padding: 3px;
+        .flex2-div {
+            display: flex;
+            flex-wrap: wrap;
+            h2 {
+                margin-left: 60px;
+                text-align: left;
+            }
+        }
+        .shader2-bg {
+            display: inline-block;
+            margin: 15px 270px;
+            margin-bottom: 30px;
+            padding: 0 35px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
         }
@@ -208,13 +231,15 @@ export default {
         }
         p {
             margin: 0 3px;
+            margin-bottom: 30px;
         }
         span {
             margin: 0 5px;
             font-size: 17px;
         }
         .product-img {
-            margin: 5px 8px;
+            margin: 15px 8px;
+            margin-left: 30px;
             width: 270px;
             height: 420px;
             border-radius: 5px;
@@ -238,8 +263,7 @@ export default {
             background-color: rgb(218, 30, 93);
         }
         .basket-button:disabled {
-            margin: 0;
-            margin-left: 30px;
+            margin: 10px;
             padding: 7px;
             border: none;
             border-radius: 5px;
@@ -250,8 +274,7 @@ export default {
             font-style: normal;
         }
         .basket-button:enabled {
-            margin: 0;
-            margin-left: 30px;
+            margin: 10px;
             padding: 7px;
             border: none;
             border-radius: 5px;
