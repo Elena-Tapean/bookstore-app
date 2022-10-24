@@ -1,5 +1,6 @@
 <template>
     <main class="home-page main-grid">
+      <div class="shader-bg">
       <h2>New books</h2>
       <ul>
         <li v-for="product in products" :key="product.id">
@@ -24,6 +25,7 @@
           <img class="next-month" src="../assets/books/midnight_sun.jpg" alt="book cover" />
         </div>
       </div>
+    </div>
     </main>
 </template>
   
@@ -56,6 +58,12 @@ export default {
       background-position: center;
       background-size: cover;
 
+      .shader-bg {
+        margin: 8px 25px;
+        padding: 3px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+      }
       h2 {
         font-size: 24px;
         color: black;
@@ -67,7 +75,7 @@ export default {
         list-style-type: none;
       }
       ul {
-        margin: 0 30px;
+        margin: 0 5px;
         padding: 0 5px;
         display: flex;
         flex-wrap: wrap;
@@ -83,7 +91,7 @@ export default {
         border-radius: 5px;
       }
       span {
-        color: rgb(134, 4, 47);
+        color: rgb(218, 30, 93);
       }
       a {
         text-decoration: none;
@@ -133,18 +141,24 @@ export default {
     }
 
     @media only screen and (min-width: 1024px) {
+      .shader-bg {
+        margin: 0 180px;
+        padding: 0 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+      }
       h2 {
         font-size: 30px;
       }
       ul {
-        margin: 0 120px;
-        padding: 0 60px;
+        margin: 0 10px;
+        padding: 0 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
       li {
-        margin: 0 10px;
+        margin: 5px;
         border: none;
       }
       .product-img {
@@ -157,7 +171,8 @@ export default {
       }
       .flex-div {
         display: flex;
-        margin: 0 450px;
+        margin: 0 200px;
+        margin-bottom: 30px;
 
         h3 {
           font-size: 24px;
