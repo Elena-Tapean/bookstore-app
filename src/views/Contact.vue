@@ -1,5 +1,6 @@
 <template>
     <main class="contact-info main-grid">
+      <div class="shader-bg">
       <h2>Let's get in touch</h2>
       <p>Send the message below and our operator will get in touch with you very soon.</p>
       <form>
@@ -21,6 +22,7 @@
         <br/>
         <button @click={handleSubmit}>SEND</button>
       </form>
+      </div>
     </main>
 </template>
 
@@ -48,15 +50,21 @@
     background-position: center;
     background-size: cover;
 
+    .shader-bg {
+      margin: 8px 20px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+    }
     h2 {
       font-size: 25px;
-      color: black;
+      color: white;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     p {
-      margin: 0 30px 24px;
+      margin: 10px 20px;
       font-size: 17px;
-      color: black; 
+      color: white; 
       font-family: Arial, Helvetica, sans-serif; 
       text-align: justify; 
       line-height: 1.8;
@@ -67,21 +75,21 @@
     }
     label {
       font-size: 17px;
-      color: black;
+      color: white;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     input {
       margin: 10px;
       padding: 5px;
-      width: 170px;
+      width: 180px;
       border-radius: 5px;
       border: 1px solid grey;
     }
     textarea {
-      margin: 10px;
+      margin: 10px auto;
       margin-bottom: 10px;
-      width: 250px;
-      height: 150px;
+      width: 240px;
+      height: 180px;
       border: 1px solid grey;
       border-radius: 5px;
     }
@@ -99,10 +107,17 @@
   }
 
   @media only screen and (min-width: 1024px) {
+    .shader-bg {
+      margin: 15px 400px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+    }
     h2 {
       font-size: 25px;
     }
     p {
+      margin: 10px 15px;
       text-align: center;
       font-size: 18px;
     }

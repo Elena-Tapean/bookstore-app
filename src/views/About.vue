@@ -1,5 +1,6 @@
 <template>
     <main class="about-page main-grid">
+        <div class="shader-bg">
         <h2>What is Blaze?</h2>
         <p>Blaze is a small-business bookstore that contains pretty much everything. From familiar titles to curious things. We encourage our readers to read, experience and inspire.</p>
         <img class="img-logo" src="../assets/logo3.png" alt="logo" />
@@ -21,6 +22,7 @@
         <p>If the product presents dysfunctionalities (torn apart, written, damaged in any way), Blaze recommends readers to get in touch with the bookstore as soon as possible. There are two ways to deal with damaged books: either replacing the ordered book with a new one or money payback. Readers are given their money back when the damaged book cannot be replaced, i.e. doesn't have a copy at the moment.</p>
         <h3>Terms and Conditions</h3>
         <p>Blaze offers readers limited access to its contents and products. The bookstore and all of its contents are protected under the Copyright Law. Utilizing its images, graphics, brand and parts or integral articles is punishable by Law.</p>
+        </div>
     </main>
 </template>
 
@@ -43,11 +45,16 @@
         background-position: center;
         background-size: cover;
 
+        .shader-bg {
+            margin: 10px 25px;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
         .img-logo {
             width: 30px;
             height: 45px;
-        }
-            
+        }            
         h2 {
             font-size: 24px;
             color: black;
@@ -63,7 +70,7 @@
             text-align: center;
         }
         p {
-            margin: 0 30px 24px;
+            margin: 25px;
             font-size: 17px;
             color: black; 
             font-family: Arial, Helvetica, sans-serif; 
@@ -78,25 +85,31 @@
             margin: 3px;
         }
         a {
-            color: rgb(134, 4, 47);
+            color: rgb(218, 30, 93);
         }
     }
 
     @media only screen and (min-width: 1024px) {
+        .shader-bg {
+            margin: 15px 330px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
         .img-logo {
             width: 30px;
             height: 45px;
-        }
-            
+        }    
         h2 {
+            margin: 10px;
             font-size: 26px;
         }
         h3 {
+            margin: 15px;
             font-size: 23px;
         }
         p {
-            margin: 5px 50px 24px;
-            padding: 0 270px;
+            margin: 15px 30px;
             font-size: 18px;
         }
         ul, li {

@@ -142,8 +142,8 @@ export default {
 
     @media only screen and (min-width: 1024px) {
       .shader-bg {
-        margin: 0 180px;
-        padding: 0 20px;
+        margin: 15px 180px;
+        padding: 10px 20px;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 5px;
       }
