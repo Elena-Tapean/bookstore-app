@@ -1,15 +1,40 @@
 <template>
     <main class="authors-page main-grid">
-        <h2>{{ author.name }}</h2>
-        <img class="author-img" :src="author.img" alt="author photo" />
-        <h3>Birthday:</h3>
-        <span>{{ author.birthday }}</span>
-        <h3>Nationality:</h3>
-        <span>{{ author.nation }}</span>
-        <h3>Quote:</h3>
-        <q>{{ author.quote }}</q>
-        <h3>Biography:</h3>
-        <p v-html="author.bio" />
+        <router-link class="go-back" to="/"> 
+           Go Back
+        </router-link>
+        <div class="shader-bg">
+            <div class="min-div">
+                <img class="product-img" :src="author.img" alt="author photo" />
+                <h1>{{ author.name }}</h1>
+                <h2>Birthday:</h2>
+                <span>{{ author.birthday }}</span>
+                <h2>Nationality:</h2>
+                <span>{{ author.nation }}</span>
+                <h2>Quote:</h2>
+                <q>{{ author.quote }}</q>
+                <h2>Biography:</h2>
+                <p v-html="author.bio" />
+            </div>
+        </div>
+        <div class="shader2-bg">
+            <div class="flex-div">
+                <img class="product-img" :src="author.img" alt="author photo" />
+                <div class="info-div">
+                    <h1>{{ author.name }}</h1>
+                    <h2>Birthday:</h2>
+                    <span>{{ author.birthday }}</span>
+                    <h2>Nationality:</h2>
+                    <span>{{ author.nation }}</span>
+                    <h2>Quote:</h2>
+                    <q>{{ author.quote }}</q>
+                </div>
+            </div>
+            <div class="flex2-div">
+                <h2>Biography:</h2>
+                <p v-html="author.bio" />
+            </div>
+        </div>
     </main>
 </template>
 
@@ -38,59 +63,128 @@ export default {
     .authors-page {
         @media only screen and (min-width: 0) {
             height: 100%;
-            margin-bottom: 24px;
-            
-            .author-img {
-                width: 230px;
-                height: 300px;
-                float: center;
+            background-image: url('../assets/home.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        
+            .shader-bg {
+                margin: 15px 25px;
+                padding: 3px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+            }
+            .shader2-bg {
+                display: none;
+            }
+            .flex-div {
+                display: none;
+            }
+            .flex2-div {
+                display: none;
+            }
+            h1 {
+                font-size: 28px;
+                color: black;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
             h2 {
-                font-size: 21px;
-                font-style: normal;
-            }
-            h3 {
-                font-size: 18px;
-                font-style: normal;
+                font-size: 19px;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
             }
             span {
                 margin: 0 auto;
-                margin-bottom: 18px;
+                font-size: 18px;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .product-img {
+                margin-top: 15px;
+                width: 220px;
+                height: 300px;
+                border-radius: 5px;
+            }
+            .go-back {
+                margin: 20px;
                 display: flex;
-                justify-content: center;
+                font-size: 18px;
+                font-style: italic;
+                color: rgb(218, 30, 93);
+                text-decoration: none;
             }
             q {
-                margin: 0 auto;
+                margin: 5px auto;
                 font-size: 17px;
                 font-style: italic;
                 quotes: none;
             }
+
         }
 
         @media only screen and (min-width: 1024px) {
-            .author-img {
-                width: 320px;
-                height: 420px;
-                margin: 35px;
-                float: right;
+            .min-div {
+                display: none;
+            }
+            .shader-bg {
+                display: none;
+            }
+            .info-div {
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .flex-div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .flex2-div {
+                display: flex;
+                flex-wrap: wrap;
+                h2 {
+                    margin-left: 60px;
+                    text-align: left;
+                }
+            }
+            .shader2-bg {
+                display: inline-block;
+                margin: 15px 270px;
+                margin-bottom: 30px;
+                padding: 0 35px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+            }
+            h1 {
+                margin: 10px;
+                font-size: 27px;
             }
             h2 {
-                font-size: 24px;
-                font-style: normal;
+                margin: 15px;
+                font-size: 18px;
             }
-            h3 {
-                font-size: 21px;
-                font-style: normal;
+            p {
+                margin: 0 3px;
+                margin-bottom: 30px;
             }
             span {
-                margin: 0 auto;
-                margin-bottom: 24px;
-                font-size: 18px;
+                margin: 0 5px;
+                font-size: 17px;
+            }
+            .product-img {
+                margin: 15px 8px;
+                margin-left: 30px;
+                width: 270px;
+                height: 420px;
+                border-radius: 5px;
+            }
+            .go-back {
+                margin: 5px;
+                margin-left: 50px;
                 display: flex;
-                justify-content: center;
+                font-size: 20px;
             }
             q {
-                margin: 0 auto;
+                margin: 10px auto;
                 font-size: 18px;
                 font-style: italic;
                 quotes: none;

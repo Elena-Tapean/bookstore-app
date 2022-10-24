@@ -198,7 +198,7 @@ export default {
         }
         .info-div {
             display: inline-block;
-            margin-right: 150px;
+            margin: 0 auto;
         }
         .flex-div {
             display: flex;

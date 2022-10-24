@@ -45,6 +45,9 @@ export default {
     }
   },
   methods: {
+    handleCollection () {
+      this.$router.push(`/collection/${ev.target.value}`)
+    }
   }
 }
 </script>

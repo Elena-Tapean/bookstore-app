@@ -263,13 +263,12 @@ export default new Vuex.Store({
       }
     ],
     collections: {
-      crime: ['C1', 'C2'],
-      horror: ['H1', 'H2', 'H3'],
-      poetry: ['P1', 'P2'],
-      young: ['YA1', 'YA2'],
-      travel: ['TRA1'],
-      literary: ['LF1', 'LF2', 'LF3'],
-      spiritual: ['S1'],
+      crime: ['Crime'],
+      horror: ['Horror'],
+      poetry: ['Poetry'],
+      travel: ['Travel'],
+      literary: ['Literary Fiction'],
+      spiritual: ['Spiritual'],
     },
     authors: [
       {
@@ -282,6 +281,15 @@ export default new Vuex.Store({
         bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Kazuo Ishiguro (Sir) is an English novelist, screenwriter, musician, and short-story writer. Ishiguro was born in Nagasaki, Japan, and moved to Britain in 1960 with his parents when he was five. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> He is one of the most critically-acclaimed and praised contemporary fiction authors writing in English, being awarded the 2017 Nobel Prize in Literature. In its 2017 citation, the Swedish Academy described Ishiguro as a writer "who, in novels of great emotional force, has uncovered the abyss beneath our illusory sense of connection with the world".</p>',
       },
       {
+        id: 'Joshua Foer',
+        name: 'Joshua Foer',
+        img: require('../assets/authors/joshua_foer.jpg'),
+        birthday: '23 September 1982',
+        nation: 'American',
+        quote: 'The way to get better at a skill is to force yourself to practice just beyond your limits.',
+        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Joshua Foer is a freelance journalist and author living in Brookline, Massachusetts, with a primary focus on science. Foer\'s first book, Moonwalking with Einstein, was published by Penguin in March 2011. The book describes his journey throughout the world of competitive memory and attempts to delineate the capacity of the human mind. The book was a finalist for the 2012 Royal Society Winton Prize for Science Books. Foer also has an interest in wildlife journalism, and has written articles for National Geographic. Foer co-founded Atlas Obscura in 2009. The company\'s mission is to inspire wonder and curiosity about the world. Foer is also the co-author of the #1 NYT bestselling book, Atlas Obscura: An Explorer\'s Guide to the World\'s Hidden Wonders.</p>'
+      },
+      {
         id: 'Mark Z. Danielweski',
         name: 'Mark Z. Danielweski',
         img: require('../assets/authors/danielweski.jpg'),
@@ -291,40 +299,13 @@ export default new Vuex.Store({
         bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Mark Z. Danielweski is an American fiction author. He is most widely known for his debut novel House of Leaves (2000), which won the New York Public Library\'s Young Lions Fiction Award. Danielewski began work on a proposed 27-volume series, The Familiar, although he completed only 5 volumes before halting the project in 2017. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Danielewski\'s work is characterized by an intricate, multi-layered typographical variation, or page layout, which he refers to as \"signiconic\". Sometimes known as visual writing,  the typographical variation corresponds directly, at any given narratological point in time, to the physical space of the events in the fictional world as well as the physical space of the page and the reader. Early on, critics characterized his writing as being ergodic literature, and Danielewski has described his style as: </p> <br/> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> \"Signiconic = sign + icon. Rather than engage those textual faculties of the mind remediating the pictorial or those visual faculties remediating language, the signiconic simultaneously engages both in order to lessen the significance of both and therefore achieve a third perception no longer dependent on sign and image for remediating a world in which the mind plays no part.\"</p>',
       },
       {
-        id: 'Agatha Christie',
-        name: 'Agatha Christie',
-        img: require('../assets/authors/agatha.jpg'),
-        birthday: '15 September 1890',
-        nation: 'English',
-        quote: 'Never tell all you know - not even to the person you know best.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Agatha Mary Clarissa Christie (Dame), Lady Mallowan, was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple. A writer during the \"Golden Age of Detective Fiction\", Christie has been called the \"Queen of Crime\". <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> She also wrote six novels under the pseudonym Mary Westmacott. In 1971, she was made a Dame by Queen Elizabeth II for her contributions to literature. Guinness World Records lists Christie as the best-selling fiction writer of all time, her novels having sold more than two billion copies.</p>',
-      },
-      {
-        id: 'Raymond Chandler',
-        name: 'Raymond Chandler',
-        img: require('../assets/authors/chandler.jpg'),
-        birthday: '23 July 1888',
-        nation: 'American-British',
-        quote: 'There is no trap so deadly as the trap you set for yourself.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Raymond Thornton Chandler was an American-British novelist and screenwriter. In 1932, at the age of forty-four, Chandler became a detective fiction writer after losing his job as an oil company executive during the Great Depression. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Chandler had an immense stylistic influence on American popular literature. He is a founder of the hard-boiled school of detective fiction, along with Dashiell Hammett, James M. Cain and other Black Mask writers. The protagonist of his novels, Philip Marlowe, like Hammett\'s Sam Spade, is considered by some to be synonymous with \"private detective\".</p>',
-      },
-      {
-        id: 'Stephen King',
-        name: 'Stephen King',
-        img: require('../assets/authors/king.jpg'),
-        birthday: '21 September 1947',
+        id: 'Laurie Martin-Gardner',
+        name: 'Laurie Martin-Gardner',
+        img: require('../assets/authors/martin.jpg'),
+        birthday: '(unknown)',
         nation: 'American',
-        quote: 'You can, you should and, if you\'re brave enough to start, you will.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Stephen Edwin King is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Described as the \"King of Horror\" (a play on his surname and a reference to his high standing in pop culture) his books have sold more than 350 million copies, and many have been adapted into films, television series, miniseries, and comic books.<p>',
-      },
-      {
-        id: 'Chalotte Perkins Gilman',
-        name: 'Charlotte Perkins Gilman',
-        img: require('../assets/authors/gilman.jpg'),
-        birthday: '3 July 1860',
-        nation: 'American',
-        quote: 'Eternity is not something that begins after you\'re dead. It is going on all the time. We are in it now.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Charlotte Perkins Gilman was an American humanist, novelist, writer, lecturer, advocate for social reform, and eugenicist. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> She was a utopian feminist and served as a role model for future generations of feminists because of her unorthodox concepts and lifestyle. She has been inducted into the National Women\'s Hall of Fame. Her best remembered work today is her semi-autobiographical short story \"The Yellow Wallpaper\", which she wrote after a severe bout of postpartum psychosis.</p>',
+        quote: '(unknown)',
+        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A lifelong student of history, mythology, and religion, Laurie Martin-Gardner draws inspiration from both the natural and spiritual worlds around her. Since childhood, she has spent her days immersed in the written word and published her first poem at the tender age of 12. Her first standalone non-fiction book, The Hidden Goddess, hit bookstores on February 1, 2020. Tracing the Divine Feminine from Asherah to Mary Magdalene, The Hidden Goddess is a look into the goddess traditions that influenced and permeated the foundations of the Judeo-Christian faith.</p>'
       },
       {
         id: 'William Butler Yeats',
@@ -336,31 +317,13 @@ export default new Vuex.Store({
         bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> William Butler Yeats was an Irish poet, dramatist, writer and one of the foremost figures of 20th-century literature. He was a driving force behind the Irish Literary Revival and became a pillar of the Irish literary establishment who helped to found the Abbey Theatre. In his later years he served two terms as a Senator of the Irish Free State. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A Protestant of Anglo-Irish descent, Yeats was born in Sandymount and was educated in Dublin and London and spent childhood holidays in County Sligo. He studied poetry from an early age, when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, lasting roughly from his student days at the Metropolitan School of Art in Dublin until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display debts to Edmund Spenser, Percy Bysshe Shelley and the poets of the Pre-Raphaelite Brotherhood. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> From 1900 his poetry grew more physical, realistic and politicised. He moved away from the transcendental beliefs of his youth, though he remained preoccupied with some elements including cyclical theories of life. He had become the chief playwright for the Irish Literary Theatre in 1897, and early on promoted younger poets such as Ezra Pound. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Yeats was awarded the Nobel Prize in Literature in 1923.</p>',
       },
       {
-        id: 'Ezra Pound',
-        name: 'Ezra Pound',
-        img: require('../assets/authors/pound.jpg'),
-        birthday: '30 October 1885',
-        nation: 'American',
-        quote: 'This is no book. Whoever touches this touches a person.',
-        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Ezra Weston Loomis Pound was an expatriate American poet and critic, a major figure in the early modernist poetry movement. Pound\'s contribution to poetry began in the early 20th century with his role in developing Imagism, a movement stressing precision and economy of language. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Working in London as foreign editor of several American literary magazines, he helped discover and shape the work of contemporaries such as T. S. Eliot, Ernest Hemingway, and James Joyce. He was responsible for the 1914 serialization of Joyce\'s A Portrait of the Artist as a Young Man, the 1915 publication of Eliot\'s \"The Love Song of J. Alfred Prufrock\", and the serialization from 1918 of Joyce\'s Ulysses. <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Hemingway wrote in 1932 that, for poets born in the late 19th or early 20th century, not to be influenced by Pound would be \"like passing through a great blizzard and not feeling its cold.\"</p>',
-      },
-      {
-        id: 'Stephenie Meyer',
-        name: 'Stephenie Meyer',
-        img: require('../assets/authors/meyer.jpg'),
-        birthday: '24 December 1973',
-        nation: 'American',
-        quote: 'After all, what was more important, in the end, than love?',
-        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Stephenie Meyer is an American novelist and film producer. She is best known for writing the vampire romance series Twilight, which has sold over 100 million copies, with translations into 37 different languages. An avid young reader, she attended Brigham Young University, marrying at the age of twenty-one before graduating with a degree in English in 1997. Having no prior experience as an author, she conceived the idea for the Twilight series in a dream. Influenced by the work of Jane Austen and William Shakespeare, she wrote Twilight soon thereafter. After many rejections, Little, Brown and Company offered her a $750,000 three-book deal which led to a four-book series, several spin-off novels and novellas, and a series of commercially successful film adaptations. Aside from young adult novels, Meyer has ventured into adult novels with The Host (2008) and The Chemist (2016). Meyer has worked in film production and cofounded production company Fickle Fish Films. Meyer produced both parts of Breaking Dawn and two other novel adaptations.</p>'
-      },
-      {
-        id: 'Laurie Martin-Gardner',
-        name: 'Laurie Martin-Gardner',
-        img: require('../assets/authors/martin.jpg'),
-        birthday: '(unknown)',
-        nation: 'American',
-        quote: '(unknown)',
-        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> A lifelong student of history, mythology, and religion, Laurie Martin-Gardner draws inspiration from both the natural and spiritual worlds around her. Since childhood, she has spent her days immersed in the written word and published her first poem at the tender age of 12. Her first standalone non-fiction book, The Hidden Goddess, hit bookstores on February 1, 2020. Tracing the Divine Feminine from Asherah to Mary Magdalene, The Hidden Goddess is a look into the goddess traditions that influenced and permeated the foundations of the Judeo-Christian faith.</p>'
+        id: 'Agatha Christie',
+        name: 'Agatha Christie',
+        img: require('../assets/authors/agatha.jpg'),
+        birthday: '15 September 1890',
+        nation: 'English',
+        quote: 'Never tell all you know - not even to the person you know best.',
+        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Agatha Mary Clarissa Christie (Dame), Lady Mallowan, was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple. A writer during the \"Golden Age of Detective Fiction\", Christie has been called the \"Queen of Crime\". <br> <p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> She also wrote six novels under the pseudonym Mary Westmacott. In 1971, she was made a Dame by Queen Elizabeth II for her contributions to literature. Guinness World Records lists Christie as the best-selling fiction writer of all time, her novels having sold more than two billion copies.</p>',
       },
       {
         id: 'Bram Stocker',
@@ -369,7 +332,7 @@ export default new Vuex.Store({
         birthday: '8 November 1847',
         nation: 'Irish',
         quote: 'We learn of great things by little experiences.',
-        bio: '<p stye="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Abraham Stocker was an Irish author who is celebrated for his 1897 Gothic horror novel Dracula. During his lifetime, he was better known as the personal assistant of actor Sir Henry Irving and business manager of the Lyceum Theatre, which Irving owned. In his early years, Stoker worked as a theatre critic for an Irish newspaper, and wrote stories as well as commentaries. He also enjoyed travelling, particularly to Cruden Bay where he set two of his novels. During another visit to the English coastal town of Whitby, Stoker drew inspiration for writing Dracula. He died on 20 April 1912 due to locomotor ataxia and was cremated in north London. Since his death, his magnum opus Dracula has become one of the most well-known works in English literature, and the novel has been adapted for numerous films, short stories, and plays.</p>'
+        bio: '<p style="margin: 0 30px; font-size: 18px; text-align: justify; text-indent: 30px; line-height: 2;"> Abraham Stocker was an Irish author who is celebrated for his 1897 Gothic horror novel Dracula. During his lifetime, he was better known as the personal assistant of actor Sir Henry Irving and business manager of the Lyceum Theatre, which Irving owned. In his early years, Stoker worked as a theatre critic for an Irish newspaper, and wrote stories as well as commentaries. He also enjoyed travelling, particularly to Cruden Bay where he set two of his novels. During another visit to the English coastal town of Whitby, Stoker drew inspiration for writing Dracula. He died on 20 April 1912 due to locomotor ataxia and was cremated in north London. Since his death, his magnum opus Dracula has become one of the most well-known works in English literature, and the novel has been adapted for numerous films, short stories, and plays.</p>'
       }
     ],
     isModal: false,
@@ -451,7 +414,7 @@ export default new Vuex.Store({
             author: 'Joshua Foer',
             img: require('../assets/books/atlas_obscura.jpg'),
             collectionId: 'Travel',
-            collectionName: 'TRA1',
+            collectionName: 'Travel',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Inspiring equal parts wonder and wanderlust, Atlas Obscura celebrates over 600 of the strangest and most curious places in the world. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Here are natural wonders—the dazzling glowworm caves in New Zealand, or a baobob tree in South Africa that\'s so large it has a pub inside where 15 people can drink comfortably. Architectural marvels, including the M.C. Escher-like stepwells in India. Mind-boggling events, like the Baby Jumping Festival in Spain, where men dressed as devils literally vault over rows of squirming infants. Not to mention the Great Stalacpipe Organ in Virginia, Turkmenistan\'s 45-year hole of fire called the Door of Hell, coffins hanging off a side of a cliff in the Philippines, eccentric bone museums in Italy, or a weather-forecasting invention that was powered by leeches, still on display in Devon, England. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Atlas Obscura revels in the weird, the unexpected, the overlooked, the hidden, and the mysterious. Every page expands our sense of how strange and marvelous the world really is. And with its compelling descriptions, hundreds of photographs, surprising charts, maps for every region of the world, it is a book you can open anywhere.</p>',
             price: 100,
             quantity: 5
@@ -462,7 +425,7 @@ export default new Vuex.Store({
             author: 'Kazuo Ishiguro',
             img: require('../assets/books/klara_and_the_sun.jpg'),
             collectionId: 'Literary Fiction',
-            collectionName: 'LF1',
+            collectionName: 'Literary Fiction',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> From her place in the store, Klara, an Artificial Friend with outstanding observational qualities, watches carefully the behavior of those who come in to browse, and of those who pass on the street outside. She remains hopeful that a customer will soon choose her, but when the possibility emerges that her circumstances may change forever, Klara is warned not to invest too much in the promises of humans. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> In Klara and the Sun, Kazuo Ishiguro looks at our rapidly changing modern world through the eyes of an unforgettable narrator to explore a fundamental question: what does it mean to love?</p>',
             price: 54,
             quantity: 5
@@ -473,7 +436,7 @@ export default new Vuex.Store({
             author: 'Mark Z. Danielweski',
             img: require('../assets/books/house_of_leaves.jpg'),
             collectionId: 'Horror',
-            collectionName: 'H3',
+            collectionName: 'Horror',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
             price: 74,
             quantity: 2
@@ -484,7 +447,7 @@ export default new Vuex.Store({
             author: 'Laurie Martin-Gardner',
             img: require('../assets/books/the_hidden_goddess.jpg'),
             collectionId: 'Spiritual',
-            collectionName: 'S1',
+            collectionName: 'Spiritual',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Hidden Goddess delves into the Bible to uncover the goddesses that have been buried within it. As well as discussing familiar figures such as Eve and Mary, the book also features Asherah, Sophia, Lilith, and others, exploring their histories, their roles in early Judaic Christian belief and their subsequent suppression. A readable and accessible antidote to the stereotype that the divine feminine is absent in the biblical traditions. A great resource for women and men seeking the Goddess in unlikely places.</p>',
             price: 55,
             quantity: 2
@@ -495,7 +458,7 @@ export default new Vuex.Store({
             author: 'William Butler Yeats',
             img: require('../assets/books/vision.jpg'),
             collectionId: 'Poetry',
-            collectionName: 'P1',
+            collectionName: 'Poetry',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
             price: 80,
             quantity: 5
@@ -506,7 +469,7 @@ export default new Vuex.Store({
             author: 'Agatha Christie',
             img: require('../assets/books/cards-table.jpg'),
             collectionId: 'Crime',
-            collectionName: 'C1',
+            collectionName: 'Crime',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
             price: 35,
             quantity: 5
@@ -517,7 +480,7 @@ export default new Vuex.Store({
             author: 'Bram Stocker',
             img: require('../assets/books/dracula.jpg'),
             collectionId: 'Literary Fiction',
-            collectionName: 'LF3',
+            collectionName: 'Literary Fiction',
             description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
             price: 35,
             quantity: 5
