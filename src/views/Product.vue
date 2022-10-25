@@ -92,6 +92,7 @@ export default {
         },
         addToBasket (product) {
             this.$store.commit('ADD_TO_BASKET', product)
+            this.$alert("The book was added to the basket!");
         }
     }
 }

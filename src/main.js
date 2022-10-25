@@ -5,7 +5,9 @@ import store from './store'
 import './styles/base.scss'
 import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
+import VueSimpleAlert from "vue-simple-alert";
 
+Vue.use(VueSimpleAlert);
 //Add a rule
 /*extend('secret', {
 //validate: value => value === 'example',

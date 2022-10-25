@@ -25,6 +25,19 @@
           <img class="next-month" src="../assets/books/midnight_sun.jpg" alt="book cover" />
         </div>
       </div>
+      <h3>Card Games</h3>
+      <div class="flex2-div">
+        <div>
+          <router-link style="color: rgb(218, 30, 93);" to="/game">
+            Pick One Card
+          </router-link>
+        </div>
+        <div>
+          <router-link style="color: rgb(218, 30, 93);" to="/game">
+            Pick Your Favorite Author
+          </router-link>
+        </div>
+      </div>
     </div>
     </main>
 </template>
@@ -45,9 +58,6 @@ export default {
     }
   },
   methods: {
-    handleCollection () {
-      this.$router.push(`/collection/${ev.target.value}`)
-    }
   }
 }
 </script>
@@ -62,7 +72,7 @@ export default {
       background-size: cover;
 
       .shader-bg {
-        margin: 8px 25px;
+        margin: 15px 25px;
         padding: 3px;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 5px;
@@ -93,8 +103,17 @@ export default {
         height: 150px;
         border-radius: 5px;
       }
+      p {
+        margin: 0 30px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+        text-align: justify; 
+        line-height: 1.5;
+      }
       span {
-        color: rgb(218, 30, 93);
+        color: black;
       }
       a {
         text-decoration: none;
@@ -112,6 +131,12 @@ export default {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-style: normal;
         text-align: center;
+      }
+      .flex2-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
       }
       .flex-div {
         display: flex;
@@ -169,8 +194,23 @@ export default {
         height: 170px;
         margin-bottom: 10px;
       }
+      p {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 18px; 
+        line-height: 2;
+      }
+      span {
+        margin: 5px;
+      }
       a {
         font-size: 18px;
+      }
+      .flex2-div {
+        margin-bottom: 30px;
+        div {
+          margin: 5px;
+        }
       }
       .flex-div {
         display: flex;

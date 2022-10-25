@@ -76,6 +76,11 @@ const routes = [
     component: Basket
   },
   {
+    path: '/game',
+    name: 'Game',
+    component: () => import('../views/Game.vue')
+  },
+  {
     path: '*',
     name: 'page not found',
     component: () => import('../views/PageNotFound.vue')

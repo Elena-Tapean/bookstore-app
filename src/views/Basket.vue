@@ -12,18 +12,28 @@
                         <br/>
                         {{ product.name }}
                     </router-link>
-                    <span>{{ product.price }} Lei</span>
+                    <div class="flex-div">
+                    <span>Price: {{ product.price }} Lei</span>
                     <div>
+                        <span>Quantity:</span>
                         <button class="quantity-button" @click="decrement(product.id)">-</button>
                         <span>{{ product.count || 0 }}</span>
                         <button class="quantity-button" :disabled="product.quantity && (product.quantity <= product.count)" 
                                @click="increment(product.id)">+</button>
                         <span v-if="product.quantity && (product.quantity <= product.count)">Max stock reached</span>
                     </div>
+                    </div>
+                    <div class="flex-div">
                     <button class="buy-button" :disabled="!product.count || product.count === 0" 
                             @click.prevent="buyProduct(product)">
                         BUY
                     </button>
+                    <br/>
+                    <button class="delete-button" 
+                            @click="deleteProduct(product.id)">
+                        Delete
+                    </button>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -46,7 +56,7 @@ export default {
         },
         basket () {
             return this.$store.state.basket
-        } 
+        }
     },
     methods: {
         increment (id) {
@@ -57,6 +67,11 @@ export default {
         },
         buyProduct () {
             this.$store.dispatch('BUY_PRODUCT', this.user)
+            this.$alert("Your order is on its way!");
+        },
+        deleteProduct (id) {
+            this.$store.commit('DELETE_PRODUCT', {id})
+            this.$confirm("Are you sure?");
         }
     }
 }
@@ -71,9 +86,9 @@ export default {
         background-position: center;
         background-size: cover;
 
-        .shader-bg {
-            margin: 0 15px;
-            padding: 3px;
+        .shader-bg { 
+            margin: 0 25px;
+            padding: 0;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
         }
@@ -103,16 +118,14 @@ export default {
             list-style-type: none;
         }
         ul {
-            margin: 5px;
+            margin: 15px;
             padding: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
         }
         li {
+            margin: 5px;
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
         }
         .product-img {
@@ -120,16 +133,19 @@ export default {
             height: 150px;
             border-radius: 5px;
         }
+        div {
+            margin: 20px 0 20px 0;
+        }
         span {
-            margin: 0 5px;
-            font-size: 17px;
+            margin: 0 10px;
+            padding: 3px;
+            font-size: 18px;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
         .quantity-button {
-            margin: 0 15px;
-            margin-bottom: 5px;
-            padding: 5px 15px;
+            margin: 0;
+            padding: 5px 12px;
             border: none;
             border-radius: 4px;
             background-color: rgb(228, 83, 131);
@@ -140,13 +156,23 @@ export default {
             background-color: rgb(218, 30, 93);
         }
         .buy-button {
-            margin: 5px;
+            margin: 10px auto; 
             padding: 7px;
             border: none;
             border-radius: 5px;
             background: linear-gradient(mediumseagreen, green);
             color: white;
             font-size: 18px;
+            font-style: normal;
+        }
+        .delete-button {
+            margin: 10px 5px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            background: linear-gradient(lightgrey, grey);
+            color: white;
+            font-size: 17px;
             font-style: normal;
         }
     }
@@ -158,6 +184,9 @@ export default {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
         }
+        .flex-div {
+            display: inline;
+        }
         .go-back {
             margin: 20px;
             display: flex;
@@ -174,34 +203,22 @@ export default {
             text-align: center;
         }
         a {
-            margin: 0 50px;
-            padding: 0 10px;
             text-decoration: none;
             font-size: 18px;
             font-style: normal;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
-        span {
-            margin: 0 10px;
-            font-size: 18px;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        div {
-            margin: 0 50px;
-        }
         ul, li {
             list-style-type: none;
         }
         ul {
-            margin: 5px;
+            margin: 0;
             padding: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: inline;
         }
         li {
+            margin: 5px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -212,27 +229,46 @@ export default {
             height: 150px;
             border-radius: 5px;
         }
+        div {
+            margin: 20px 0 20px 0;
+        }
+        span {
+            margin: 0 10px;
+            padding: 3px;
+            font-size: 18px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         .quantity-button {
-            margin: 0 15px;
-            margin-bottom: 5px;
-            padding: 5px 10px;
+            margin: 0;
+            padding: 5px 12px;
             border: none;
             border-radius: 4px;
             background-color: rgb(228, 83, 131);
             color: white;
-            font-size: 17px;
+            font-size: 16px;
         }
         .quantity-button:hover {
             background-color: rgb(218, 30, 93);
         }
         .buy-button {
-            margin: 0 30px;
-            padding: 9px;
+            margin: 10px auto; 
+            padding: 7px;
             border: none;
             border-radius: 5px;
             background: linear-gradient(mediumseagreen, green);
             color: white;
             font-size: 18px;
+            font-style: normal;
+        }
+        .delete-button {
+            margin: 10px 5px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            background: linear-gradient(lightgrey, grey);
+            color: white;
+            font-size: 17px;
             font-style: normal;
         }
     }

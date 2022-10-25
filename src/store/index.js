@@ -338,7 +338,7 @@ export default new Vuex.Store({
     isModal: false,
     productsCopy: [],
     user: {},
-    basket: [],
+    basket: []
   },
   getters: {
     collections: state => {
@@ -388,6 +388,10 @@ export default new Vuex.Store({
       state.user = user;
       state.basket.buy(product)
     },
+    DELETE_PRODUCT (state, {id}) {
+      const index = state.products.findIndex(product => product.id === id)
+      
+    }
     //UPDATE_BUY_QUANTITY (state, {id, direction}) {
     //  const index = state.products.findIndex(obj => obj.id === id)
     //  const product = state.products[index]
@@ -524,6 +528,9 @@ export default new Vuex.Store({
     }, 
     async leave ({commit}) {
       commit('SET_USER', {})
+    },
+    async delete ({commit}) {
+      commit('DELETE_PRODUCT', {})
     }
   },
   modules: {
