@@ -1,7 +1,7 @@
 <template>
     <main class="home-page main-grid">
       <div class="shader-bg">
-      <h2>New books</h2>
+      <h3>New books</h3>
       <ul>
         <li v-for="product in products" :key="product.id">
           <router-link :to="`/product/${product.id}`">
@@ -119,7 +119,7 @@ export default {
         text-decoration: none;
         font-size: 18px;
         font-style: normal;
-        color: black;
+        color: rgb(218, 30, 93);
         font-family: Arial, Helvetica, sans-serif;
       }
       a:hover {
@@ -137,6 +137,10 @@ export default {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        margin-bottom: 20px;
+        div {
+          margin: 5px;
+        }
       }
       .flex-div {
         display: flex;
@@ -164,6 +168,9 @@ export default {
           width: 130px;
           height: 170px;
           border-radius: 5px;
+        }
+        .flip-card {
+          display: none;
         }
       }
     }

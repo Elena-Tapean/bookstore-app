@@ -201,11 +201,11 @@ export default {
             font-size: 30px;
         }
         ul {
-            margin: 0 10px;
+            margin: 0 250px;
             padding: 0 10px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
         li {
             margin: 5px;

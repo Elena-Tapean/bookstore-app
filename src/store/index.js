@@ -420,7 +420,7 @@ export default new Vuex.Store({
             collectionId: 'Travel',
             collectionName: 'Travel',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Inspiring equal parts wonder and wanderlust, Atlas Obscura celebrates over 600 of the strangest and most curious places in the world. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Here are natural wonders—the dazzling glowworm caves in New Zealand, or a baobob tree in South Africa that\'s so large it has a pub inside where 15 people can drink comfortably. Architectural marvels, including the M.C. Escher-like stepwells in India. Mind-boggling events, like the Baby Jumping Festival in Spain, where men dressed as devils literally vault over rows of squirming infants. Not to mention the Great Stalacpipe Organ in Virginia, Turkmenistan\'s 45-year hole of fire called the Door of Hell, coffins hanging off a side of a cliff in the Philippines, eccentric bone museums in Italy, or a weather-forecasting invention that was powered by leeches, still on display in Devon, England. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Atlas Obscura revels in the weird, the unexpected, the overlooked, the hidden, and the mysterious. Every page expands our sense of how strange and marvelous the world really is. And with its compelling descriptions, hundreds of photographs, surprising charts, maps for every region of the world, it is a book you can open anywhere.</p>',
-            price: 100,
+            price: 70,
             quantity: 5
           },
           {
@@ -431,7 +431,7 @@ export default new Vuex.Store({
             collectionId: 'Literary Fiction',
             collectionName: 'Literary Fiction',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> From her place in the store, Klara, an Artificial Friend with outstanding observational qualities, watches carefully the behavior of those who come in to browse, and of those who pass on the street outside. She remains hopeful that a customer will soon choose her, but when the possibility emerges that her circumstances may change forever, Klara is warned not to invest too much in the promises of humans. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> In Klara and the Sun, Kazuo Ishiguro looks at our rapidly changing modern world through the eyes of an unforgettable narrator to explore a fundamental question: what does it mean to love?</p>',
-            price: 54,
+            price: 40,
             quantity: 5
           },
           {
@@ -442,7 +442,7 @@ export default new Vuex.Store({
             collectionId: 'Horror',
             collectionName: 'Horror',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command. Starting with an odd assortment of marginalized youth—musicians, tattoo artists, programmers, strippers, environmentalists, and adrenaline junkies—the book eventually made its way into the hands of older generations, who not only found themselves in those strangely arranged pages but also discovered a way back into the lives of their estranged children. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Now, for the first time, this astonishing novel is made available in book form, complete with the original colored words, vertical footnotes, and newly added second and third appendices. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The story remains unchanged, focusing on a young family that moves into a small home on Ash Tree Lane where they discover something is terribly wrong: their house is bigger on the inside than it is on the outside. <br> <p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Of course, neither Pulitzer Prize-winning photojournalist Will Navidson nor his companion Karen Green was prepared to face the consequences of that impossibility, until the day their two little children wandered off and their voices eerily began to return another story—of creature darkness, of an ever-growing abyss behind a closet door, and of that unholy growl which soon enough would tear through their walls and consume all their dreams.</p>',
-            price: 74,
+            price: 70,
             quantity: 2
           },
           {
@@ -453,7 +453,7 @@ export default new Vuex.Store({
             collectionId: 'Spiritual',
             collectionName: 'Spiritual',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> The Hidden Goddess delves into the Bible to uncover the goddesses that have been buried within it. As well as discussing familiar figures such as Eve and Mary, the book also features Asherah, Sophia, Lilith, and others, exploring their histories, their roles in early Judaic Christian belief and their subsequent suppression. A readable and accessible antidote to the stereotype that the divine feminine is absent in the biblical traditions. A great resource for women and men seeking the Goddess in unlikely places.</p>',
-            price: 55,
+            price: 30,
             quantity: 2
           },
           {
@@ -464,7 +464,7 @@ export default new Vuex.Store({
             collectionId: 'Poetry',
             collectionName: 'Poetry',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Privately published in 1925, A Vision is a book-length study of various philosophical, historical, astrological, and poetic topics by the Irish poet William Butler Yeats. Yeats wrote this work while experimenting with automatic writing with his wife Georgie Hyde-Lees. It serves as a meditation on the relationships between imagination, history, and the occult. A Vision has been compared to Eureka: A Prose Poem, the final major work of Edgar Allan Poe.</p>',
-            price: 80,
+            price: 20,
             quantity: 5
           },
           {
@@ -475,7 +475,7 @@ export default new Vuex.Store({
             collectionId: 'Crime',
             collectionName: 'Crime',
             description: '<p style="margin: 0 30px; font-size: 17px; color: black; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> A flamboyant party host is murdered in full view of a roomful of bridge players! Mr. Shaitana was famous, as were his parties. He was also a man of whom everybody was a little afraid. So, when he boasted to Poirot that he considered murder an art form, the detective had some reservations about accepting a party invitation of cards and viewing Shaitana\'s private art collection. Indeed, what began as an absorbing evening of bridge was to turn into a more dangerous game altogether.</p>',
-            price: 35,
+            price: 20,
             quantity: 5
         },
           {
@@ -486,7 +486,7 @@ export default new Vuex.Store({
             collectionId: 'Literary Fiction',
             collectionName: 'Literary Fiction',
             description: '<p style="margin: 0 30px; font-size: 17px; font-family: Arial, Helvetica, sans-serif; text-align: justify; text-indent: 30px; line-height: 2;"> Dracula is a novel by Bram Stoker, published in 1897. As an epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian noble, Count Dracula. Harker escapes the castle after discovering that Dracula is a vampire, and the Count moves to England and plagues the seaside town of Whitby. A small group, led by Abraham Van Helsing, hunt Dracula and, in the end, kill him. Dracula is one of the most famous pieces of English literature. Many of the book\'s characters have entered popular culture as archetypal versions of their characters; for example, Count Dracula as the quintessential vampire, and Abraham Van Helsing as an iconic vampire hunter.</p>',
-            price: 35,
+            price: 30,
             quantity: 5
           }
         ]
