@@ -9,7 +9,6 @@
                     <span>Name:</span>
                     <br/>
                     <input v-model="user.name" type="text" />
-                    <br/>
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
@@ -18,7 +17,6 @@
                     <span>Email:</span>
                     <br/>
                     <input v-model="user.email" type="email" />
-                    <br/>
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
@@ -27,7 +25,6 @@
                     <span>Password:</span>
                     <br/>
                     <input v-model="user.password" type="password" />
-                    <br/>
                     <span>{{errors[0]}}</span>
                 </ValidationProvider>
                 <br/>
@@ -70,8 +67,8 @@
         background-size: cover;
 
         .shader-bg {
-            margin: 50px 120px;
-            padding: 10px 15px;
+            margin: 50px 130px;
+            padding: 15px;
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
         }
@@ -96,7 +93,7 @@
             border: 1px solid white;
         }
         button {
-            padding: 7px 10px;
+            padding: 8px 10px;
             background: linear-gradient(mediumseagreen, green);
             color: white;
             font-size: 17px;
@@ -110,8 +107,8 @@
     }
     @media only screen and (min-width: 1024px) {
         .shader-bg {
-            margin: 50px 550px;
-            padding: 10px 15px;
+            margin: 30px 550px;
+            padding: 10px;
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
         }

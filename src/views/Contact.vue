@@ -81,14 +81,14 @@
     input {
       margin: 10px;
       padding: 5px;
-      width: 180px;
+      width: 220px;
       border-radius: 5px;
       border: 1px solid grey;
     }
     textarea {
       margin: 10px auto;
       margin-bottom: 10px;
-      width: 240px;
+      width: 220px;
       height: 180px;
       border: 1px solid grey;
       border-radius: 5px;
@@ -131,9 +131,12 @@
     input {
       margin: 10px;
       padding: 5px;
-      width: 170px;
+      width: 250px;
       border-radius: 5px;
       border: 1px solid grey;
+    }
+    textarea {
+      width: 250px;
     }
     button {
       padding: 10px;

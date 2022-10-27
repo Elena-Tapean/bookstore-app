@@ -8,7 +8,6 @@
                 <span>Name:</span>
                 <br/>
                 <input v-model="user.name" type="text" />
-                <br/>
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
@@ -16,7 +15,6 @@
                 <span>Surname:</span>
                 <br/>
                 <input v-model="user.surname" type="text" />
-                <br/>
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
@@ -24,7 +22,6 @@
                 <span>Email:</span>
                 <br/>
                 <input v-model="user.email" type="email" />
-                <br/>
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
@@ -32,7 +29,6 @@
                 <span>Password:</span>
                 <br/>
                 <input v-model="user.password" type="password" />
-                <br/>
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
             <br/>
@@ -40,7 +36,6 @@
                 <span>Confirm Password:</span>
                 <br/>
                 <input v-model="user.confirm" type="password" />
-                <br/>
                 <span>{{errors[0]}}</span>
             </ValidationProvider>
                 <br/>

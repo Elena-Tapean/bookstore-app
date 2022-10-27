@@ -77,13 +77,6 @@ export default {
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 5px;
       }
-      h2 {
-        font-size: 24px;
-        color: black;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: normal;
-        text-align: center;
-      }
       ul, li {
         list-style-type: none;
       }
@@ -148,7 +141,7 @@ export default {
 
         h3 {
           margin: 0 30px;
-          color: rgb(218, 30, 93);
+          color: rgb(52, 52, 52);
           font-size: 21px;
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
           font-style: normal;
