@@ -389,8 +389,8 @@ export default new Vuex.Store({
       state.basket.buy(product)
     },
     DELETE_PRODUCT (state, {id}) {
-      const index = state.products.findIndex(product => product.id === id)
-      
+      const index = state.basket.findIndex(product => +product.id === +id)
+      state.basket.splice(index, 1)
     }
     //UPDATE_BUY_QUANTITY (state, {id, direction}) {
     //  const index = state.products.findIndex(obj => obj.id === id)

@@ -13,7 +13,7 @@
                         {{ product.name }}
                     </router-link>
                     <div class="flex-div">
-                    <span>Price: {{ product.price }} Lei</span>
+                    <span>Price: {{ basketTotal }} Lei</span>
                     <div>
                         <span>Quantity:</span>
                         <button class="quantity-button" @click="decrement(product.id)">-</button>
@@ -56,6 +56,9 @@ export default {
         },
         basket () {
             return this.$store.state.basket
+        },
+        basketTotal () {
+            return this.basket.reduce((basketTotal, product) => basketTotal + +product.quantity * +product.price, 0).toFixed(2)
         }
     },
     methods: {
@@ -70,8 +73,9 @@ export default {
             this.$alert("Your order is on its way!");
         },
         deleteProduct (id) {
+            this.$confirm("Are you sure?").then(() => {
             this.$store.commit('DELETE_PRODUCT', {id})
-            this.$confirm("Are you sure?");
+        });
         }
     }
 }
